@@ -1,0 +1,29 @@
+:root {
+    --container-width: 1592;
+    --container-padding: 20px;
+
+    --vh: 1vh;
+    --section-rect-pad-top: calc(5rem + 2.5rem);
+    --section-rect-pad-bottom: calc(5rem + 2.5rem);
+    --section-mb: 160px;
+
+    --ff-base: 'Gotham', sans-serif;
+
+    --accent-color: #f7d252;
+    --text-color: #242c33;
+    --bg-color: #f9f7f0;
+}
+
+@media (max-width: 1700px) {
+    :root {
+        --container-padding: 20px;
+        --section-mb: 72px;
+    }
+}
+
+@media (max-width: 767px) {
+    :root {
+        --container-padding: 16px;
+        --section-mb: 60px;
+    }
+}

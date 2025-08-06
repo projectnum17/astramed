@@ -1,0 +1,120 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.link-plus {
+    font: 500 16px / 100% var(--ff-base);
+    text-transform: uppercase;
+    align-items: center;
+    padding: 8px 11px 8px 19px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 36px;
+    gap: 12px;
+
+    @include hover {
+        .link-plus__ico {
+            span {
+                &:first-child {
+                    top: -30%;
+                }
+
+                &:last-child {
+                    top: 50%;
+                }
+            }
+        }
+
+        .link-plus__text {
+            span {
+                &:first-child {
+                    transform: translateY(-30px);
+                }
+
+                &:last-child {
+                    top: 50%;
+                }
+            }
+        }
+    }
+
+    &--light {
+        .link-plus__ico {
+            span {
+                &:last-child {
+                    color: var(--white);
+                }
+            }
+        }
+    }
+
+    &--blight {
+        border-color: var(--white);
+    }
+
+    &--dark {
+        .link-plus__ico {
+            span {
+                &:last-child {
+                    color: var(--dark-grey);
+                }
+            }
+        }
+    }
+
+    &--bdark {
+        border-color: var(--dark-grey);
+    }
+
+    &__text {
+        position: relative;
+        overflow: hidden;
+
+        span {
+            display: inline-flex;
+            transition: ease-out 0.3s;
+
+            &:last-child {
+                width: 100%;
+                position: absolute;
+                top: 30px;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+
+    &__ico {
+        position: relative;
+        overflow: hidden;
+        padding: 5px;
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--accent-color);
+
+        span {
+            display: inline-flex;
+            width: 16px;
+            height: 16px;
+            flex-shrink: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: ease-out 0.3s;
+            color: var(--dark-grey);
+
+            svg {
+                width: 100%;
+                height: 100%;
+            }
+
+            &:last-child {
+                top: 125%;
+            }
+        }
+    }
+}

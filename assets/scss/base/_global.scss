@@ -12,8 +12,8 @@ body {
     // overflow-anchor: none;
     font: 400 16px/1.5 var(--ff-base);
     min-height: 100vh;
-    color: var(--almost-black);
-    background: var(--bgc-color);
+    color: var(--text-color);
+    background: var(--bg-color);
 
     &.is-locked {
         overflow: hidden;
@@ -38,6 +38,7 @@ main {
 button {
     @include reset_button;
     display: flex;
+    color: inherit;
 }
 
 a {
@@ -70,9 +71,7 @@ a {
 }
 section,
 .scrl-mt {
-    scroll-margin-top: 150px;
-    @include media('mobile') {
-    }
+    scroll-margin-top: var(--scrl-mt);
 }
 
 .js-animation {

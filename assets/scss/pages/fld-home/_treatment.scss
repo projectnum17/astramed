@@ -1,0 +1,64 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.main--home {
+    .treatment {
+        margin-bottom: var(--section-mb);
+        .container {
+            display: flex;
+            align-items: stretch;
+            gap: 20px;
+            justify-content: space-between;
+        }
+
+        &__info {
+            max-width: 430px;
+        }
+
+        &__title {
+            margin-bottom: 60px;
+        }
+
+        &__thumbnail {
+            max-width: 566px;
+            width: 100%;
+            height: 615px;
+            border-radius: 24px;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &__mission {
+            max-width: 373px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        &__logo {
+            max-width: 113px;
+            display: inline-flex;
+            flex-shrink: 0;
+            margin-bottom: 40px;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &__subtitle {
+            margin-bottom: 24px;
+        }
+
+        &__link {
+            margin-top: 40px;
+            width: max-content;
+        }
+    }
+}

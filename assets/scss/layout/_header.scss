@@ -1,2 +1,111 @@
 @use '../base/media' as *;
 @use '../base/mixins' as *;
+
+.header {
+    position: fixed;
+    top: 12px;
+    width: 100%;
+    z-index: 5;
+    padding-inline: 20px;
+
+    @include media('mobile') {
+        padding-inline: 16px;
+    }
+
+    &__wrapper {
+        padding: 17px 15px 17px 23px;
+        border-radius: 16px;
+        max-width: 1552px;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        backdrop-filter: blur(28px);
+        background: #ffffffb2;
+        border: 1px solid #ded8d8;
+    }
+
+    &__services {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        span {
+            font: 500 14px / 100% var(--ff-base);
+            text-transform: uppercase;
+        }
+
+        svg {
+            display: inline-flex;
+            flex-shrink: 0;
+            width: 24px;
+            height: 24px;
+            color: var(--dark-grey);
+        }
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+        gap: 53px;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: 60px;
+
+        &-link {
+            font: 500 14px / 100% var(--ff-base);
+            text-transform: uppercase;
+        }
+    }
+
+    &__panel {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
+
+    &__search {
+        display: inline-flex;
+        flex-shrink: 0;
+        width: 24px;
+        height: 24px;
+        color: var(--dark-grey);
+    }
+
+    &__phone {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        span {
+            font: 500 18px / 100% var(--ff-base);
+            text-transform: uppercase;
+        }
+
+        svg {
+            display: inline-flex;
+            flex-shrink: 0;
+            width: 24px;
+            height: 24px;
+            color: var(--dark-grey);
+        }
+    }
+
+    &__make {
+        font: 500 14px / 100% var(--ff-base);
+        padding: 17px 20px;
+
+        &.cta {
+            &::before {
+                border-radius: 11px;
+                height: 56px;
+                width: 150px;
+            }
+        }
+    }
+}

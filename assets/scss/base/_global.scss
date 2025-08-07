@@ -50,6 +50,10 @@ a {
     width: 100%;
     padding-inline: var(--container-padding);
     margin: 0 auto;
+
+    &--lg {
+        max-width: 1904px;
+    }
 }
 
 .container--right {

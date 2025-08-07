@@ -1,0 +1,50 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.main--about {
+    .gallery {
+        margin-bottom: var(--section-mb);
+
+        &__head {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 20px;
+            margin-bottom: 80px;
+
+            &-col {
+                max-width: 764px;
+
+                .gallery__description {
+                    font: 400 20px / 140% var(--ff-base);
+                    letter-spacing: -1px;
+                    &:not(:last-child) {
+                        margin-bottom: 24px;
+                    }
+                }
+            }
+        }
+
+        &__title {
+            max-width: 768px;
+        }
+
+        &__carousel {
+            margin-bottom: 60px;
+
+            &-pic {
+                border-radius: 20px;
+                overflow: hidden;
+                height: 560px;
+                width: 100%;
+                max-width: 100%;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}

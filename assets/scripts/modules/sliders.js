@@ -9,10 +9,6 @@ const sliders = () => {
             spaceBetween: 41,
             grabCursor: true,
             speed: 900,
-            // autoplay: {
-            //     delay: 3000,
-            //     disableOnInteraction: true,
-            // },
             navigation: {
                 prevEl: '.js-doctors-prev',
                 nextEl: '.js-doctors-next',
@@ -33,10 +29,6 @@ const sliders = () => {
             spaceBetween: 40,
             grabCursor: true,
             speed: 900,
-            // autoplay: {
-            //     delay: 3000,
-            //     disableOnInteraction: true,
-            // },
             navigation: {
                 prevEl: '.js-reviews-prev',
                 nextEl: '.js-reviews-next',
@@ -48,8 +40,50 @@ const sliders = () => {
         });
     };
 
+    const gallerySlider = () => {
+        const sliderEl = document.querySelector('.js-gallery-carousel');
+        if (!sliderEl) return;
+
+        new Swiper(sliderEl, {
+            slidesPerView: 3,
+            spaceBetween: 20,
+            grabCursor: true,
+            speed: 900,
+            navigation: {
+                prevEl: '.js-gallery-prev',
+                nextEl: '.js-gallery-next',
+            },
+            pagination: {
+                el: '.js-gallery-prog',
+                type: 'progressbar',
+            },
+        });
+    };
+
+    const licensesSlider = () => {
+        const sliderEl = document.querySelector('.js-licenses-slider');
+        if (!sliderEl) return;
+
+        new Swiper(sliderEl, {
+            slidesPerView: 'auto',
+            spaceBetween: 20,
+            grabCursor: true,
+            speed: 900,
+            navigation: {
+                prevEl: '.js-licenses-prev',
+                nextEl: '.js-licenses-next',
+            },
+            pagination: {
+                el: '.js-licenses-prog',
+                type: 'progressbar',
+            },
+        });
+    };
+
     doctorsSlider();
     reviewsSlider();
+    gallerySlider();
+    licensesSlider();
 };
 
 export default sliders;

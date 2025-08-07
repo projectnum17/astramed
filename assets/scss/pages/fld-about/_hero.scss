@@ -1,0 +1,65 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.main--about {
+    .hero {
+        padding-top: var(--section-pt);
+        margin-bottom: var(--section-mb);
+        .container {
+            max-width: 1716px;
+        }
+
+        &__pic {
+            position: relative;
+            border-radius: 80px;
+            overflow: hidden;
+            height: 774px;
+
+            &>img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(
+                    180deg,
+                    rgba(36, 44, 51, 0) 0%,
+                    rgba(36, 44, 51, 0.7) 70.3%,
+                    rgba(36, 44, 51, 0.9) 100%
+                );
+            }
+        }
+
+        &__content {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            left: 62px;
+            bottom: 62px;
+            right: 62px;
+            z-index: 2;
+
+            &-logo {
+                max-width: 766px;
+                width: 100%;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            &-title {
+                max-width: 572px;
+                color: var(--white);
+            }
+        }
+    }
+}

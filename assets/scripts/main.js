@@ -1,5 +1,6 @@
 'use strict';
 
+// components
 import forms from './modules/forms.js';
 import appointmentForm from './modules/appointmentForm.js';
 import feedbackForm from './modules/feedbackForm.js';
@@ -9,7 +10,11 @@ import videoObserver from './modules/videoObserver.js';
 import sliders from './modules/sliders.js';
 import reviewBox from './modules/reviewBox.js';
 
+// pages
+import pricesPageFlow from './modules/pricesPage.js';
+
 document.addEventListener('DOMContentLoaded', () => {
+    // components
     forms();
     appointmentForm();
     feedbackForm();
@@ -18,4 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
     videoObserver();
     sliders();
     reviewBox();
+    // pages
+    pricesPageFlow();
 });

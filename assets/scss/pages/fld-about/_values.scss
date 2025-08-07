@@ -1,0 +1,47 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.main--about {
+    .values {
+        margin-bottom: var(--section-mb);
+
+        &__content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px 20px;
+        }
+
+        &__box {
+            color: var(--grey);
+
+            &:not(:first-child) {
+                padding: 32px;
+                border-radius: 24px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                justify-content: space-between;
+                background: var(--white);
+            }
+
+            &-ico {
+                margin-left: auto;
+                width: 96px;
+                height: 96px;
+                display: inline-flex;
+                flex-shrink: 0;
+            }
+
+            &-title {
+                font: 500 20px / 140% var(--ff-base);
+                margin-bottom: 24px;
+                max-width: 312px;
+            }
+
+            &-text {
+                font: 400 14px / 140% var(--ff-base);
+                max-width: 312px;
+            }
+        }
+    }
+}

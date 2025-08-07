@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/images/favicon/favicon.svg" type="image/svg+xml" />
+    <title>Astramed | About</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.min.css">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script defer type="module" src="./assets/scripts/main.js"></script>
+</head>
+
+<body>
+    <div class="appointment-modal js-appointment-modal">
+        <div class="appointment-modal__inner">
+            <div class="appointment-modal__box js-appointment-box">
+                <button class="appointment-modal__close js-appointment-close">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M25.7075 24.2921C25.8004 24.385 25.8741 24.4953 25.9244 24.6167C25.9747 24.7381 26.0006 24.8682 26.0006 24.9996C26.0006 25.131 25.9747 25.2611 25.9244 25.3825C25.8741 25.5039 25.8004 25.6142 25.7075 25.7071C25.6146 25.8 25.5043 25.8737 25.3829 25.924C25.2615 25.9743 25.1314 26.0001 25 26.0001C24.8686 26.0001 24.7385 25.9743 24.6171 25.924C24.4957 25.8737 24.3854 25.8 24.2925 25.7071L16 17.4133L7.70751 25.7071C7.51987 25.8947 7.26537 26.0001 7.00001 26.0001C6.73464 26.0001 6.48015 25.8947 6.29251 25.7071C6.10487 25.5194 5.99945 25.2649 5.99945 24.9996C5.99945 24.7342 6.10487 24.4797 6.29251 24.2921L14.5863 15.9996L6.29251 7.70708C6.10487 7.51944 5.99945 7.26494 5.99945 6.99958C5.99945 6.73422 6.10487 6.47972 6.29251 6.29208C6.48015 6.10444 6.73464 5.99902 7.00001 5.99902C7.26537 5.99902 7.51987 6.10444 7.70751 6.29208L16 14.5858L24.2925 6.29208C24.4802 6.10444 24.7346 5.99902 25 5.99902C25.2654 5.99902 25.5199 6.10444 25.7075 6.29208C25.8952 6.47972 26.0006 6.73422 26.0006 6.99958C26.0006 7.26494 25.8952 7.51944 25.7075 7.70708L17.4138 15.9996L25.7075 24.2921Z"
+                            fill="black" />
+                    </svg>
+                </button>
+                <h4 class="h4 appointment-modal__title">
+                    Запис на консультацію
+                </h4>
+                <p class="appointment-modal__text">
+                    Наш адміністратор зателефонує Вам щоб підтвердити Ваш запис на прийом до спеціаліста
+                </p>
+                <form class="appointment-modal__form js-appointment-form">
+                    <div class="appointment-modal__wrapper">
+                        <div class="appointment-modal__fields">
+                            <div class="field-box">
+                                <div class="field-box__item">
+                                    <input class="field-box__input" required type="text" name="appointmentName"
+                                        id="appointmentName" placeholder="">
+                                    <label for="appointmentName" class="field-box__label">
+                                        Ваше ім'я
+                                    </label>
+                                </div>
+                                <div class="field-box__item">
+                                    <input class="field-box__input" required type="text" name="appointmentSurName"
+                                        id="appointmentSurName" placeholder="">
+                                    <label for="appointmentSurName" class="field-box__label">
+                                        Ваше прізвище
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="appointment-modal__field">
+                            <div class="field-box">
+                                <div class="field-box__item">
+                                    <input class="field-box__input" required type="tel" name="appointmentPhone"
+                                        id="appointmentPhone" placeholder="">
+                                    <label for="appointmentPhone" class="field-box__label">
+                                        Номер телефону
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="appointment-modal__field">
+                            <div class="field-box">
+                                <div class="field-box__item">
+                                    <input class="field-box__input" required type="email" name="appointmentEmail"
+                                        id="appointmentEmail" placeholder="">
+                                    <label for="appointmentEmail" class="field-box__label">
+                                        Email
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="appointment-modal__field">
+                            <div class="select-box">
+                                <select required class="select-box__select js-select" id="appointmentSpecialict"
+                                    name="appointmentSpecialict">
+                                    <option value="" disabled selected>
+                                        Оберіть спеціаліста
+                                    </option>
+                                    <option value="1">Спеціаліст 1</option>
+                                    <option value="2">Спеціаліст 2</option>
+                                    <option value="3">Спеціаліст 3</option>
+                                    <option value="4">Спеціаліст 4</option>
+                                    <option value="5">Спеціаліст 5</option>
+                                    <option value="6">Спеціаліст 6</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="appointment-modal__check">
+                        <input class="appointment-modal__cheked" type="checkbox" name="appointmentAgree"
+                            id="appointmentAgree">
+                        <label class="appointment-modal__label" for="appointmentAgree">
+                            Ви погоджуєтеся на обробку Ваших даних у відповідності до політики конфіденційності
+                        </label>
+                    </div>
+                    <button type="submit" class="appointment-modal__submit cta cta--lg">
+                        Записатись на консультацію
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <header class="header">
+        <div class="header__wrapper">
+            <div class="header__info">
+                <a href="/" class="header__logo">
+                    <img width="208" height="36" src="./assets/images/icons/logo.svg" alt="Logo">
+                </a>
+                <button class="header__services">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="7" cy="7" r="3" fill="#242C33" />
+                        <circle cx="17" cy="7" r="3" fill="#242C33" />
+                        <circle cx="7" cy="17" r="3" fill="#242C33" />
+                        <circle cx="17" cy="17" r="3" fill="#242C33" />
+                    </svg>
+                    <span>послуги</span>
+                </button>
+            </div>
+            <nav class="header__nav">
+                <ul class="header__list">
+                    <li class="header__list-item">
+                        <a href="#!" class="header__list-link">лікарі</a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="about.html" class="header__list-link current-page">про клініку</a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="#!" class="header__list-link">Блог</a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="#!" class="header__list-link">Ціни</a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="#!" class="header__list-link">контакти</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header__panel">
+                <button class="header__search">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17 17L21 21" stroke="#242C33" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path
+                            d="M19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19C15.4183 19 19 15.4183 19 11Z"
+                            stroke="#242C33" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <a href="tel:+380671125577" class="header__phone">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M3.77762 11.9424C2.8296 10.2893 2.37185 8.93948 2.09584 7.57121C1.68762 5.54758 2.62181 3.57081 4.16938 2.30947C4.82345 1.77638 5.57323 1.95852 5.96 2.6524L6.83318 4.21891C7.52529 5.46057 7.87134 6.08139 7.8027 6.73959C7.73407 7.39779 7.26737 7.93386 6.33397 9.00601L3.77762 11.9424ZM3.77762 11.9424C5.69651 15.2883 8.70784 18.3013 12.0576 20.2224M12.0576 20.2224C13.7107 21.1704 15.0605 21.6282 16.4288 21.9042C18.4524 22.3124 20.4292 21.3782 21.6905 19.8306C22.2236 19.1766 22.0415 18.4268 21.3476 18.04L19.7811 17.1668C18.5394 16.4747 17.9186 16.1287 17.2604 16.1973C16.6022 16.2659 16.0661 16.7326 14.994 17.666L12.0576 20.2224Z"
+                            stroke="#242C33" stroke-width="2" stroke-linejoin="round" />
+                    </svg>
+                    <span>
+                        +38 (067) 112 55 77
+                    </span>
+                </a>
+                <button class="header__make cta cta--sm js-appointment-open">Записатись</button>
+            </div>
+        </div>
+    </header>
+    <main class="main main--about">
+        <section class="hero">
+            <div class="container">
+                <div class="hero__pic">
+                    <img src="./assets/images/hero-about.jpg" alt="Picture">
+                    <div class="hero__content">
+                        <div class="hero__content-logo">
+                            <img width="766" height="134" src="./assets/images/icons/logo-colored.svg" alt="Logo">
+                        </div>
+                        <h1 class="h3 hero__content-title">
+                            Територія Вашого здоров’я
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="care">
+            <div class="container">
+                <div class="care__content">
+                    <div class="care__about">
+                        <h2 class="h2 care__title">
+                            З турботи починається лікування
+                        </h2>
+                        <p class="care__description">
+                            “AstraMed” – це спеціалізований центр у місті Рівному, де надаються високоякісні медичні
+                            послуги. Головна місія нашої компанії – це надати кожному пацієнтові індивідуальний
+                            комплексний підхід та доступ до найкращих європейським медицинських технологій. Адже
+                            здоров’я – це головний капітал у житті, який постійно потребує відповідального ставлення як
+                            збоку самого власника, так і зі сторони кваліфікованих лікарів.
+                        </p>
+                        <div class="care__stats">
+                            <div class="care__stats-item">
+                                <span class="care__stats-value">7500+</span>
+                                <p class="care__stats-title">Щасливих клієнтів</p>
+                            </div>
+                            <div class="care__stats-item">
+                                <span class="care__stats-value">30+</span>
+                                <p class="care__stats-title">Професіоналів у команді</p>
+                            </div>
+                            <div class="care__stats-item">
+                                <span class="care__stats-value">50+</span>
+                                <p class="care__stats-title">Напрямків лікування</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="care__pic">
+                        <img loading="lazy" width="566" height="615" src="./assets/images/treatment-pic.jpg"
+                            alt="Thumbnail">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="gallery">
+            <div class="container">
+                <div class="gallery__head">
+                    <h2 class="h2 gallery__title">
+                        Багатопрофільна медична клініка AstraMed
+                    </h2>
+
+                    <div class="gallery__head-col">
+                        <p class="gallery__description">
+                            Індивідуальний підхід до кожного пацієнта, високий рівень надання медичної консультації,
+                            призначення ефективного лікування, – все це для нас надзвичайно важливо! Тому, якщо Ви
+                            бажаєте, щоб за Ваше здоров’я попіклувалися максимально професійно, тоді Вам точно до нас.
+                        </p>
+                        <p class="gallery__description">
+                            “AstraMed” – це територія Вашого здоров’я, адже у нас цілий спектр медицинських напрямків:
+                            урологія, офтальмологія, гінекологія, терапія та інші.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="container container--lg">
+                <div class="gallery__carousel js-gallery-carousel swiper">
+                    <div class="gallery__carousel-wrapper swiper-wrapper">
+                        <div class="gallery__carousel-slide swiper-slide">
+                            <div class="gallery__carousel-pic">
+                                <img loading="lazy" width="608" height="560" src="./assets/images/gall_1.jpg"
+                                    alt="Picture">
+                            </div>
+                        </div>
+                        <div class="gallery__carousel-slide swiper-slide">
+                            <div class="gallery__carousel-pic">
+                                <img loading="lazy" width="608" height="560" src="./assets/images/gall_2.jpg"
+                                    alt="Picture">
+                            </div>
+                        </div>
+                        <div class="gallery__carousel-slide swiper-slide">
+                            <div class="gallery__carousel-pic">
+                                <img loading="lazy" width="608" height="560" src="./assets/images/gall_3.jpg"
+                                    alt="Picture">
+                            </div>
+                        </div>
+                        <div class="gallery__carousel-slide swiper-slide">
+                            <div class="gallery__carousel-pic">
+                                <img loading="lazy" width="608" height="560" src="./assets/images/gall_1.jpg"
+                                    alt="Picture">
+                            </div>
+                        </div>
+                        <div class="gallery__carousel-slide swiper-slide">
+                            <div class="gallery__carousel-pic">
+                                <img loading="lazy" width="608" height="560" src="./assets/images/gall_2.jpg"
+                                    alt="Picture">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="gallery__panel slider-panel">
+                    <div class="gallery__btns slider-panel__nav">
+                        <button class="gallery__nav js-gallery-prev">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 6C15 6 9.00001 10.4189 9 12C8.99999 13.5812 15 18 15 18" stroke="#242C33"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 6C15 6 9.00001 10.4189 9 12C8.99999 13.5812 15 18 15 18" stroke="#242C33"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <button class="gallery__nav js-gallery-next">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 6C9 6 15 10.4189 15 12C15 13.5812 9 18 9 18" stroke="#242C33"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 6C9 6 15 10.4189 15 12C15 13.5812 9 18 9 18" stroke="#242C33"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="gallery__progress js-gallery-prog slider-panel__progress"></div>
+                </div>
+            </div>
+        </section>
+        <section class="values">
+            <div class="container">
+                <div class="values__content">
+                    <div class="values__box">
+                        <h2 class="h2 values__title">
+                            Цінності та переваги
+                        </h2>
+                    </div>
+                    <div class="values__box">
+                        <div class="values__box-about">
+                            <h3 class="values__box-title">
+                                Високий рівень кваліфікації спеціалістів.
+                            </h3>
+                            <p class="values__box-text">
+                                Наші лікарі успішно провели десятки операцій і вилікували сотні пацієнтів, знайшли шлях
+                                лікування важких діагнозів та подарували можливість багатьом хворим стати знову цілком
+                                здоровими.
+                            </p>
+                        </div>
+                        <div class="values__box-ico">
+                            <lottie-player src="./assets/animations/study.json" direction="1" mode="normal" loop
+                                autoplay></lottie-player>
+                        </div>
+                    </div>
+                    <div class="values__box">
+                        <div class="values__box-about">
+                            <h3 class="values__box-title">
+                                Сучасне медицинські технології та прилади
+                            </h3>
+                            <p class="values__box-text">
+                                У нашій клініці застосовується новітня апаратура, яка дозволяє точно ставити діагнози та
+                                призначати правильне та максимально ефективне лікування.
+                            </p>
+                        </div>
+                        <div class="values__box-ico">
+                            <lottie-player src="./assets/animations/chip.json" direction="1" mode="normal" loop
+                                autoplay></lottie-player>
+                        </div>
+                    </div>
+                    <div class="values__box">
+                        <div class="values__box-about">
+                            <h3 class="values__box-title">
+                                Командна взаємодія лікарів та комплексна методика лікування
+                            </h3>
+                            <p class="values__box-text">
+                                Це в свою чергу дозволяє супроводжувати пацієнтів на всіх етапах обстеження та
+                                лікування.
+                            </p>
+                        </div>
+                        <div class="values__box-ico">
+                            <lottie-player src="./assets/animations/community.json" direction="1" mode="normal" loop
+                                autoplay></lottie-player>
+                        </div>
+                    </div>
+                    <div class="values__box">
+                        <div class="values__box-about">
+                            <h3 class="values__box-title">
+                                Доступна цінова політика
+                            </h3>
+                            <p class="values__box-text">
+                                У нашій клініці Ви не витрачаєте, а інвестуєте у власне здоров’я. Ви точно будете
+                                впевнені, що лікування є правильним та принесе результат.
+                            </p>
+                        </div>
+                        <div class="values__box-ico">
+                            <lottie-player src="./assets/animations/coins.json" direction="1" mode="normal" loop
+                                autoplay></lottie-player>
+                        </div>
+                    </div>
+                    <div class="values__box">
+                        <div class="values__box-about">
+                            <h3 class="values__box-title">
+                                Індивідуальний підхід до кожного пацієнта.
+                            </h3>
+                            <p class="values__box-text">
+                                Нам важливо, надати кожному, хто звернувся до нас, високоякісну медичнуку допомогу і
+                                подарувати можливість відчувати цінність та насолоду від здоров’я та життя
+                            </p>
+                        </div>
+                        <div class="values__box-ico">
+                            <lottie-player src="./assets/animations/care.json" direction="1" mode="normal" loop
+                                autoplay></lottie-player>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="specialist">
+            <div class="container">
+                <div class="specialist__head">
+                    <h2 class="h2 specialist__title">
+                        Команда Спеціалістів
+                    </h2>
+                    <p class="specialist__description">
+                        У нашому центрі “AstraMed” ми зібрали найкращу команду експертів-лікарів, яку чудово
+                        знаються у своїй галузі і володіють багаторічним практичним досвідом роботи. Наші лікарі
+                        застосовують сучасні схеми терапії, регулярно відвідують європейські медицинські конференції
+                        та поглиблюють свої професійні навички. Нам важливо слідувати за сучасними тенденціями та
+                        методами лікування, які надають найбільш ефективний результат та сприяють швидкому одужанню
+                        пацієнта.
+                    </p>
+                </div>
+                <div class="doctors-slider js-doctors-slider swiper">
+                    <div class="doctors-slider__wrapper swiper-wrapper">
+                        <div class="doctors-slider__slide swiper-slide">
+                            <a href="#!" class="doctor-card">
+                                <div class="doctor-card__pic">
+                                    <img loading="lazy" width="458" height="528" src="./assets/images/doctor_1.jpg"
+                                        alt="Picture">
+                                </div>
+                                <div class="doctor-card__info">
+                                    <p class="doctor-card__job">
+                                        Лікар-уролог вищої категорії
+                                    </p>
+                                    <div class="doctor-card__glass">
+                                        <div class="doctor-card__about">
+                                            <p class="h5 doctor-card__name">
+                                                Данилець
+                                            </p>
+                                            <p class="doctor-card__surname">
+                                                Микола Леонтійович
+                                            </p>
+                                        </div>
+                                        <span class="doctor-card__deco">
+                                            <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.5 6C9.5 6 15.5 10.4189 15.5 12C15.5 13.5812 9.5 18 9.5 18"
+                                                    stroke="#141B34" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                            <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8.5 13.3333L8.5 2.66665" stroke="#242C33" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M13.833 8L3.16634 8" stroke="#242C33" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="doctors-slider__slide swiper-slide">
+                            <a href="#!" class="doctor-card">
+                                <div class="doctor-card__pic">
+                                    <img loading="lazy" width="458" height="528" src="./assets/images/doctor_2.jpg"
+                                        alt="Picture">
+                                </div>
+                                <div class="doctor-card__info">
+                                    <p class="doctor-card__job">
+                                        Лікар-уролог вищої категорії
+                                    </p>
+                                    <div class="doctor-card__glass">
+                                        <div class="doctor-card__about">
+                                            <p class="h5 doctor-card__name">
+                                                Данилець
+                                            </p>
+                                            <p class="doctor-card__surname">
+                                                Микола Леонтійович
+                                            </p>
+                                        </div>
+                                        <span class="doctor-card__deco">
+                                            <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.5 6C9.5 6 15.5 10.4189 15.5 12C15.5 13.5812 9.5 18 9.5 18"
+                                                    stroke="#141B34" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                            <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8.5 13.3333L8.5 2.66665" stroke="#242C33" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M13.833 8L3.16634 8" stroke="#242C33" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="doctors-slider__slide swiper-slide">
+                            <a href="#!" class="doctor-card">
+                                <div class="doctor-card__pic">
+                                    <img loading="lazy" width="458" height="528" src="./assets/images/doctor_3.jpg"
+                                        alt="Picture">
+                                </div>
+                                <div class="doctor-card__info">
+                                    <p class="doctor-card__job">
+                                        Лікар-уролог вищої категорії
+                                    </p>
+                                    <div class="doctor-card__glass">
+                                        <div class="doctor-card__about">
+                                            <p class="h5 doctor-card__name">
+                                                Данилець
+                                            </p>
+                                            <p class="doctor-card__surname">
+                                                Микола Леонтійович
+                                            </p>
+                                        </div>
+                                        <span class="doctor-card__deco">
+                                            <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.5 6C9.5 6 15.5 10.4189 15.5 12C15.5 13.5812 9.5 18 9.5 18"
+                                                    stroke="#141B34" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                            <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8.5 13.3333L8.5 2.66665" stroke="#242C33" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M13.833 8L3.16634 8" stroke="#242C33" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="doctors-slider__slide swiper-slide">
+                            <a href="#!" class="doctor-card">
+                                <div class="doctor-card__pic">
+                                    <img loading="lazy" width="458" height="528" src="./assets/images/doctor_2.jpg"
+                                        alt="Picture">
+                                </div>
+                                <div class="doctor-card__info">
+                                    <p class="doctor-card__job">
+                                        Лікар-уролог вищої категорії
+                                    </p>
+                                    <div class="doctor-card__glass">
+                                        <div class="doctor-card__about">
+                                            <p class="h5 doctor-card__name">
+                                                Данилець
+                                            </p>
+                                            <p class="doctor-card__surname">
+                                                Микола Леонтійович
+                                            </p>
+                                        </div>
+                                        <span class="doctor-card__deco">
+                                            <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.5 6C9.5 6 15.5 10.4189 15.5 12C15.5 13.5812 9.5 18 9.5 18"
+                                                    stroke="#141B34" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                            <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8.5 13.3333L8.5 2.66665" stroke="#242C33" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M13.833 8L3.16634 8" stroke="#242C33" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="doctors-slider__slide swiper-slide">
+                            <a href="#!" class="doctor-card">
+                                <div class="doctor-card__pic">
+                                    <img loading="lazy" width="458" height="528" src="./assets/images/doctor_3.jpg"
+                                        alt="Picture">
+                                </div>
+                                <div class="doctor-card__info">
+                                    <p class="doctor-card__job">
+                                        Лікар-уролог вищої категорії
+                                    </p>
+                                    <div class="doctor-card__glass">
+                                        <div class="doctor-card__about">
+                                            <p class="h5 doctor-card__name">
+                                                Данилець
+                                            </p>
+                                            <p class="doctor-card__surname">
+                                                Микола Леонтійович
+                                            </p>
+                                        </div>
+                                        <span class="doctor-card__deco">
+                                            <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.5 6C9.5 6 15.5 10.4189 15.5 12C15.5 13.5812 9.5 18 9.5 18"
+                                                    stroke="#141B34" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                            <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8.5 13.3333L8.5 2.66665" stroke="#242C33" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M13.833 8L3.16634 8" stroke="#242C33" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="doctors-slider__panel slider-panel">
+                        <div class="doctors-slider__btns slider-panel__nav">
+                            <button class="doctors-slider__nav js-doctors-prev">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15 6C15 6 9.00001 10.4189 9 12C8.99999 13.5812 15 18 15 18"
+                                        stroke="#242C33" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15 6C15 6 9.00001 10.4189 9 12C8.99999 13.5812 15 18 15 18"
+                                        stroke="#242C33" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                            <button class="doctors-slider__nav js-doctors-next">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 6C9 6 15 10.4189 15 12C15 13.5812 9 18 9 18" stroke="#242C33"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 6C9 6 15 10.4189 15 12C15 13.5812 9 18 9 18" stroke="#242C33"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="doctors-slider__progress js-doctors-prog slider-panel__progress"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="licenses">
+            <div class="container">
+                <h2 class="h2 licenses__title">
+                    Ліцензії та сертифікати
+                </h2>
+                <div class="licenses-slider js-licenses-slider swiper">
+                    <div class="licenses-slider__wrapper swiper-wrapper">
+                        <div class="licenses-slider__slide swiper-slide">
+                            <div class="licenses-slider__item">
+                                <img src="./assets/images/cert_1.png" alt="License">
+                            </div>
+                        </div>
+                        <div class="licenses-slider__slide swiper-slide">
+                            <div class="licenses-slider__item">
+                                <img src="./assets/images/cert_2.png" alt="License">
+                            </div>
+                        </div>
+                        <div class="licenses-slider__slide swiper-slide">
+                            <div class="licenses-slider__item">
+                                <img src="./assets/images/cert_3.jpg" alt="License">
+                            </div>
+                        </div>
+                        <div class="licenses-slider__slide swiper-slide">
+                            <div class="licenses-slider__item">
+                                <img src="./assets/images/cert_4.jpg" alt="License">
+                            </div>
+                        </div>
+                        <div class="licenses-slider__slide swiper-slide">
+                            <div class="licenses-slider__item">
+                                <img src="./assets/images/cert_5.jpg" alt="License">
+                            </div>
+                        </div>
+                        <div class="licenses-slider__slide swiper-slide">
+                            <div class="licenses-slider__item">
+                                <img src="./assets/images/cert_6.jpg" alt="License">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="licenses-slider__panel slider-panel">
+                        <div class="licenses-slider__btns slider-panel__nav">
+                            <button class="licenses-slider__nav js-licenses-prev">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15 6C15 6 9.00001 10.4189 9 12C8.99999 13.5812 15 18 15 18"
+                                        stroke="#242C33" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15 6C15 6 9.00001 10.4189 9 12C8.99999 13.5812 15 18 15 18"
+                                        stroke="#242C33" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                            <button class="licenses-slider__nav js-licenses-next">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 6C9 6 15 10.4189 15 12C15 13.5812 9 18 9 18" stroke="#242C33"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 6C9 6 15 10.4189 15 12C15 13.5812 9 18 9 18" stroke="#242C33"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="licenses-slider__progress js-licenses-prog slider-panel__progress"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="feedback">
+            <div class="container">
+                <div class="feedback__content">
+                    <div class="feedback__col">
+                        <img class="feedback__pic" src="./assets/images/feedback-pic.jpg" alt="Picture">
+                        <div class="feedback__border">
+                            <div class="feedback__info">
+                                <div>
+                                    <h3 class="h3 feedback__title">
+                                        Запис та консультація
+                                    </h3>
+                                    <p class="feedback__description">
+                                        Виникають питання, зателефонуйте нам і ми проконсультуємо Вас та надамо найкраще
+                                        розв'язання
+                                        Вашого питання.
+                                    </p>
+                                    <div class="feedback__phones">
+                                        <a href="tel:+380671125577" class="feedback__phone">
+                                            <img loading="lazy" width="40" height="40"
+                                                src="./assets/images/icons/ico-call.svg" alt="Icon">
+                                            <span>+38 (067) 112 55 77</span>
+                                        </a>
+                                        <a href="tel:+380671125577" class="feedback__phone">
+                                            <img loading="lazy" width="40" height="40"
+                                                src="./assets/images/icons/ico-call.svg" alt="Icon">
+                                            <span>+38 (067) 112 55 77</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="feedback__social">
+                                        <p class="feedback__text">
+                                            Ми в соціальних мережах та мессенджерах
+                                        </p>
+                                        <div class="feedback__social-links">
+                                            <a href="#!">
+                                                <img width="32" height="32" loading="lazy"
+                                                    src="./assets/images/icons/ico-facebook.svg" alt="Icon">
+                                            </a>
+                                            <a href="#!">
+                                                <img width="32" height="32" loading="lazy"
+                                                    src="./assets/images/icons/ico-inst.svg" alt="Icon">
+                                            </a>
+                                            <a href="#!">
+                                                <img width="32" height="32" loading="lazy"
+                                                    src="./assets/images/icons/ico-telegram.svg" alt="Icon">
+                                            </a>
+                                            <a href="#!">
+                                                <img width="32" height="32" loading="lazy"
+                                                    src="./assets/images/icons/ico-vider.svg" alt="Icon">
+                                            </a>
+                                            <a href="#!">
+                                                <img width="32" height="32" loading="lazy"
+                                                    src="./assets/images/icons/ico-tt.svg" alt="Icon">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feedback__col">
+                        <h3 class="h3 feedback__title">
+                            Запис на прийом онлайн
+                        </h3>
+                        <form class="feedback__form js-appointment-form">
+                            <div class="feedback__form-wrapper">
+                                <div class="feedback__form-fields">
+                                    <div class="field-box">
+                                        <div class="field-box__item">
+                                            <input class="field-box__input" required type="text" name="feedbackMainName"
+                                                id="feedbackMainName" placeholder="">
+                                            <label for="feedbackMainName" class="field-box__label">
+                                                Ваше ім'я
+                                            </label>
+                                        </div>
+                                        <div class="field-box__item">
+                                            <input class="field-box__input" required type="text"
+                                                name="feedbackMainSurName" id="feedbackMainSurName" placeholder="">
+                                            <label for="feedbackMainSurName" class="field-box__label">
+                                                Ваше прізвище
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="feedback__form__field">
+                                    <div class="field-box">
+                                        <div class="field-box__item">
+                                            <input class="field-box__input" required type="tel" name="feedbackMainPhone"
+                                                id="feedbackMainPhone" placeholder="">
+                                            <label for="feedbackMainPhone" class="field-box__label">
+                                                Номер телефону
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="feedback__form__field">
+                                    <div class="field-box">
+                                        <div class="field-box__item">
+                                            <input class="field-box__input" required type="email"
+                                                name="feedbackMainEmail" id="feedbackMainEmail" placeholder="">
+                                            <label for="feedbackMainEmail" class="field-box__label">
+                                                Email
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="feedback__form__field">
+                                    <div class="select-box">
+                                        <select required class="select-box__select js-select"
+                                            id="feedbackMainSpecialict" name="feedbackMainSpecialict">
+                                            <option value="" disabled selected>
+                                                Оберіть спеціаліста
+                                            </option>
+                                            <option value="1">Спеціаліст 1</option>
+                                            <option value="2">Спеціаліст 2</option>
+                                            <option value="3">Спеціаліст 3</option>
+                                            <option value="4">Спеціаліст 4</option>
+                                            <option value="5">Спеціаліст 5</option>
+                                            <option value="6">Спеціаліст 6</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="feedback__form-check">
+                                <input class="feedback__form-cheked" type="checkbox" name="feedbackMainAgree"
+                                    id="feedbackMainAgree">
+                                <label class="feedback__form-label" for="feedbackMainAgree">
+                                    Ви погоджуєтеся на обробку Ваших даних у відповідності до політики конфіденційності
+                                </label>
+                            </div>
+                            <button type="submit" class="feedback__form-submit cta cta--lg">
+                                Записатись на консультацію
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__col">
+                <div class="footer__info">
+                    <div class="footer__info-row">
+                        <div class="footer__info-about">
+                            <div class="footer__info-logo">
+                                <img loading="lazy" width="409" height="72" src="./assets/images/icons/logo-colored.svg"
+                                    alt="Logo">
+                            </div>
+                            <div class="footer__info-location">
+                                <p class="footer__info-subtitle">
+                                    Ми знаходимось
+                                </p>
+                                <p class="footer__info-text">
+                                    м. Рівне, вул. Дворецька, 180
+                                </p>
+                                <a href="#!" class="footer__info-btn link-plus link-plus--light link-plus--blight">
+                                    <div class="link-plus__text">
+                                        <span>показати на карті</span>
+                                        <span>детальніше</span>
+                                    </div>
+                                    <div class="link-plus__ico">
+                                        <span>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8 2.66699V13.3337" stroke="#242C33" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M2.66666 8H13.3333" stroke="#242C33" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </span>
+                                        <span>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8 2.66699V13.3337" stroke="#fff" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M2.66666 8H13.3333" stroke="#fff" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="footer__info-works">
+                                <p class="footer__info-subtitle">
+                                    Графік роботи
+                                </p>
+                                <p class="footer__info-text">
+                                    ПН-СБ: 08.00 - 18.00
+                                </p>
+                                <p class="footer__info-text">
+                                    НД: вихідний
+                                </p>
+                            </div>
+                        </div>
+                        <div class="footer__info-contacts">
+                            <a href="tel+380951125577" class="footer__info-call">
+                                <img loading="lazy" width="40" height="40" src="./assets/images/icons/ico-call.svg"
+                                    alt="Icon">
+                                <span>+38 (095) 112 55 77</span>
+                            </a>
+                            <a href="mailto:astraMed.ua@gmail.com" class="footer__info-mail">
+                                <img loading="lazy" width="32" height="32" src="./assets/images/icons/ico-mail.svg"
+                                    alt="Icon">
+                                <span>astraMed.ua@gmail.com</span>
+                            </a>
+                            <div class="footer__info-social">
+                                <p class="footer__info-subtitle">
+                                    Ми в соціальних мережах та мессенджерах
+                                </p>
+                                <div class="footer__info-links">
+                                    <a href="#!">
+                                        <img width="32" height="32" loading="lazy"
+                                            src="./assets/images/icons/ico-facebook.svg" alt="Icon">
+                                    </a>
+                                    <a href="#!">
+                                        <img width="32" height="32" loading="lazy"
+                                            src="./assets/images/icons/ico-inst.svg" alt="Icon">
+                                    </a>
+                                    <a href="#!">
+                                        <img width="32" height="32" loading="lazy"
+                                            src="./assets/images/icons/ico-telegram.svg" alt="Icon">
+                                    </a>
+                                    <a href="#!">
+                                        <img width="32" height="32" loading="lazy"
+                                            src="./assets/images/icons/ico-vider.svg" alt="Icon">
+                                    </a>
+                                    <a href="#!">
+                                        <img width="32" height="32" loading="lazy"
+                                            src="./assets/images/icons/ico-tt.svg" alt="Icon">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <nav class="footer__info-nav">
+                        <ul class="footer__info-list">
+                            <li class="footer__info-item">
+                                <a href="#!" class="footer__info-link">
+                                    Лікарі
+                                </a>
+                            </li>
+                            <li class="footer__info-item">
+                                <a href="about.html" class="footer__info-link">
+                                    Про клініку
+                                </a>
+                            </li>
+                            <li class="footer__info-item">
+                                <a href="#!" class="footer__info-link">
+                                    Відгуки
+                                </a>
+                            </li>
+                            <li class="footer__info-item">
+                                <a href="#!" class="footer__info-link">
+                                    Блог
+                                </a>
+                            </li>
+                            <li class="footer__info-item">
+                                <a href="#!" class="footer__info-link">
+                                    Ціни
+                                </a>
+                            </li>
+                            <li class="footer__info-item">
+                                <a href="#!" class="footer__info-link">
+                                    Контакти
+                                </a>
+                            </li>
+                            <li class="footer__info-item">
+                                <a href="#!" class="footer__info-link">
+                                    Спеціальні пропозиції
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="footer__col">
+                <div class="footer__menu">
+                    <p class="footer__menu-subtitle">
+                        Наші послуги
+                    </p>
+                    <nav class="footer__menu-nav">
+                        <ul class="footer__menu-list">
+                            <li class="footer__menu-item">
+                                <a href="#!" class="footer__menu-link">
+                                    Лікувально консультативне відділення
+                                </a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="#!" class="footer__menu-link">
+                                    Узд-обстеження
+                                </a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="#!" class="footer__menu-link">
+                                    Урологія
+                                </a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="#!" class="footer__menu-link">
+                                    Гінекологія
+                                </a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="#!" class="footer__menu-link">
+                                    Судинна хірургія
+                                </a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="#!" class="footer__menu-link">
+                                    Проктологія
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="footer__copy">
+            <div class="container">
+                <p class="footer__copy-text">
+                    © AstraMed 2025
+                </p>
+                <p class="footer__copy-text">
+                    Created by Esfirum Agency
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.main--about {
+    .specialist {
+        margin-bottom: var(--section-mb);
+
+        &__head {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 20px;
+            margin-bottom: 60px;
+        }
+
+        &__title {
+            max-width: 422px;
+        }
+
+        &__description {
+            font: 400 20px / 140% var(--ff-base);
+            letter-spacing: -1px;
+            max-width: 766px;
+        }
+    }
+}

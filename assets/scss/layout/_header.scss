@@ -60,6 +60,10 @@
         &-link {
             font: 500 14px / 100% var(--ff-base);
             text-transform: uppercase;
+
+            &.current-page {
+                color: var(--accent-color);
+            }
         }
     }
 

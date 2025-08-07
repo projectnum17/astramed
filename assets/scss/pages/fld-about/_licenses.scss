@@ -1,0 +1,12 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.main--about {
+    .licenses {
+        overflow: hidden;
+        margin-bottom: var(--section-mb);
+        &__title {
+            margin-bottom: 60px;
+        }
+    }
+}

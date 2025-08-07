@@ -1,10 +1,12 @@
 const reviewBox = () => {
     const reviewItems = document.querySelectorAll('.js-review-box');
     const popup = document.querySelector('.js-review-modal');
+    if (!reviewItems.length || !popup) return;
+
     const popupBody = popup.querySelector('.js-review-body');
     const popupClose = popup.querySelector('.js-review-close');
 
-    if (!reviewItems.length) return;
+    if (!popupBody || !popupClose) return;
 
     reviewItems.forEach((box) => {
         const reviewTextEl = box.querySelector('.js-review-text');

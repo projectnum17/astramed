@@ -1,0 +1,8 @@
+@use '../base/media' as *;
+@use '../base/mixins' as *;
+
+.doctors-slider {
+    &__panel {
+        padding-top: 60px;
+    }
+}

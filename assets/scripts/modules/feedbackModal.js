@@ -1,12 +1,12 @@
-const appointmentModal = () => {
-    const openTriggers = document.querySelectorAll('.js-appointment-open');
+const feedbackModal = () => {
+    const openTriggers = document.querySelectorAll('.js-feedback-open');
     if (!openTriggers.length) return;
 
-    const appModal = document.querySelector('.js-appointment-modal');
+    const appModal = document.querySelector('.js-feedback-modal');
     if (!appModal) return;
 
-    const closeTrigger = appModal.querySelector('.js-appointment-close');
-    const modalContent = appModal.querySelector('.js-appointment-box');
+    const closeTrigger = appModal.querySelector('.js-feedback-close');
+    const modalContent = appModal.querySelector('.js-feedback-box');
 
     const openModal = () => {
         appModal.classList.add('is-shown');
@@ -29,6 +29,7 @@ const appointmentModal = () => {
             closeModal();
         }
     });
+
 };
 
-export default appointmentModal;
+export default feedbackModal;

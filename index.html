@@ -13,92 +13,226 @@
     <script defer type="module" src="./assets/scripts/main.js"></script>
 </head>
 
+<!-- <style>
+    lottie-player {
+        width: 60px;
+        height: 60px;
+    }
+</style>
+<div class="container">
+
+    <lottie-player src="./assets/animations/chip.json" direction="1" mode="normal" loop autoplay></lottie-player>
+    <lottie-player src="./assets/animations/coins.json" direction="1" mode="normal" loop autoplay></lottie-player>
+    <lottie-player src="./assets/animations/community.json" direction="1" mode="normal" loop autoplay></lottie-player>
+    <lottie-player src="./assets/animations/pulse.json" direction="1" mode="normal" loop autoplay></lottie-player>
+    <lottie-player src="./assets/animations/study.json" direction="1" mode="normal" loop autoplay></lottie-player>
+</div> -->
+
 <body>
     <div class="appointment-modal js-appointment-modal">
-        <div class="appointment-modal__box js-appointment-box">
-            <button class="appointment-modal__close js-appointment-close">
-                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M25.7075 24.2921C25.8004 24.385 25.8741 24.4953 25.9244 24.6167C25.9747 24.7381 26.0006 24.8682 26.0006 24.9996C26.0006 25.131 25.9747 25.2611 25.9244 25.3825C25.8741 25.5039 25.8004 25.6142 25.7075 25.7071C25.6146 25.8 25.5043 25.8737 25.3829 25.924C25.2615 25.9743 25.1314 26.0001 25 26.0001C24.8686 26.0001 24.7385 25.9743 24.6171 25.924C24.4957 25.8737 24.3854 25.8 24.2925 25.7071L16 17.4133L7.70751 25.7071C7.51987 25.8947 7.26537 26.0001 7.00001 26.0001C6.73464 26.0001 6.48015 25.8947 6.29251 25.7071C6.10487 25.5194 5.99945 25.2649 5.99945 24.9996C5.99945 24.7342 6.10487 24.4797 6.29251 24.2921L14.5863 15.9996L6.29251 7.70708C6.10487 7.51944 5.99945 7.26494 5.99945 6.99958C5.99945 6.73422 6.10487 6.47972 6.29251 6.29208C6.48015 6.10444 6.73464 5.99902 7.00001 5.99902C7.26537 5.99902 7.51987 6.10444 7.70751 6.29208L16 14.5858L24.2925 6.29208C24.4802 6.10444 24.7346 5.99902 25 5.99902C25.2654 5.99902 25.5199 6.10444 25.7075 6.29208C25.8952 6.47972 26.0006 6.73422 26.0006 6.99958C26.0006 7.26494 25.8952 7.51944 25.7075 7.70708L17.4138 15.9996L25.7075 24.2921Z"
-                        fill="black" />
-                </svg>
-            </button>
-            <h4 class="h4 appointment-modal__title">
-                Запис на консультацію
-            </h4>
-            <p class="appointment-modal__text">
-                Наш адміністратор зателефонує Вам щоб підтвердити Ваш запис на прийом до спеціаліста
-            </p>
-            <form class="appointment-modal__form js-appointment-form">
-                <div class="appointment-modal__wrapper">
-                    <div class="appointment-modal__fields">
+        <div class="appointment-modal__inner">
+            <div class="appointment-modal__box js-appointment-box">
+                <button class="appointment-modal__close js-appointment-close">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M25.7075 24.2921C25.8004 24.385 25.8741 24.4953 25.9244 24.6167C25.9747 24.7381 26.0006 24.8682 26.0006 24.9996C26.0006 25.131 25.9747 25.2611 25.9244 25.3825C25.8741 25.5039 25.8004 25.6142 25.7075 25.7071C25.6146 25.8 25.5043 25.8737 25.3829 25.924C25.2615 25.9743 25.1314 26.0001 25 26.0001C24.8686 26.0001 24.7385 25.9743 24.6171 25.924C24.4957 25.8737 24.3854 25.8 24.2925 25.7071L16 17.4133L7.70751 25.7071C7.51987 25.8947 7.26537 26.0001 7.00001 26.0001C6.73464 26.0001 6.48015 25.8947 6.29251 25.7071C6.10487 25.5194 5.99945 25.2649 5.99945 24.9996C5.99945 24.7342 6.10487 24.4797 6.29251 24.2921L14.5863 15.9996L6.29251 7.70708C6.10487 7.51944 5.99945 7.26494 5.99945 6.99958C5.99945 6.73422 6.10487 6.47972 6.29251 6.29208C6.48015 6.10444 6.73464 5.99902 7.00001 5.99902C7.26537 5.99902 7.51987 6.10444 7.70751 6.29208L16 14.5858L24.2925 6.29208C24.4802 6.10444 24.7346 5.99902 25 5.99902C25.2654 5.99902 25.5199 6.10444 25.7075 6.29208C25.8952 6.47972 26.0006 6.73422 26.0006 6.99958C26.0006 7.26494 25.8952 7.51944 25.7075 7.70708L17.4138 15.9996L25.7075 24.2921Z"
+                            fill="black" />
+                    </svg>
+                </button>
+                <h4 class="h4 appointment-modal__title">
+                    Запис на консультацію
+                </h4>
+                <p class="appointment-modal__text">
+                    Наш адміністратор зателефонує Вам щоб підтвердити Ваш запис на прийом до спеціаліста
+                </p>
+                <form class="appointment-modal__form js-appointment-form">
+                    <div class="appointment-modal__wrapper">
+                        <div class="appointment-modal__fields">
+                            <div class="field-box">
+                                <div class="field-box__item">
+                                    <input class="field-box__input" required type="text" name="appointmentName"
+                                        id="appointmentName" placeholder="">
+                                    <label for="appointmentName" class="field-box__label">
+                                        Ваше ім'я
+                                    </label>
+                                </div>
+                                <div class="field-box__item">
+                                    <input class="field-box__input" required type="text" name="appointmentSurName"
+                                        id="appointmentSurName" placeholder="">
+                                    <label for="appointmentSurName" class="field-box__label">
+                                        Ваше прізвище
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="appointment-modal__field">
+                            <div class="field-box">
+                                <div class="field-box__item">
+                                    <input class="field-box__input" required type="tel" name="appointmentPhone"
+                                        id="appointmentPhone" placeholder="">
+                                    <label for="appointmentPhone" class="field-box__label">
+                                        Номер телефону
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="appointment-modal__field">
+                            <div class="field-box">
+                                <div class="field-box__item">
+                                    <input class="field-box__input" required type="email" name="appointmentEmail"
+                                        id="appointmentEmail" placeholder="">
+                                    <label for="appointmentEmail" class="field-box__label">
+                                        Email
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="appointment-modal__field">
+                            <div class="select-box">
+                                <select required class="select-box__select js-select" id="appointmentSpecialict"
+                                    name="appointmentSpecialict">
+                                    <option value="" disabled selected>
+                                        Оберіть спеціаліста
+                                    </option>
+                                    <option value="1">Спеціаліст 1</option>
+                                    <option value="2">Спеціаліст 2</option>
+                                    <option value="3">Спеціаліст 3</option>
+                                    <option value="4">Спеціаліст 4</option>
+                                    <option value="5">Спеціаліст 5</option>
+                                    <option value="6">Спеціаліст 6</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="appointment-modal__check">
+                        <input class="appointment-modal__cheked" type="checkbox" name="appointmentAgree"
+                            id="appointmentAgree">
+                        <label class="appointment-modal__label" for="appointmentAgree">
+                            Ви погоджуєтеся на обробку Ваших даних у відповідності до політики конфіденційності
+                        </label>
+                    </div>
+                    <button type="submit" class="appointment-modal__submit cta cta--lg">
+                        Записатись на консультацію
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="feedback-modal js-feedback-modal">
+        <div class="feedback-modal__inner">
+            <div class="feedback-modal__box js-feedback-box">
+                <button class="feedback-modal__close js-feedback-close">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M25.7075 24.2921C25.8004 24.385 25.8741 24.4953 25.9244 24.6167C25.9747 24.7381 26.0006 24.8682 26.0006 24.9996C26.0006 25.131 25.9747 25.2611 25.9244 25.3825C25.8741 25.5039 25.8004 25.6142 25.7075 25.7071C25.6146 25.8 25.5043 25.8737 25.3829 25.924C25.2615 25.9743 25.1314 26.0001 25 26.0001C24.8686 26.0001 24.7385 25.9743 24.6171 25.924C24.4957 25.8737 24.3854 25.8 24.2925 25.7071L16 17.4133L7.70751 25.7071C7.51987 25.8947 7.26537 26.0001 7.00001 26.0001C6.73464 26.0001 6.48015 25.8947 6.29251 25.7071C6.10487 25.5194 5.99945 25.2649 5.99945 24.9996C5.99945 24.7342 6.10487 24.4797 6.29251 24.2921L14.5863 15.9996L6.29251 7.70708C6.10487 7.51944 5.99945 7.26494 5.99945 6.99958C5.99945 6.73422 6.10487 6.47972 6.29251 6.29208C6.48015 6.10444 6.73464 5.99902 7.00001 5.99902C7.26537 5.99902 7.51987 6.10444 7.70751 6.29208L16 14.5858L24.2925 6.29208C24.4802 6.10444 24.7346 5.99902 25 5.99902C25.2654 5.99902 25.5199 6.10444 25.7075 6.29208C25.8952 6.47972 26.0006 6.73422 26.0006 6.99958C26.0006 7.26494 25.8952 7.51944 25.7075 7.70708L17.4138 15.9996L25.7075 24.2921Z"
+                            fill="black" />
+                    </svg>
+                </button>
+                <h4 class="h4 feedback-modal__title">
+                    Залишити відгук
+                </h4>
+                <p class="feedback-modal__text">
+                    Ви можете залишити Ваш відгук про нас, заповнивши дані в цих полях.
+                </p>
+                <form class="feedback-modal__form js-feedback-form">
+                    <div class="feedback-modal__wrapper">
                         <div class="field-box">
                             <div class="field-box__item">
-                                <input class="field-box__input" required type="text" name="appointmentName"
-                                    id="appointmentName" placeholder="">
-                                <label for="appointmentName" class="field-box__label">
+                                <input class="field-box__input" required type="text" name="feedbackName"
+                                    id="feedbackName" placeholder="">
+                                <label for="feedbackName" class="field-box__label">
                                     Ваше ім'я
                                 </label>
                             </div>
-                            <div class="field-box__item">
-                                <input class="field-box__input" required type="text" name="appointmentSurName"
-                                    id="appointmentSurName" placeholder="">
-                                <label for="appointmentSurName" class="field-box__label">
-                                    Ваше прізвище
-                                </label>
-                            </div>
                         </div>
-                    </div>
-                    <div class="appointment-modal__field">
                         <div class="field-box">
                             <div class="field-box__item">
-                                <input class="field-box__input" required type="tel" name="appointmentPhone"
-                                    id="appointmentPhone" placeholder="">
-                                <label for="appointmentPhone" class="field-box__label">
-                                    Номер телефону
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="appointment-modal__field">
-                        <div class="field-box">
-                            <div class="field-box__item">
-                                <input class="field-box__input" required type="email" name="appointmentEmail"
-                                    id="appointmentEmail" placeholder="">
-                                <label for="appointmentEmail" class="field-box__label">
+                                <input class="field-box__input" required type="email" name="feedbackEmail"
+                                    id="feedbackEmail" placeholder="">
+                                <label for="feedbackEmail" class="field-box__label">
                                     Email
                                 </label>
                             </div>
                         </div>
-                    </div>
-                    <div class="appointment-modal__field">
-                        <div class="select-box">
-                            <select required class="select-box__select js-select" id="appointmentSpecialict"
-                                name="appointmentSpecialict">
-                                <option value="" disabled selected>
-                                    Оберіть спеціаліста
-                                </option>
-                                <option value="1">Спеціаліст 1</option>
-                                <option value="2">Спеціаліст 2</option>
-                                <option value="3">Спеціаліст 3</option>
-                                <option value="4">Спеціаліст 4</option>
-                                <option value="5">Спеціаліст 5</option>
-                                <option value="6">Спеціаліст 6</option>
-                            </select>
+                        <div class="stars-box">
+                            <p class="stars-box__label">
+                                Ваша оцінка *
+                            </p>
+                            <div class="stars-box__items js-rating-stars">
+                                <input type="hidden" name="rating" value="0">
+                                <button type="button" class="stars-box__btn js-rating-btn" data-value="1">
+                                    <svg width="64" height="65" viewBox="0 0 64 65" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M36.6069 9.86091L41.2997 19.3241C41.9397 20.6414 43.6461 21.905 45.0861 22.1469L53.5917 23.5718C59.0312 24.4858 60.3112 28.4647 56.3914 32.3898L49.7789 39.057C48.6589 40.186 48.0458 42.3636 48.3922 43.9231L50.2856 52.1764C51.7786 58.7092 48.3389 61.2364 42.6064 57.822L34.6338 53.0636C33.1941 52.2034 30.821 52.2034 29.3544 53.0636L21.382 57.822C15.676 61.2364 12.2097 58.6823 13.7029 52.1764L15.596 43.9231C15.9426 42.3636 15.3294 40.186 14.2095 39.057L7.59688 32.3898C3.70398 28.4647 4.95718 24.4858 10.3966 23.5718L18.9023 22.1469C20.3155 21.905 22.022 20.6414 22.6619 19.3241L27.3546 9.86091C29.9144 4.72605 34.0738 4.72605 36.6069 9.86091Z"
+                                            stroke="#242C33" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                                <button type="button" class="stars-box__btn js-rating-btn" data-value="2">
+                                    <svg width="64" height="65" viewBox="0 0 64 65" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M36.6069 9.86091L41.2997 19.3241C41.9397 20.6414 43.6461 21.905 45.0861 22.1469L53.5917 23.5718C59.0312 24.4858 60.3112 28.4647 56.3914 32.3898L49.7789 39.057C48.6589 40.186 48.0458 42.3636 48.3922 43.9231L50.2856 52.1764C51.7786 58.7092 48.3389 61.2364 42.6064 57.822L34.6338 53.0636C33.1941 52.2034 30.821 52.2034 29.3544 53.0636L21.382 57.822C15.676 61.2364 12.2097 58.6823 13.7029 52.1764L15.596 43.9231C15.9426 42.3636 15.3294 40.186 14.2095 39.057L7.59688 32.3898C3.70398 28.4647 4.95718 24.4858 10.3966 23.5718L18.9023 22.1469C20.3155 21.905 22.022 20.6414 22.6619 19.3241L27.3546 9.86091C29.9144 4.72605 34.0738 4.72605 36.6069 9.86091Z"
+                                            stroke="#242C33" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                                <button type="button" class="stars-box__btn js-rating-btn" data-value="3">
+                                    <svg width="64" height="65" viewBox="0 0 64 65" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M36.6069 9.86091L41.2997 19.3241C41.9397 20.6414 43.6461 21.905 45.0861 22.1469L53.5917 23.5718C59.0312 24.4858 60.3112 28.4647 56.3914 32.3898L49.7789 39.057C48.6589 40.186 48.0458 42.3636 48.3922 43.9231L50.2856 52.1764C51.7786 58.7092 48.3389 61.2364 42.6064 57.822L34.6338 53.0636C33.1941 52.2034 30.821 52.2034 29.3544 53.0636L21.382 57.822C15.676 61.2364 12.2097 58.6823 13.7029 52.1764L15.596 43.9231C15.9426 42.3636 15.3294 40.186 14.2095 39.057L7.59688 32.3898C3.70398 28.4647 4.95718 24.4858 10.3966 23.5718L18.9023 22.1469C20.3155 21.905 22.022 20.6414 22.6619 19.3241L27.3546 9.86091C29.9144 4.72605 34.0738 4.72605 36.6069 9.86091Z"
+                                            stroke="#242C33" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                                <button type="button" class="stars-box__btn js-rating-btn" data-value="4">
+                                    <svg width="64" height="65" viewBox="0 0 64 65" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M36.6069 9.86091L41.2997 19.3241C41.9397 20.6414 43.6461 21.905 45.0861 22.1469L53.5917 23.5718C59.0312 24.4858 60.3112 28.4647 56.3914 32.3898L49.7789 39.057C48.6589 40.186 48.0458 42.3636 48.3922 43.9231L50.2856 52.1764C51.7786 58.7092 48.3389 61.2364 42.6064 57.822L34.6338 53.0636C33.1941 52.2034 30.821 52.2034 29.3544 53.0636L21.382 57.822C15.676 61.2364 12.2097 58.6823 13.7029 52.1764L15.596 43.9231C15.9426 42.3636 15.3294 40.186 14.2095 39.057L7.59688 32.3898C3.70398 28.4647 4.95718 24.4858 10.3966 23.5718L18.9023 22.1469C20.3155 21.905 22.022 20.6414 22.6619 19.3241L27.3546 9.86091C29.9144 4.72605 34.0738 4.72605 36.6069 9.86091Z"
+                                            stroke="#242C33" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                                <button type="button" class="stars-box__btn js-rating-btn" data-value="5">
+                                    <svg width="64" height="65" viewBox="0 0 64 65" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M36.6069 9.86091L41.2997 19.3241C41.9397 20.6414 43.6461 21.905 45.0861 22.1469L53.5917 23.5718C59.0312 24.4858 60.3112 28.4647 56.3914 32.3898L49.7789 39.057C48.6589 40.186 48.0458 42.3636 48.3922 43.9231L50.2856 52.1764C51.7786 58.7092 48.3389 61.2364 42.6064 57.822L34.6338 53.0636C33.1941 52.2034 30.821 52.2034 29.3544 53.0636L21.382 57.822C15.676 61.2364 12.2097 58.6823 13.7029 52.1764L15.596 43.9231C15.9426 42.3636 15.3294 40.186 14.2095 39.057L7.59688 32.3898C3.70398 28.4647 4.95718 24.4858 10.3966 23.5718L18.9023 22.1469C20.3155 21.905 22.022 20.6414 22.6619 19.3241L27.3546 9.86091C29.9144 4.72605 34.0738 4.72605 36.6069 9.86091Z"
+                                            stroke="#242C33" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="text-box">
+                            <div class="text-box__item">
+                                <textarea required minlength="20" class="text-box__area" name="feedbackTextarea"
+                                    id="feedbackTextarea" placeholder=""></textarea>
+                                <label for="feedbackTextarea" class="field-box__label">
+                                    Текст відгука *
+                                </label>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="appointment-modal__check">
-                    <input class="appointment-modal__cheked" type="checkbox" name="appointmentAgree"
-                        id="appointmentAgree">
-                    <label class="appointment-modal__label" for="appointmentAgree">
-                        Ви погоджуєтеся на обробку Ваших даних у відповідності до політики конфіденційності
-                    </label>
-                </div>
-                <button type="submit" class="appointment-modal__submit cta cta--lg">
-                    Записатись на консультацію
-                </button>
-            </form>
+                    <p class="feedback-modal__legal">
+                        Натискаючи кнопку, ви даєте згоду на обробку особистих даних.
+                        <a href="#!">Детальніше</a>
+                    </p>
+                    <button type="submit" class="appointment-modal__submit cta cta--lg">
+                        Залишити відгук
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="review-modal js-review-modal">
+        <div class="review-modal__content">
+            <button class="review-modal__close js-review-close">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M25.7071 24.2926C25.8 24.3855 25.8737 24.4958 25.924 24.6172C25.9743 24.7386 26.0001 24.8687 26.0001 25.0001C26.0001 25.1315 25.9743 25.2616 25.924 25.383C25.8737 25.5044 25.8 25.6147 25.7071 25.7076C25.6142 25.8005 25.5039 25.8742 25.3825 25.9245C25.2611 25.9747 25.131 26.0006 24.9996 26.0006C24.8682 26.0006 24.7381 25.9747 24.6167 25.9245C24.4953 25.8742 24.385 25.8005 24.2921 25.7076L15.9996 17.4138L7.70708 25.7076C7.51944 25.8952 7.26494 26.0006 6.99958 26.0006C6.73422 26.0006 6.47972 25.8952 6.29208 25.7076C6.10444 25.5199 5.99902 25.2654 5.99902 25.0001C5.99902 24.7347 6.10444 24.4802 6.29208 24.2926L14.5858 16.0001L6.29208 7.70757C6.10444 7.51993 5.99902 7.26543 5.99902 7.00007C5.99902 6.7347 6.10444 6.48021 6.29208 6.29257C6.47972 6.10493 6.73422 5.99951 6.99958 5.99951C7.26494 5.99951 7.51944 6.10493 7.70708 6.29257L15.9996 14.5863L24.2921 6.29257C24.4797 6.10493 24.7342 5.99951 24.9996 5.99951C25.2649 5.99951 25.5194 6.10493 25.7071 6.29257C25.8947 6.48021 26.0001 6.7347 26.0001 7.00007C26.0001 7.26543 25.8947 7.51993 25.7071 7.70757L17.4133 16.0001L25.7071 24.2926Z"
+                        fill="black" />
+                </svg>
+            </button>
+            <div class="review-modal__body js-review-body"></div>
         </div>
     </div>
     <header class="header">
@@ -162,6 +296,11 @@
     </header>
     <main class="main main--home">
         <section class="hero">
+            <video muted autoplay loop playsinline class="hero__video js-video-autoplay"
+                poster="./assets/images/poster-water.jpg">
+                <source data-src="./assets/video/water.mp4" type="video/mp4">
+                <p>Your browser does not support the video tag.</p>
+            </video>
             <div class="container">
                 <div class="hero__time">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -272,8 +411,8 @@
                 <div class="services__col">
                     <div class="services__item">
                         <div class="services__item-ico">
-                            <!-- <lottie-player src="" direction="1" mode="normal" loop
-                            autoplay></lottie-player> -->
+                            <!-- <lottie-player src="./assets/animations/chat.json" direction="1" mode="normal" loop
+                                autoplay></lottie-player> -->
                         </div>
                         <div class="services__item-info">
                             <h4 class="h4 services__item-title">
@@ -329,8 +468,8 @@
                     </div>
                     <div class="services__item">
                         <div class="services__item-ico">
-                            <!-- <lottie-player src="" direction="1" mode="normal" loop
-                            autoplay></lottie-player> -->
+                            <lottie-player src="./assets/animations/sensor.json" direction="1" mode="normal" loop
+                                autoplay></lottie-player>
                         </div>
                         <div class="services__item-info">
                             <h4 class="h4 services__item-title">
@@ -366,8 +505,8 @@
                     </div>
                     <div class="services__item">
                         <div class="services__item-ico">
-                            <!-- <lottie-player src="" direction="1" mode="normal" loop
-                            autoplay></lottie-player> -->
+                            <lottie-player src="./assets/animations/ovaries.json" direction="1" mode="normal" loop
+                                autoplay></lottie-player>
                         </div>
                         <div class="services__item-info">
                             <h4 class="h4 services__item-title">
@@ -403,8 +542,8 @@
                     </div>
                     <div class="services__item">
                         <div class="services__item-ico">
-                            <!-- <lottie-player src="" direction="1" mode="normal" loop
-                            autoplay></lottie-player> -->
+                            <lottie-player src="./assets/animations/eye.json" direction="1" mode="normal" loop
+                                autoplay></lottie-player>
                         </div>
                         <div class="services__item-info">
                             <h4 class="h4 services__item-title">
@@ -440,8 +579,8 @@
                     </div>
                     <div class="services__item">
                         <div class="services__item-ico">
-                            <!-- <lottie-player src="" direction="1" mode="normal" loop
-                            autoplay></lottie-player> -->
+                            <lottie-player src="./assets/animations/couple.json" direction="1" mode="normal" loop
+                                autoplay></lottie-player>
                         </div>
                         <div class="services__item-info">
                             <h4 class="h4 services__item-title">
@@ -477,8 +616,8 @@
                     </div>
                     <div class="services__item">
                         <div class="services__item-ico">
-                            <!-- <lottie-player src="" direction="1" mode="normal" loop
-                            autoplay></lottie-player> -->
+                            <lottie-player src="./assets/animations/heart.json" direction="1" mode="normal" loop
+                                autoplay></lottie-player>
                         </div>
                         <div class="services__item-info">
                             <h4 class="h4 services__item-title">
@@ -514,8 +653,8 @@
                     </div>
                     <div class="services__item">
                         <div class="services__item-ico">
-                            <!-- <lottie-player src="" direction="1" mode="normal" loop
-                            autoplay></lottie-player> -->
+                            <lottie-player src="./assets/animations/stomach.json" direction="1" mode="normal" loop
+                                autoplay></lottie-player>
                         </div>
                         <div class="services__item-info">
                             <h4 class="h4 services__item-title">
@@ -591,6 +730,850 @@
                                 Кваліфікована команда
                             </li>
                         </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="specialist">
+            <div class="container">
+                <div class="specialist__head">
+                    <div class="specialist__col">
+                        <h2 class="h2 specialist__title">
+                            Команда Спеціалістів
+                        </h2>
+                    </div>
+                    <div class="specialist__col">
+                        <h2 class="h2 specialist__subtitle">
+                            AstraMed
+                        </h2>
+                        <p class="specialist__description">
+                            Фахівці з багаторічним досвідом, які працюють за міжнародними протоколами та найвищими
+                            стандартами лікарської етики.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="doctors-slider js-doctors-slider swiper">
+                    <div class="doctors-slider__wrapper swiper-wrapper">
+                        <div class="doctors-slider__slide swiper-slide">
+                            <a href="#!" class="doctor-card">
+                                <div class="doctor-card__pic">
+                                    <img loading="lazy" width="458" height="528" src="./assets/images/doctor_1.jpg"
+                                        alt="Picture">
+                                </div>
+                                <div class="doctor-card__info">
+                                    <p class="doctor-card__job">
+                                        Лікар-уролог вищої категорії
+                                    </p>
+                                    <div class="doctor-card__glass">
+                                        <div class="doctor-card__about">
+                                            <p class="h5 doctor-card__name">
+                                                Данилець
+                                            </p>
+                                            <p class="doctor-card__surname">
+                                                Микола Леонтійович
+                                            </p>
+                                        </div>
+                                        <span class="doctor-card__deco">
+                                            <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.5 6C9.5 6 15.5 10.4189 15.5 12C15.5 13.5812 9.5 18 9.5 18"
+                                                    stroke="#141B34" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                            <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8.5 13.3333L8.5 2.66665" stroke="#242C33" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M13.833 8L3.16634 8" stroke="#242C33" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="doctors-slider__slide swiper-slide">
+                            <a href="#!" class="doctor-card">
+                                <div class="doctor-card__pic">
+                                    <img loading="lazy" width="458" height="528" src="./assets/images/doctor_2.jpg"
+                                        alt="Picture">
+                                </div>
+                                <div class="doctor-card__info">
+                                    <p class="doctor-card__job">
+                                        Лікар-уролог вищої категорії
+                                    </p>
+                                    <div class="doctor-card__glass">
+                                        <div class="doctor-card__about">
+                                            <p class="h5 doctor-card__name">
+                                                Данилець
+                                            </p>
+                                            <p class="doctor-card__surname">
+                                                Микола Леонтійович
+                                            </p>
+                                        </div>
+                                        <span class="doctor-card__deco">
+                                            <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.5 6C9.5 6 15.5 10.4189 15.5 12C15.5 13.5812 9.5 18 9.5 18"
+                                                    stroke="#141B34" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                            <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8.5 13.3333L8.5 2.66665" stroke="#242C33" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M13.833 8L3.16634 8" stroke="#242C33" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="doctors-slider__slide swiper-slide">
+                            <a href="#!" class="doctor-card">
+                                <div class="doctor-card__pic">
+                                    <img loading="lazy" width="458" height="528" src="./assets/images/doctor_3.jpg"
+                                        alt="Picture">
+                                </div>
+                                <div class="doctor-card__info">
+                                    <p class="doctor-card__job">
+                                        Лікар-уролог вищої категорії
+                                    </p>
+                                    <div class="doctor-card__glass">
+                                        <div class="doctor-card__about">
+                                            <p class="h5 doctor-card__name">
+                                                Данилець
+                                            </p>
+                                            <p class="doctor-card__surname">
+                                                Микола Леонтійович
+                                            </p>
+                                        </div>
+                                        <span class="doctor-card__deco">
+                                            <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.5 6C9.5 6 15.5 10.4189 15.5 12C15.5 13.5812 9.5 18 9.5 18"
+                                                    stroke="#141B34" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                            <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8.5 13.3333L8.5 2.66665" stroke="#242C33" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M13.833 8L3.16634 8" stroke="#242C33" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="doctors-slider__slide swiper-slide">
+                            <a href="#!" class="doctor-card">
+                                <div class="doctor-card__pic">
+                                    <img loading="lazy" width="458" height="528" src="./assets/images/doctor_2.jpg"
+                                        alt="Picture">
+                                </div>
+                                <div class="doctor-card__info">
+                                    <p class="doctor-card__job">
+                                        Лікар-уролог вищої категорії
+                                    </p>
+                                    <div class="doctor-card__glass">
+                                        <div class="doctor-card__about">
+                                            <p class="h5 doctor-card__name">
+                                                Данилець
+                                            </p>
+                                            <p class="doctor-card__surname">
+                                                Микола Леонтійович
+                                            </p>
+                                        </div>
+                                        <span class="doctor-card__deco">
+                                            <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.5 6C9.5 6 15.5 10.4189 15.5 12C15.5 13.5812 9.5 18 9.5 18"
+                                                    stroke="#141B34" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                            <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8.5 13.3333L8.5 2.66665" stroke="#242C33" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M13.833 8L3.16634 8" stroke="#242C33" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="doctors-slider__slide swiper-slide">
+                            <a href="#!" class="doctor-card">
+                                <div class="doctor-card__pic">
+                                    <img loading="lazy" width="458" height="528" src="./assets/images/doctor_3.jpg"
+                                        alt="Picture">
+                                </div>
+                                <div class="doctor-card__info">
+                                    <p class="doctor-card__job">
+                                        Лікар-уролог вищої категорії
+                                    </p>
+                                    <div class="doctor-card__glass">
+                                        <div class="doctor-card__about">
+                                            <p class="h5 doctor-card__name">
+                                                Данилець
+                                            </p>
+                                            <p class="doctor-card__surname">
+                                                Микола Леонтійович
+                                            </p>
+                                        </div>
+                                        <span class="doctor-card__deco">
+                                            <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.5 6C9.5 6 15.5 10.4189 15.5 12C15.5 13.5812 9.5 18 9.5 18"
+                                                    stroke="#141B34" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                            <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8.5 13.3333L8.5 2.66665" stroke="#242C33" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M13.833 8L3.16634 8" stroke="#242C33" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="doctors-slider__panel slider-panel">
+                        <div class="doctors-slider__btns slider-panel__nav">
+                            <button class="doctors-slider__nav js-doctors-prev">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15 6C15 6 9.00001 10.4189 9 12C8.99999 13.5812 15 18 15 18"
+                                        stroke="#242C33" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15 6C15 6 9.00001 10.4189 9 12C8.99999 13.5812 15 18 15 18"
+                                        stroke="#242C33" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                            <button class="doctors-slider__nav js-doctors-next">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 6C9 6 15 10.4189 15 12C15 13.5812 9 18 9 18" stroke="#242C33"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 6C9 6 15 10.4189 15 12C15 13.5812 9 18 9 18" stroke="#242C33"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="doctors-slider__progress js-doctors-prog slider-panel__progress"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="reviews">
+            <img src="./assets/images/name.svg" alt="Company name" class="reviews__name">
+            <div class="container">
+                <h2 class="h2 reviews__title">
+                    Більше <span>7 000 пацієнтів</span> довірили нам своє здоров’я
+                </h2>
+                <div class="reviews__head">
+                    <div class="reviews__info">
+                        <div class="reviews__rating">
+                            <p class="reviews__rating-title">
+                                Рейтинг клініки в
+                            </p>
+                            <div class="reviews__rating-logo">
+                                <img src="./assets/images/icons/google-logo.svg" alt="Google">
+                            </div>
+                            <div class="reviews__rating-items">
+                                <span class="reviews__rating-grade">4.7</span>
+                                <div class="reviews__rating-stars">
+                                    <img width="24" height="24" src="./assets/images/icons/ico-star.svg" alt="Star">
+                                    <img width="24" height="24" src="./assets/images/icons/ico-star.svg" alt="Star">
+                                    <img width="24" height="24" src="./assets/images/icons/ico-star.svg" alt="Star">
+                                    <img width="24" height="24" src="./assets/images/icons/ico-star.svg" alt="Star">
+                                    <img width="24" height="24" src="./assets/images/icons/ico-star.svg" alt="Star">
+                                </div>
+                                <div class="reviews__rating-value">
+                                    <span id="totalReviews">22</span>
+                                    <span>відгуки</span>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="reviews__btn cta cta--sm js-feedback-open">
+                            залишити відгук
+                        </button>
+                    </div>
+                    <div class="reviews__ico">
+                        <lottie-player src="./assets/animations/chat.json" direction="1" mode="normal" loop
+                            autoplay></lottie-player>
+                        <a href="#!" class="reviews__link link-plus link-plus--dark link-plus--bdark">
+                            <div class="link-plus__text">
+                                <span>всі відгуки</span>
+                                <span>всі відгуки</span>
+                            </div>
+                            <div class="link-plus__ico">
+                                <span>
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8 2.66699V13.3337" stroke="#242C33" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M2.66666 8H13.3333" stroke="#242C33" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </span>
+                                <span>
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8 2.66699V13.3337" stroke="#fff" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M2.66666 8H13.3333" stroke="#fff" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="reviews__slider js-reviews-slider swiper">
+                    <div class="reviews__slider-wrapper swiper-wrapper">
+                        <div class="reviews__slider-slide swiper-slide">
+                            <div class="reviews-box js-review-box">
+                                <div class="reviews-box__head">
+                                    <div class="reviews-box__quote">
+                                        <div class="reviews-box__name">
+                                            <span>14 Травня 2025</span>
+                                            <p>Вікторія</p>
+                                        </div>
+                                    </div>
+                                    <div class="reviews-box__rating">
+                                        <img src="./assets/images/icons/ico-star.svg" alt="Star">
+                                        <img src="./assets/images/icons/ico-star.svg" alt="Star">
+                                        <img src="./assets/images/icons/ico-star.svg" alt="Star">
+                                        <img src="./assets/images/icons/ico-star.svg" alt="Star">
+                                        <img src="./assets/images/icons/ico-star-empty.svg" alt="Star">
+                                    </div>
+                                </div>
+                                <p class="reviews-box__text js-review-text">
+                                    Фахівці з багаторічним досвідом, які працюють за міжнародними протоколами та
+                                    найвищими
+                                    стандартами лікарської етики.
+                                    Фахівці з багаторічним досвідом, які працюють за міжнародними протоколами та
+                                    найвищими
+                                    стандартами лікарської етики.
+                                    Фахівці з багаторічним досвідом, які працюють за міжнародними протоколами та
+                                    найвищими
+                                    стандартами лікарської етики.
+                                </p>
+                                <button class="reviews-box__more js-review-popup">
+                                    <span>Читати повністю</span>
+                                    <span>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M12 5.99707C12 5.99707 9.05407 9.99706 8 9.99707C6.94587 9.99708 4 5.99707 4 5.99707"
+                                                stroke="#242C33" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M12 5.99707C12 5.99707 9.05407 9.99706 8 9.99707C6.94587 9.99708 4 5.99707 4 5.99707"
+                                                stroke="#242C33" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="reviews__slider-slide swiper-slide">
+                            <div class="reviews-box js-review-box">
+                                <div class="reviews-box__head">
+                                    <div class="reviews-box__quote">
+                                        <div class="reviews-box__name">
+                                            <span>25 Червня 2025</span>
+                                            <p>Ольга</p>
+                                        </div>
+                                    </div>
+                                    <div class="reviews-box__rating">
+                                        <img src="./assets/images/icons/ico-star.svg" alt="Star">
+                                        <img src="./assets/images/icons/ico-star.svg" alt="Star">
+                                        <img src="./assets/images/icons/ico-star.svg" alt="Star">
+                                        <img src="./assets/images/icons/ico-star.svg" alt="Star">
+                                        <img src="./assets/images/icons/ico-star-empty.svg" alt="Star">
+                                    </div>
+                                </div>
+                                <p class="reviews-box__text js-review-text">
+                                    Фахівці з багаторічним досвідом, які працюють за міжнародними протоколами та
+                                    найвищими
+                                    стандартами лікарської етики.
+                                </p>
+                                <button class="reviews-box__more js-review-popup">
+                                    <span>Читати повністю</span>
+                                    <span>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M12 5.99707C12 5.99707 9.05407 9.99706 8 9.99707C6.94587 9.99708 4 5.99707 4 5.99707"
+                                                stroke="#242C33" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M12 5.99707C12 5.99707 9.05407 9.99706 8 9.99707C6.94587 9.99708 4 5.99707 4 5.99707"
+                                                stroke="#242C33" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="reviews__slider-slide swiper-slide">
+                            <div class="reviews-box js-review-box">
+                                <div class="reviews-box__head">
+                                    <div class="reviews-box__quote">
+                                        <div class="reviews-box__name">
+                                            <span>01 Травня 2025</span>
+                                            <p>Віктор</p>
+                                        </div>
+                                    </div>
+                                    <div class="reviews-box__rating">
+                                        <img src="./assets/images/icons/ico-star.svg" alt="Star">
+                                        <img src="./assets/images/icons/ico-star.svg" alt="Star">
+                                        <img src="./assets/images/icons/ico-star.svg" alt="Star">
+                                        <img src="./assets/images/icons/ico-star.svg" alt="Star">
+                                        <img src="./assets/images/icons/ico-star-empty.svg" alt="Star">
+                                    </div>
+                                </div>
+                                <p class="reviews-box__text js-review-text">
+                                    Фахівці з багаторічним досвідом, які працюють за міжнародними протоколами та
+                                    найвищими
+                                    стандартами лікарської етики.
+                                    Фахівці з багаторічним досвідом, які працюють за міжнародними протоколами та
+                                    найвищими
+                                    стандартами лікарської етики.
+                                    Фахівці з багаторічним досвідом, які працюють за міжнародними протоколами та
+                                    найвищими
+                                    стандартами лікарської етики.
+                                </p>
+                                <button class="reviews-box__more js-review-popup">
+                                    <span>Читати повністю</span>
+                                    <span>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M12 5.99707C12 5.99707 9.05407 9.99706 8 9.99707C6.94587 9.99708 4 5.99707 4 5.99707"
+                                                stroke="#242C33" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M12 5.99707C12 5.99707 9.05407 9.99706 8 9.99707C6.94587 9.99708 4 5.99707 4 5.99707"
+                                                stroke="#242C33" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="reviews__slider-slide swiper-slide">
+                            <div class="reviews-box js-review-box">
+                                <div class="reviews-box__head">
+                                    <div class="reviews-box__quote">
+                                        <div class="reviews-box__name">
+                                            <span>14 Травня 2025</span>
+                                            <p>Вікторія</p>
+                                        </div>
+                                    </div>
+                                    <div class="reviews-box__rating">
+                                        <img src="./assets/images/icons/ico-star.svg" alt="Star">
+                                        <img src="./assets/images/icons/ico-star.svg" alt="Star">
+                                        <img src="./assets/images/icons/ico-star.svg" alt="Star">
+                                        <img src="./assets/images/icons/ico-star.svg" alt="Star">
+                                        <img src="./assets/images/icons/ico-star-empty.svg" alt="Star">
+                                    </div>
+                                </div>
+                                <p class="reviews-box__text js-review-text">
+                                    Фахівці з багаторічним досвідом, які працюють за міжнародними протоколами та
+                                    найвищими
+                                    стандартами лікарської етики.
+                                </p>
+                                <button class="reviews-box__more js-review-popup">
+                                    <span>Читати повністю</span>
+                                    <span>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M12 5.99707C12 5.99707 9.05407 9.99706 8 9.99707C6.94587 9.99708 4 5.99707 4 5.99707"
+                                                stroke="#242C33" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M12 5.99707C12 5.99707 9.05407 9.99706 8 9.99707C6.94587 9.99708 4 5.99707 4 5.99707"
+                                                stroke="#242C33" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reviews__slider-panel slider-panel">
+                        <div class="reviews__slider-btns slider-panel__nav">
+                            <button class="reviews__slider-nav js-reviews-prev">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15 6C15 6 9.00001 10.4189 9 12C8.99999 13.5812 15 18 15 18"
+                                        stroke="#242C33" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15 6C15 6 9.00001 10.4189 9 12C8.99999 13.5812 15 18 15 18"
+                                        stroke="#242C33" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                            <button class="reviews__slider-nav js-reviews-next">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 6C9 6 15 10.4189 15 12C15 13.5812 9 18 9 18" stroke="#242C33"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 6C9 6 15 10.4189 15 12C15 13.5812 9 18 9 18" stroke="#242C33"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="reviews__slider-progress js-reviews-prog slider-panel__progress"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="offer">
+            <div class="container">
+                <div class="offer__head">
+                    <h2 class="h2 offer__title">
+                        Спеціальні пропозиції
+                    </h2>
+                    <a href="#!" class="offer__link link-plus link-plus--dark link-plus--bdark">
+                        <div class="link-plus__text">
+                            <span>дивитись всі</span>
+                            <span>дивитись всі</span>
+                        </div>
+                        <div class="link-plus__ico">
+                            <span>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 2.66699V13.3337" stroke="#242C33" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M2.66666 8H13.3333" stroke="#242C33" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </span>
+                            <span>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 2.66699V13.3337" stroke="#fff" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                    <path d="M2.66666 8H13.3333" stroke="#fff" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </svg>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+                <div class="offer__cards">
+                    <a href="#!" class="offer-card">
+                        <div class="offer-card__pic">
+                            <img loading="lazy" width="724" height="608" src="./assets/images/offer_1.jpg"
+                                alt="Picture">
+                        </div>
+                        <div class="offer-card__info">
+                            <h4 class="h4 offer-card__title">
+                                Первинна консультація терапевта <span>750 грн</span>
+                            </h4>
+                            <div class="offer-card__cta">
+                                <div class="offer-card__cta--text">
+                                    <span>детальніше</span>
+                                    <span>детальніше</span>
+                                </div>
+                                <div class="offer-card__cta--ico">
+                                    <span>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8 2.66699V13.3337" stroke="#242C33" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M2.66666 8H13.3333" stroke="#242C33" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </span>
+                                    <span>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8 2.66699V13.3337" stroke="#fff" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M2.66666 8H13.3333" stroke="#fff" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#!" class="offer-card">
+                        <div class="offer-card__pic">
+                            <img loading="lazy" width="724" height="608" src="./assets/images/offer_2.jpg"
+                                alt="Picture">
+                        </div>
+                        <div class="offer-card__info">
+                            <h4 class="h4 offer-card__title">
+                                УЗД щитоподібної залози від <span>1500 грн</span>
+                            </h4>
+                            <div class="offer-card__cta">
+                                <div class="offer-card__cta--text">
+                                    <span>детальніше</span>
+                                    <span>детальніше</span>
+                                </div>
+                                <div class="offer-card__cta--ico">
+                                    <span>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8 2.66699V13.3337" stroke="#242C33" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M2.66666 8H13.3333" stroke="#242C33" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </span>
+                                    <span>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8 2.66699V13.3337" stroke="#fff" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M2.66666 8H13.3333" stroke="#fff" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="feedback">
+            <div class="container">
+                <div class="feedback__content">
+                    <div class="feedback__col">
+                        <img class="feedback__pic" src="./assets/images/feedback-pic.jpg" alt="Picture">
+                        <div class="feedback__border">
+                            <div class="feedback__info">
+                                <div>
+                                    <h3 class="h3 feedback__title">
+                                        Запис та консультація
+                                    </h3>
+                                    <p class="feedback__description">
+                                        Виникають питання, зателефонуйте нам і ми проконсультуємо Вас та надамо найкраще
+                                        розв'язання
+                                        Вашого питання.
+                                    </p>
+                                    <div class="feedback__phones">
+                                        <a href="tel:+380671125577" class="feedback__phone">
+                                            <img loading="lazy" width="40" height="40"
+                                                src="./assets/images/icons/ico-call.svg" alt="Icon">
+                                            <span>+38 (067) 112 55 77</span>
+                                        </a>
+                                        <a href="tel:+380671125577" class="feedback__phone">
+                                            <img loading="lazy" width="40" height="40"
+                                                src="./assets/images/icons/ico-call.svg" alt="Icon">
+                                            <span>+38 (067) 112 55 77</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="feedback__social">
+                                        <p class="feedback__text">
+                                            Ми в соціальних мережах та мессенджерах
+                                        </p>
+                                        <div class="feedback__social-links">
+                                            <a href="#!">
+                                                <img width="32" height="32" loading="lazy"
+                                                    src="./assets/images/icons/ico-facebook.svg" alt="Icon">
+                                            </a>
+                                            <a href="#!">
+                                                <img width="32" height="32" loading="lazy"
+                                                    src="./assets/images/icons/ico-inst.svg" alt="Icon">
+                                            </a>
+                                            <a href="#!">
+                                                <img width="32" height="32" loading="lazy"
+                                                    src="./assets/images/icons/ico-telegram.svg" alt="Icon">
+                                            </a>
+                                            <a href="#!">
+                                                <img width="32" height="32" loading="lazy"
+                                                    src="./assets/images/icons/ico-vider.svg" alt="Icon">
+                                            </a>
+                                            <a href="#!">
+                                                <img width="32" height="32" loading="lazy"
+                                                    src="./assets/images/icons/ico-tt.svg" alt="Icon">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feedback__col">
+                        <h3 class="h3 feedback__title">
+                            Запис на прийом онлайн
+                        </h3>
+                        <form class="feedback__form js-appointment-form">
+                            <div class="feedback__form-wrapper">
+                                <div class="feedback__form-fields">
+                                    <div class="field-box">
+                                        <div class="field-box__item">
+                                            <input class="field-box__input" required type="text" name="feedbackMainName"
+                                                id="feedbackMainName" placeholder="">
+                                            <label for="feedbackMainName" class="field-box__label">
+                                                Ваше ім'я
+                                            </label>
+                                        </div>
+                                        <div class="field-box__item">
+                                            <input class="field-box__input" required type="text"
+                                                name="feedbackMainSurName" id="feedbackMainSurName" placeholder="">
+                                            <label for="feedbackMainSurName" class="field-box__label">
+                                                Ваше прізвище
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="feedback__form__field">
+                                    <div class="field-box">
+                                        <div class="field-box__item">
+                                            <input class="field-box__input" required type="tel" name="feedbackMainPhone"
+                                                id="feedbackMainPhone" placeholder="">
+                                            <label for="feedbackMainPhone" class="field-box__label">
+                                                Номер телефону
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="feedback__form__field">
+                                    <div class="field-box">
+                                        <div class="field-box__item">
+                                            <input class="field-box__input" required type="email"
+                                                name="feedbackMainEmail" id="feedbackMainEmail" placeholder="">
+                                            <label for="feedbackMainEmail" class="field-box__label">
+                                                Email
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="feedback__form__field">
+                                    <div class="select-box">
+                                        <select required class="select-box__select js-select"
+                                            id="feedbackMainSpecialict" name="feedbackMainSpecialict">
+                                            <option value="" disabled selected>
+                                                Оберіть спеціаліста
+                                            </option>
+                                            <option value="1">Спеціаліст 1</option>
+                                            <option value="2">Спеціаліст 2</option>
+                                            <option value="3">Спеціаліст 3</option>
+                                            <option value="4">Спеціаліст 4</option>
+                                            <option value="5">Спеціаліст 5</option>
+                                            <option value="6">Спеціаліст 6</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="feedback__form-check">
+                                <input class="feedback__form-cheked" type="checkbox" name="feedbackMainAgree"
+                                    id="feedbackMainAgree">
+                                <label class="feedback__form-label" for="feedbackMainAgree">
+                                    Ви погоджуєтеся на обробку Ваших даних у відповідності до політики конфіденційності
+                                </label>
+                            </div>
+                            <button type="submit" class="feedback__form-submit cta cta--lg">
+                                Записатись на консультацію
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="location">
+            <div class="container">
+                <h2 class="h2 location__title">
+                    Багатопрофільна медична Клініка AstraMed
+                </h2>
+                <div class="location__content">
+                    <div class="location__info">
+                        <p class="location__description">
+                            У нашому медичному центрі ми поєднуємо хірургічну точність, сучасні технології та
+                            людське
+                            ставлення, створюючи простір, де кожен пацієнт почувається впевнено і спокійно. Комфорт
+                            — це
+                            не лише слово. Це наші просторі палати, турботливий персонал і увага до кожної деталі,
+                            що
+                            робить процес лікування максимально спокійним та ефективним.
+                        </p>
+                        <div class="location__map">
+                            <div class="location__map-box">
+                                <img src="./assets/images/map-pic.jpg" alt="Map">
+                                <div class="location__map-panel">
+                                    <img width="38" height="38" src="./assets/images/icons/ico-pin.svg" alt="Pin">
+                                    <a href="#!" class="location__map-link link-plus link-plus--dark link-plus--bdark">
+                                        <div class="link-plus__text">
+                                            <span>показати на карті</span>
+                                            <span>детальніше</span>
+                                        </div>
+                                        <div class="link-plus__ico">
+                                            <span>
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M8 2.66699V13.3337" stroke="#242C33" stroke-width="2"
+                                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <path d="M2.66666 8H13.3333" stroke="#242C33" stroke-width="2"
+                                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </svg>
+                                            </span>
+                                            <span>
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M8 2.66699V13.3337" stroke="#fff" stroke-width="2"
+                                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <path d="M2.66666 8H13.3333" stroke="#fff" stroke-width="2"
+                                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="location__map-ico">
+                                <lottie-player src="./assets/animations/dna.json" direction="1" mode="normal" loop
+                                    autoplay></lottie-player>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="location__pic">
+                        <img loading="lazy" width="766" height="712" src="./assets/images/location-pic.jpg"
+                            alt="Picture">
                     </div>
                 </div>
             </div>

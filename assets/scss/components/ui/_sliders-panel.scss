@@ -1,0 +1,96 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.slider-panel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+
+    &__progress {
+        position: relative;
+        height: 2px !important;
+        background: rgba(36, 44, 51, 0.1);
+
+        span {
+            background: var(--dark-grey) !important;
+        }
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        button {
+            position: relative;
+            display: inline-flex;
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 1px solid var(--dark-grey);
+            @include transitions(0.3s, ease-out);
+            @include hover {
+                border-color: var(--accent-color);
+                &:first-child {
+                    svg {
+                        &:first-child {
+                            left: -15px;
+                        }
+
+                        &:last-child {
+                            left: 50%;
+                        }
+                    }
+                }
+
+                &:last-child {
+                    svg {
+                        &:first-child {
+                            left: 50px;
+                        }
+
+                        &:last-child {
+                            left: 50%;
+                        }
+                    }
+                }
+            }
+
+            &:first-child {
+                svg {
+                    &:last-child {
+                        left: 50px;
+                    }
+                }
+            }
+
+            &:last-child {
+                svg {
+                    &:last-child {
+                        left: -15px;
+                    }
+                }
+            }
+
+            svg {
+                display: inline-flex;
+                flex-shrink: 0;
+                width: 24px;
+                height: 24px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                @include transitions(0.3s, ease-out);
+            }
+
+            &.swiper-button-disabled {
+                opacity: .4;
+                pointer-events: none;
+            }
+        }
+    }
+}

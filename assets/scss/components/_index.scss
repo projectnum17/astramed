@@ -1,2 +1,9 @@
-@forward 'appointment-modal';
 @use 'ui';
+@forward 'appointment-modal';
+@forward 'feedback-modal';
+@forward 'doctor-card';
+@forward 'doctors-slider';
+@forward 'review-box';
+@forward 'review-modal';
+@forward 'offer-card';
+@forward 'feedback-section';

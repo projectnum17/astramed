@@ -1,0 +1,125 @@
+@use '../base/media' as *;
+@use '../base/mixins' as *;
+
+.reviews-box {
+    // max-width: 491px;
+    padding: 32px;
+    border-radius: 24px;
+    border: 1px solid #dde0e3;
+    background: var(--white);
+
+    &__head {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 24px;
+        margin-bottom: 21px;
+    }
+
+    &__rating {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+
+        img {
+            display: inline-flex;
+            flex-shrink: 0;
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    &__quote {
+        display: flex;
+        align-items: flex-start;
+        gap: 24px;
+
+        &::before {
+            content: '';
+            width: 40px;
+            height: 40px;
+            display: inline-flex;
+            flex-shrink: 0;
+            background: url('../images/icons/ico-quote.svg') no-repeat center
+                center;
+        }
+    }
+
+    &__name {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        span {
+            font: 400 20px / 140% var(--ff-base);
+            letter-spacing: -1px;
+        }
+
+        p {
+            font: 400 32px / 100% var(--ff-base);
+            letter-spacing: -1px;
+        }
+    }
+
+    &__text {
+        font: 400 18px / 140% var(--ff-base);
+        letter-spacing: -1px;
+        font-style: italic;
+    }
+
+    &__more {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        margin-top: 16px;
+        @include hover {
+            span {
+                &:last-child {
+                    svg {
+                        &:first-child {
+                            top: 35px;
+                        }
+
+                        &:last-child {
+                            top: 50%;
+                        }
+                    }
+                }
+            }
+        }
+
+        span {
+            &:first-child {
+                font: 400 16px / 100% var(--ff-base);
+                letter-spacing: -1px;
+            }
+
+            &:last-child {
+                overflow: hidden;
+                display: inline-flex;
+                flex-shrink: 0;
+                width: 26px;
+                height: 26px;
+                border-radius: 50%;
+                position: relative;
+                background: var(--accent-color);
+
+                svg {
+                    display: inline-flex;
+                    flex-shrink: 0;
+                    width: 16px;
+                    height: 16px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    @include transitions(0.3s, ease-out);
+
+                    &:last-child {
+                        top: -10px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.main--home {
+    .offer {
+        margin-bottom: var(--section-mb);
+
+        &__head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            max-width: 1379px;
+            margin-bottom: 48px;
+        }
+
+        &__cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+    }
+}

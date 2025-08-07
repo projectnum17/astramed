@@ -1,0 +1,41 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.main--home {
+    .specialist {
+        margin-bottom: var(--section-mb);
+
+        &__head {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 20px;
+            margin-bottom: 52px;
+        }
+
+        &__col {
+            &:first-child {
+                max-width: 422px;
+            }
+
+            &:last-child {
+                max-width: 50%;
+                width: 100%;
+
+                .specialist__subtitle,
+                .specialist__description {
+                    max-width: 636px;
+                }
+            }
+        }
+
+        &__subtitle {
+            margin-bottom: 24px;
+        }
+
+        &__description {
+            font: 400 20px / 140% var(--ff-base);
+            letter-spacing: -1px;
+        }
+    }
+}

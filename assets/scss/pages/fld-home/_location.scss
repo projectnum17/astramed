@@ -1,0 +1,95 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.main--home {
+    .location {
+        margin-bottom: var(--section-mb);
+        &__content {
+            display: flex;
+            align-items: stretch;
+            gap: 20px;
+            justify-content: space-between;
+        }
+
+        &__title {
+            max-width: 914px;
+            margin-bottom: 40px;
+        }
+
+        &__description {
+            font: 400 20px / 140% var(--ff-base);
+            letter-spacing: -1px;
+        }
+
+        &__info {
+            max-width: 766px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            justify-content: space-between;
+        }
+
+        &__map {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+
+            &-link {
+                background: var(--white);
+            }
+
+            &-box {
+                max-width: 566px;
+                padding: 20px;
+                position: relative;
+                border-radius: 24px;
+                background: var(--white);
+                & > img {
+                    border-radius: 16px;
+                }
+            }
+
+            &-ico {
+                max-width: 134px;
+
+                lottie-player {
+                    width: 100%;
+                }
+            }
+
+            &-panel {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 8px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                img {
+                    display: flex;
+                    flex-shrink: 0;
+                    width: 38px;
+                    height: 38px;
+                }
+            }
+        }
+
+        &__pic {
+            width: 100%;
+            max-width: 766px;
+            height: 712px;
+            overflow: hidden;
+            border-radius: 24px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}

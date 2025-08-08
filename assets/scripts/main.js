@@ -16,6 +16,7 @@ import pricesPageFlow from './modules/pricesPage.js';
 
 // func
 import showMoreContent from './modules/showMoreContent.js';
+import reviewCount from './modules/reviewCount.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     // components
@@ -34,4 +35,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // func
     showMoreContent('.js-offer-card', '.js-offer-parent', '.js-offer-more', 5);
     showMoreContent('.js-blog-card', '.js-blog-parent', '.js-blog-more', 8);
+    showMoreContent(
+        '.main--reviews .js-review-box',
+        '.js-reviews-parent',
+        '.js-reviews-more',
+        7
+    );
+    reviewCount('.main--home .js-review-box');
+    reviewCount('.main--reviews .js-review-box');
 });

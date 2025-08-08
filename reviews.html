@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/images/favicon/favicon.svg" type="image/svg+xml" />
+    <title>Astramed | Reviews</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.min.css">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script defer type="module" src="./assets/scripts/main.js"></script>
+</head>
+
+<body>
+    <div class="appointment-modal js-appointment-modal">
+        <div class="appointment-modal__inner">
+            <div class="appointment-modal__box js-appointment-box">
+                <button class="appointment-modal__close js-appointment-close">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M25.7075 24.2921C25.8004 24.385 25.8741 24.4953 25.9244 24.6167C25.9747 24.7381 26.0006 24.8682 26.0006 24.9996C26.0006 25.131 25.9747 25.2611 25.9244 25.3825C25.8741 25.5039 25.8004 25.6142 25.7075 25.7071C25.6146 25.8 25.5043 25.8737 25.3829 25.924C25.2615 25.9743 25.1314 26.0001 25 26.0001C24.8686 26.0001 24.7385 25.9743 24.6171 25.924C24.4957 25.8737 24.3854 25.8 24.2925 25.7071L16 17.4133L7.70751 25.7071C7.51987 25.8947 7.26537 26.0001 7.00001 26.0001C6.73464 26.0001 6.48015 25.8947 6.29251 25.7071C6.10487 25.5194 5.99945 25.2649 5.99945 24.9996C5.99945 24.7342 6.10487 24.4797 6.29251 24.2921L14.5863 15.9996L6.29251 7.70708C6.10487 7.51944 5.99945 7.26494 5.99945 6.99958C5.99945 6.73422 6.10487 6.47972 6.29251 6.29208C6.48015 6.10444 6.73464 5.99902 7.00001 5.99902C7.26537 5.99902 7.51987 6.10444 7.70751 6.29208L16 14.5858L24.2925 6.29208C24.4802 6.10444 24.7346 5.99902 25 5.99902C25.2654 5.99902 25.5199 6.10444 25.7075 6.29208C25.8952 6.47972 26.0006 6.73422 26.0006 6.99958C26.0006 7.26494 25.8952 7.51944 25.7075 7.70708L17.4138 15.9996L25.7075 24.2921Z"
+                            fill="black" />
+                    </svg>
+                </button>
+                <h4 class="h4 appointment-modal__title">
+                    Запис на консультацію
+                </h4>
+                <p class="appointment-modal__text">
+                    Наш адміністратор зателефонує Вам щоб підтвердити Ваш запис на прийом до спеціаліста
+                </p>
+                <form class="appointment-modal__form js-appointment-form">
+                    <div class="appointment-modal__wrapper">
+                        <div class="appointment-modal__fields">
+                            <div class="field-box">
+                                <div class="field-box__item">
+                                    <input class="field-box__input" required type="text" name="appointmentName"
+                                        id="appointmentName" placeholder="">
+                                    <label for="appointmentName" class="field-box__label">
+                                        Ваше ім'я
+                                    </label>
+                                </div>
+                                <div class="field-box__item">
+                                    <input class="field-box__input" required type="text" name="appointmentSurName"
+                                        id="appointmentSurName" placeholder="">
+                                    <label for="appointmentSurName" class="field-box__label">
+                                        Ваше прізвище
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="appointment-modal__field">
+                            <div class="field-box">
+                                <div class="field-box__item">
+                                    <input class="field-box__input" required type="tel" name="appointmentPhone"
+                                        id="appointmentPhone" placeholder="">
+                                    <label for="appointmentPhone" class="field-box__label">
+                                        Номер телефону
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="appointment-modal__field">
+                            <div class="field-box">
+                                <div class="field-box__item">
+                                    <input class="field-box__input" required type="email" name="appointmentEmail"
+                                        id="appointmentEmail" placeholder="">
+                                    <label for="appointmentEmail" class="field-box__label">
+                                        Email
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="appointment-modal__field">
+                            <div class="select-box">
+                                <select required class="select-box__select js-select" id="appointmentSpecialict"
+                                    name="appointmentSpecialict">
+                                    <option value="" disabled selected>
+                                        Оберіть спеціаліста
+                                    </option>
+                                    <option value="1">Спеціаліст 1</option>
+                                    <option value="2">Спеціаліст 2</option>
+                                    <option value="3">Спеціаліст 3</option>
+                                    <option value="4">Спеціаліст 4</option>
+                                    <option value="5">Спеціаліст 5</option>
+                                    <option value="6">Спеціаліст 6</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="appointment-modal__check">
+                        <input class="appointment-modal__cheked" type="checkbox" name="appointmentAgree"
+                            id="appointmentAgree">
+                        <label class="appointment-modal__label" for="appointmentAgree">
+                            Ви погоджуєтеся на обробку Ваших даних у відповідності до політики конфіденційності
+                        </label>
+                    </div>
+                    <button type="submit" class="appointment-modal__submit cta cta--lg">
+                        Записатись на консультацію
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="review-modal js-review-modal">
+        <div class="review-modal__content">
+            <button class="review-modal__close js-review-close">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M25.7071 24.2926C25.8 24.3855 25.8737 24.4958 25.924 24.6172C25.9743 24.7386 26.0001 24.8687 26.0001 25.0001C26.0001 25.1315 25.9743 25.2616 25.924 25.383C25.8737 25.5044 25.8 25.6147 25.7071 25.7076C25.6142 25.8005 25.5039 25.8742 25.3825 25.9245C25.2611 25.9747 25.131 26.0006 24.9996 26.0006C24.8682 26.0006 24.7381 25.9747 24.6167 25.9245C24.4953 25.8742 24.385 25.8005 24.2921 25.7076L15.9996 17.4138L7.70708 25.7076C7.51944 25.8952 7.26494 26.0006 6.99958 26.0006C6.73422 26.0006 6.47972 25.8952 6.29208 25.7076C6.10444 25.5199 5.99902 25.2654 5.99902 25.0001C5.99902 24.7347 6.10444 24.4802 6.29208 24.2926L14.5858 16.0001L6.29208 7.70757C6.10444 7.51993 5.99902 7.26543 5.99902 7.00007C5.99902 6.7347 6.10444 6.48021 6.29208 6.29257C6.47972 6.10493 6.73422 5.99951 6.99958 5.99951C7.26494 5.99951 7.51944 6.10493 7.70708 6.29257L15.9996 14.5863L24.2921 6.29257C24.4797 6.10493 24.7342 5.99951 24.9996 5.99951C25.2649 5.99951 25.5194 6.10493 25.7071 6.29257C25.8947 6.48021 26.0001 6.7347 26.0001 7.00007C26.0001 7.26543 25.8947 7.51993 25.7071 7.70757L17.4133 16.0001L25.7071 24.2926Z"
+                        fill="black" />
+                </svg>
+            </button>
+            <div class="review-modal__body js-review-body"></div>
+        </div>
+    </div>
+    <header class="header">
+        <div class="header__wrapper">
+            <div class="header__info">
+                <a href="/" class="header__logo">
+                    <img width="208" height="36" src="./assets/images/icons/logo.svg" alt="Logo">
+                </a>
+                <button class="header__services">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="7" cy="7" r="3" fill="#242C33" />
+                        <circle cx="17" cy="7" r="3" fill="#242C33" />
+                        <circle cx="7" cy="17" r="3" fill="#242C33" />
+                        <circle cx="17" cy="17" r="3" fill="#242C33" />
+                    </svg>
+                    <span>послуги</span>
+                </button>
+            </div>
+            <nav class="header__nav">
+                <ul class="header__list">
+                    <li class="header__list-item">
+                        <a href="doctors.html" class="header__list-link">лікарі</a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="about.html" class="header__list-link">про клініку</a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="#!" class="header__list-link">Блог</a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="prices.html" class="header__list-link">Ціни</a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="contacts.html" class="header__list-link">контакти</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header__panel">
+                <button class="header__search">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17 17L21 21" stroke="#242C33" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path
+                            d="M19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19C15.4183 19 19 15.4183 19 11Z"
+                            stroke="#242C33" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <a href="tel:+380671125577" class="header__phone">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M3.77762 11.9424C2.8296 10.2893 2.37185 8.93948 2.09584 7.57121C1.68762 5.54758 2.62181 3.57081 4.16938 2.30947C4.82345 1.77638 5.57323 1.95852 5.96 2.6524L6.83318 4.21891C7.52529 5.46057 7.87134 6.08139 7.8027 6.73959C7.73407 7.39779 7.26737 7.93386 6.33397 9.00601L3.77762 11.9424ZM3.77762 11.9424C5.69651 15.2883 8.70784 18.3013 12.0576 20.2224M12.0576 20.2224C13.7107 21.1704 15.0605 21.6282 16.4288 21.9042C18.4524 22.3124 20.4292 21.3782 21.6905 19.8306C22.2236 19.1766 22.0415 18.4268 21.3476 18.04L19.7811 17.1668C18.5394 16.4747 17.9186 16.1287 17.2604 16.1973C16.6022 16.2659 16.0661 16.7326 14.994 17.666L12.0576 20.2224Z"
+                            stroke="#242C33" stroke-width="2" stroke-linejoin="round" />
+                    </svg>
+                    <span>
+                        +38 (067) 112 55 77
+                    </span>
+                </a>
+                <button class="header__make cta cta--sm js-appointment-open">Записатись</button>
+            </div>
+        </div>
+    </header>
+    <main class="main main--reviews">
+        <img src="./assets/images/name.svg" alt="Company name" class="logotype">
+        <section class="reviews">
+            <div class="container">
+                <div class="reviews__head">
+                    <div class="reviews__head-col">
+                        <h1 class="h2 reviews__title">
+                            Відгуки
+                        </h1>
+                        <lottie-player class="reviews__ico" src="./assets/animations/chat.json" direction="1"
+                            mode="normal" loop="" autoplay="" background="transparent"></lottie-player>
+                    </div>
+                    <div class="reviews__rating">
+                        <p class="reviews__rating-title">
+                            Рейтинг клініки в
+                        </p>
+                        <div class="reviews__rating-logo">
+                            <img src="./assets/images/icons/google-logo.svg" alt="Google">
+                        </div>
+                        <div class="reviews__rating-items">
+                            <span class="reviews__rating-grade">4.7</span>
+                            <div class="reviews__rating-stars">
+                                <img width="24" height="24" src="./assets/images/icons/ico-star.svg" alt="Star">
+                                <img width="24" height="24" src="./assets/images/icons/ico-star.svg" alt="Star">
+                                <img width="24" height="24" src="./assets/images/icons/ico-star.svg" alt="Star">
+                                <img width="24" height="24" src="./assets/images/icons/ico-star.svg" alt="Star">
+                                <img width="24" height="24" src="./assets/images/icons/ico-star.svg" alt="Star">
+                            </div>
+                            <div class="reviews__rating-value">
+                                <span id="totalReviews"></span>
+                                <span id="totalReviewsText"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reviews__content">
+                    <div class="reviews__items">
+                        <div class="reviews__boxes">
+                            <div class="reviews-box js-review-box">
+                                <div class="reviews-box__head">
+                                    <div class="reviews-box__quote">
+                                        <div class="reviews-box__name">
+                                            <span>14 Травня 2025</span>
+                                            <p>Вікторія</p>
+                                        </div>
+                                    </div>
+                                    <div class="reviews-box__rating">
+                                        <img src="./assets/images/icons/ico-star.svg" alt="Star">
+                                        <img src="./assets/images/icons/ico-star.svg" alt="Star">
+                                        <img src="./assets/images/icons/ico-star.svg" alt="Star">
+                                        <img src="./assets/images/icons/ico-star.svg" alt="Star">
+                                        <img src="./assets/images/icons/ico-star-empty.svg" alt="Star">
+                                    </div>
+                                </div>
+                                <p class="reviews-box__text js-review-text">
+                                    Фахівці з багаторічним досвідом, які працюють за міжнародними протоколами та
+                                    найвищими
+                                    стандартами лікарської етики.
+                                    Фахівці з багаторічним досвідом, які працюють за міжнародними протоколами та
+                                    найвищими
+                                    стандартами лікарської етики.
+                                    Фахівці з багаторічним досвідом, які працюють за міжнародними протоколами та
+                                    найвищими
+                                    стандартами лікарської етики.
+                                </p>
+                                <button class="reviews-box__more js-review-popup">
+                                    <span>Читати повністю</span>
+                                    <span>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M12 5.99707C12 5.99707 9.05407 9.99706 8 9.99707C6.94587 9.99708 4 5.99707 4 5.99707"
+                                                stroke="#242C33" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M12 5.99707C12 5.99707 9.05407 9.99706 8 9.99707C6.94587 9.99708 4 5.99707 4 5.99707"
+                                                stroke="#242C33" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="reviews-box js-review-box">
+                                <div class="reviews-box__head">
+                                    <div class="reviews-box__quote">
+                                        <div class="reviews-box__name">
+                                            <span>14 Травня 2025</span>
+                                            <p>Вікторія</p>
+                                        </div>
+                                    </div>
+                                    <div class="reviews-box__rating">
+                                        <img src="./assets/images/icons/ico-star.svg" alt="Star">
+                                        <img src="./assets/images/icons/ico-star.svg" alt="Star">
+                                        <img src="./assets/images/icons/ico-star.svg" alt="Star">
+                                        <img src="./assets/images/icons/ico-star.svg" alt="Star">
+                                        <img src="./assets/images/icons/ico-star-empty.svg" alt="Star">
+                                    </div>
+                                </div>
+                                <p class="reviews-box__text js-review-text">
+                                    Фахівці з багаторічним досвідом, які працюють за міжнародними протоколами та
+                                    найвищими
+                                    стандартами лікарської етики.
+                                    Фахівці з багаторічним досвідом, які працюють за міжнародними протоколами та
+                                    найвищими
+                                    стандартами лікарської етики.
+                                    Фахівці з багаторічним досвідом, які працюють за міжнародними протоколами та
+                                    найвищими
+                                    стандартами лікарської етики.
+                                </p>
+                                <button class="reviews-box__more js-review-popup">
+                                    <span>Читати повністю</span>
+                                    <span>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M12 5.99707C12 5.99707 9.05407 9.99706 8 9.99707C6.94587 9.99708 4 5.99707 4 5.99707"
+                                                stroke="#242C33" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M12 5.99707C12 5.99707 9.05407 9.99706 8 9.99707C6.94587 9.99708 4 5.99707 4 5.99707"
+                                                stroke="#242C33" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="reviews-box js-review-box">
+                                <div class="reviews-box__head">
+                                    <div class="reviews-box__quote">
+                                        <div class="reviews-box__name">
+                                            <span>14 Травня 2025</span>
+                                            <p>Віктор</p>
+                                        </div>
+                                    </div>
+                                    <div class="reviews-box__rating">
+                                        <img src="./assets/images/icons/ico-star.svg" alt="Star">
+                                        <img src="./assets/images/icons/ico-star.svg" alt="Star">
+                                        <img src="./assets/images/icons/ico-star.svg" alt="Star">
+                                        <img src="./assets/images/icons/ico-star.svg" alt="Star">
+                                        <img src="./assets/images/icons/ico-star.svg" alt="Star">
+                                    </div>
+                                </div>
+                                <p class="reviews-box__text js-review-text">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae optio blanditiis
+                                    eos eum, nisi voluptatum iste neque perspiciatis odio nam ad fugiat. Inventore
+                                    necessitatibus, totam velit illo beatae dignissimos magnam?
+                                </p>
+                                <button class="reviews-box__more js-review-popup">
+                                    <span>Читати повністю</span>
+                                    <span>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M12 5.99707C12 5.99707 9.05407 9.99706 8 9.99707C6.94587 9.99708 4 5.99707 4 5.99707"
+                                                stroke="#242C33" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M12 5.99707C12 5.99707 9.05407 9.99706 8 9.99707C6.94587 9.99708 4 5.99707 4 5.99707"
+                                                stroke="#242C33" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="reviews-box js-review-box">
+                                <div class="reviews-box__head">
+                                    <div class="reviews-box__quote">
+                                        <div class="reviews-box__name">
+                                            <span>14 Травня 2025</span>
+                                            <p>Вікторія</p>
+                                        </div>
+                                    </div>
+                                    <div class="reviews-box__rating">
+                                        <img src="./assets/images/icons/ico-star.svg" alt="Star">
+                                        <img src="./assets/images/icons/ico-star.svg" alt="Star">
+                                        <img src="./assets/images/icons/ico-star.svg" alt="Star">
+                                        <img src="./assets/images/icons/ico-star.svg" alt="Star">
+                                        <img src="./assets/images/icons/ico-star-empty.svg" alt="Star">
+                                    </div>
+                                </div>
+                                <p class="reviews-box__text js-review-text">
+                                    Фахівці з багаторічним досвідом, які працюють за міжнародними протоколами та
+                                    найвищими
+                                    стандартами лікарської етики.
+                                    Фахівці з багаторічним досвідом, які працюють за міжнародними протоколами та
+                                    найвищими
+                                    стандартами лікарської етики.
+                                    Фахівці з багаторічним досвідом, які працюють за міжнародними протоколами та
+                                    найвищими
+                                    стандартами лікарської етики.
+                                </p>
+                                <button class="reviews-box__more js-review-popup">
+                                    <span>Читати повністю</span>
+                                    <span>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M12 5.99707C12 5.99707 9.05407 9.99706 8 9.99707C6.94587 9.99708 4 5.99707 4 5.99707"
+                                                stroke="#242C33" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M12 5.99707C12 5.99707 9.05407 9.99706 8 9.99707C6.94587 9.99708 4 5.99707 4 5.99707"
+                                                stroke="#242C33" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="reviews-box js-review-box">
+                                <div class="reviews-box__head">
+                                    <div class="reviews-box__quote">
+                                        <div class="reviews-box__name">
+                                            <span>14 Травня 2025</span>
+                                            <p>Вікторія</p>
+                                        </div>
+                                    </div>
+                                    <div class="reviews-box__rating">
+                                        <img src="./assets/images/icons/ico-star.svg" alt="Star">
+                                        <img src="./assets/images/icons/ico-star.svg" alt="Star">
+                                        <img src="./assets/images/icons/ico-star.svg" alt="Star">
+                                        <img src="./assets/images/icons/ico-star.svg" alt="Star">
+                                        <img src="./assets/images/icons/ico-star-empty.svg" alt="Star">
+                                    </div>
+                                </div>
+                                <p class="reviews-box__text js-review-text">
+                                    Фахівці з багаторічним досвідом, які працюють за міжнародними протоколами та
+                                    найвищими
+                                    стандартами лікарської етики.
+                                </p>
+                                <button class="reviews-box__more js-review-popup">
+                                    <span>Читати повністю</span>
+                                    <span>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M12 5.99707C12 5.99707 9.05407 9.99706 8 9.99707C6.94587 9.99708 4 5.99707 4 5.99707"
+                                                stroke="#242C33" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M12 5.99707C12 5.99707 9.05407 9.99706 8 9.99707C6.94587 9.99708 4 5.99707 4 5.99707"
+                                                stroke="#242C33" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="reviews-box js-review-box">
+                                <div class="reviews-box__head">
+                                    <div class="reviews-box__quote">
+                                        <div class="reviews-box__name">
+                                            <span>14 Травня 2025</span>
+                                            <p>Вікторія</p>
+                                        </div>
+                                    </div>
+                                    <div class="reviews-box__rating">
+                                        <img src="./assets/images/icons/ico-star.svg" alt="Star">
+                                        <img src="./assets/images/icons/ico-star.svg" alt="Star">
+                                        <img src="./assets/images/icons/ico-star.svg" alt="Star">
+                                        <img src="./assets/images/icons/ico-star.svg" alt="Star">
+                                        <img src="./assets/images/icons/ico-star-empty.svg" alt="Star">
+                                    </div>
+                                </div>
+                                <p class="reviews-box__text js-review-text">
+                                    Фахівці з багаторічним досвідом, які працюють за міжнародними протоколами та
+                                    найвищими
+                                    стандартами лікарської етики.
+                                    Фахівці з багаторічним досвідом, які працюють за міжнародними протоколами та
+                                    найвищими
+                                    стандартами лікарської етики.
+                                    Фахівці з багаторічним досвідом, які працюють за міжнародними протоколами та
+                                    найвищими
+                                    стандартами лікарської етики.
+                                </p>
+                                <button class="reviews-box__more js-review-popup">
+                                    <span>Читати повністю</span>
+                                    <span>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M12 5.99707C12 5.99707 9.05407 9.99706 8 9.99707C6.94587 9.99708 4 5.99707 4 5.99707"
+                                                stroke="#242C33" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M12 5.99707C12 5.99707 9.05407 9.99706 8 9.99707C6.94587 9.99708 4 5.99707 4 5.99707"
+                                                stroke="#242C33" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="reviews-box js-review-box">
+                                <div class="reviews-box__head">
+                                    <div class="reviews-box__quote">
+                                        <div class="reviews-box__name">
+                                            <span>14 Травня 2025</span>
+                                            <p>Віктор</p>
+                                        </div>
+                                    </div>
+                                    <div class="reviews-box__rating">
+                                        <img src="./assets/images/icons/ico-star.svg" alt="Star">
+                                        <img src="./assets/images/icons/ico-star.svg" alt="Star">
+                                        <img src="./assets/images/icons/ico-star.svg" alt="Star">
+                                        <img src="./assets/images/icons/ico-star.svg" alt="Star">
+                                        <img src="./assets/images/icons/ico-star.svg" alt="Star">
+                                    </div>
+                                </div>
+                                <p class="reviews-box__text js-review-text">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae optio blanditiis
+                                    eos eum, nisi voluptatum iste neque perspiciatis odio nam ad fugiat. Inventore
+                                    necessitatibus, totam velit illo beatae dignissimos magnam?
+                                </p>
+                                <button class="reviews-box__more js-review-popup">
+                                    <span>Читати повністю</span>
+                                    <span>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M12 5.99707C12 5.99707 9.05407 9.99706 8 9.99707C6.94587 9.99708 4 5.99707 4 5.99707"
+                                                stroke="#242C33" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M12 5.99707C12 5.99707 9.05407 9.99706 8 9.99707C6.94587 9.99708 4 5.99707 4 5.99707"
+                                                stroke="#242C33" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="reviews-box js-review-box">
+                                <div class="reviews-box__head">
+                                    <div class="reviews-box__quote">
+                                        <div class="reviews-box__name">
+                                            <span>14 Травня 2025</span>
+                                            <p>Вікторія</p>
+                                        </div>
+                                    </div>
+                                    <div class="reviews-box__rating">
+                                        <img src="./assets/images/icons/ico-star.svg" alt="Star">
+                                        <img src="./assets/images/icons/ico-star.svg" alt="Star">
+                                        <img src="./assets/images/icons/ico-star.svg" alt="Star">
+                                        <img src="./assets/images/icons/ico-star.svg" alt="Star">
+                                        <img src="./assets/images/icons/ico-star-empty.svg" alt="Star">
+                                    </div>
+                                </div>
+                                <p class="reviews-box__text js-review-text">
+                                    Фахівці з багаторічним досвідом, які працюють за міжнародними протоколами та
+                                    найвищими
+                                    стандартами лікарської етики.
+                                    Фахівці з багаторічним досвідом, які працюють за міжнародними протоколами та
+                                    найвищими
+                                    стандартами лікарської етики.
+                                    Фахівці з багаторічним досвідом, які працюють за міжнародними протоколами та
+                                    найвищими
+                                    стандартами лікарської етики.
+                                </p>
+                                <button class="reviews-box__more js-review-popup">
+                                    <span>Читати повністю</span>
+                                    <span>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M12 5.99707C12 5.99707 9.05407 9.99706 8 9.99707C6.94587 9.99708 4 5.99707 4 5.99707"
+                                                stroke="#242C33" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M12 5.99707C12 5.99707 9.05407 9.99706 8 9.99707C6.94587 9.99708 4 5.99707 4 5.99707"
+                                                stroke="#242C33" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="reviews-box js-review-box">
+                                <div class="reviews-box__head">
+                                    <div class="reviews-box__quote">
+                                        <div class="reviews-box__name">
+                                            <span>14 Травня 2025</span>
+                                            <p>Вікторія</p>
+                                        </div>
+                                    </div>
+                                    <div class="reviews-box__rating">
+                                        <img src="./assets/images/icons/ico-star.svg" alt="Star">
+                                        <img src="./assets/images/icons/ico-star.svg" alt="Star">
+                                        <img src="./assets/images/icons/ico-star.svg" alt="Star">
+                                        <img src="./assets/images/icons/ico-star.svg" alt="Star">
+                                        <img src="./assets/images/icons/ico-star-empty.svg" alt="Star">
+                                    </div>
+                                </div>
+                                <p class="reviews-box__text js-review-text">
+                                    Фахівці з багаторічним досвідом, які працюють за міжнародними протоколами та
+                                    найвищими
+                                    стандартами лікарської етики.
+                                </p>
+                                <button class="reviews-box__more js-review-popup">
+                                    <span>Читати повністю</span>
+                                    <span>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M12 5.99707C12 5.99707 9.05407 9.99706 8 9.99707C6.94587 9.99708 4 5.99707 4 5.99707"
+                                                stroke="#242C33" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M12 5.99707C12 5.99707 9.05407 9.99706 8 9.99707C6.94587 9.99708 4 5.99707 4 5.99707"
+                                                stroke="#242C33" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="reviews-box js-review-box">
+                                <div class="reviews-box__head">
+                                    <div class="reviews-box__quote">
+                                        <div class="reviews-box__name">
+                                            <span>14 Травня 2025</span>
+                                            <p>Вікторія</p>
+                                        </div>
+                                    </div>
+                                    <div class="reviews-box__rating">
+                                        <img src="./assets/images/icons/ico-star.svg" alt="Star">
+                                        <img src="./assets/images/icons/ico-star.svg" alt="Star">
+                                        <img src="./assets/images/icons/ico-star.svg" alt="Star">
+                                        <img src="./assets/images/icons/ico-star.svg" alt="Star">
+                                        <img src="./assets/images/icons/ico-star-empty.svg" alt="Star">
+                                    </div>
+                                </div>
+                                <p class="reviews-box__text js-review-text">
+                                    Фахівці з багаторічним досвідом, які працюють за міжнародними протоколами та
+                                    найвищими
+                                    стандартами лікарської етики.
+                                </p>
+                                <button class="reviews-box__more js-review-popup">
+                                    <span>Читати повністю</span>
+                                    <span>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M12 5.99707C12 5.99707 9.05407 9.99706 8 9.99707C6.94587 9.99708 4 5.99707 4 5.99707"
+                                                stroke="#242C33" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M12 5.99707C12 5.99707 9.05407 9.99706 8 9.99707C6.94587 9.99708 4 5.99707 4 5.99707"
+                                                stroke="#242C33" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="reviews__more js-reviews-parent">
+                            <button
+                                class="reviews__more-btn link-plus link-plus--dark link-plus--bdark js-reviews-more">
+                                <div class="link-plus__text">
+                                    <span>дивитись більше</span>
+                                    <span>дивитись більше</span>
+                                </div>
+                                <div class="link-plus__ico">
+                                    <span>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8 2.66699V13.3337" stroke="#242C33" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M2.66666 8H13.3333" stroke="#242C33" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </span>
+                                    <span>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8 2.66699V13.3337" stroke="#fff" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M2.66666 8H13.3333" stroke="#fff" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="reviews__form js-feedback-box">
+                        <h4 class="h4 reviews__form-title">
+                            Залишити відгук
+                        </h4>
+                        <p class="reviews__form-text">
+                            Ви можете залишити Ваш відгук про нас, заповнивши дані в цих полях.
+                        </p>
+                        <form class="reviews__form-form js-feedback-form">
+                            <div class="reviews__form-wrapper">
+                                <div class="field-box">
+                                    <div class="field-box__item">
+                                        <input class="field-box__input" required="" type="text" name="feedbackName"
+                                            id="feedbackName" placeholder="">
+                                        <label for="feedbackName" class="field-box__label">
+                                            Ваше ім'я
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="field-box">
+                                    <div class="field-box__item">
+                                        <input class="field-box__input" required="" type="email" name="feedbackEmail"
+                                            id="feedbackEmail" placeholder="">
+                                        <label for="feedbackEmail" class="field-box__label">
+                                            Email
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="stars-box">
+                                    <p class="stars-box__label">
+                                        Ваша оцінка *
+                                    </p>
+                                    <div class="stars-box__items js-rating-stars">
+                                        <input type="hidden" name="rating" value="0">
+                                        <button type="button" class="stars-box__btn js-rating-btn" data-value="1">
+                                            <svg width="64" height="65" viewBox="0 0 64 65" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M36.6069 9.86091L41.2997 19.3241C41.9397 20.6414 43.6461 21.905 45.0861 22.1469L53.5917 23.5718C59.0312 24.4858 60.3112 28.4647 56.3914 32.3898L49.7789 39.057C48.6589 40.186 48.0458 42.3636 48.3922 43.9231L50.2856 52.1764C51.7786 58.7092 48.3389 61.2364 42.6064 57.822L34.6338 53.0636C33.1941 52.2034 30.821 52.2034 29.3544 53.0636L21.382 57.822C15.676 61.2364 12.2097 58.6823 13.7029 52.1764L15.596 43.9231C15.9426 42.3636 15.3294 40.186 14.2095 39.057L7.59688 32.3898C3.70398 28.4647 4.95718 24.4858 10.3966 23.5718L18.9023 22.1469C20.3155 21.905 22.022 20.6414 22.6619 19.3241L27.3546 9.86091C29.9144 4.72605 34.0738 4.72605 36.6069 9.86091Z"
+                                                    stroke="#242C33" stroke-linecap="round" stroke-linejoin="round">
+                                                </path>
+                                            </svg>
+                                        </button>
+                                        <button type="button" class="stars-box__btn js-rating-btn" data-value="2">
+                                            <svg width="64" height="65" viewBox="0 0 64 65" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M36.6069 9.86091L41.2997 19.3241C41.9397 20.6414 43.6461 21.905 45.0861 22.1469L53.5917 23.5718C59.0312 24.4858 60.3112 28.4647 56.3914 32.3898L49.7789 39.057C48.6589 40.186 48.0458 42.3636 48.3922 43.9231L50.2856 52.1764C51.7786 58.7092 48.3389 61.2364 42.6064 57.822L34.6338 53.0636C33.1941 52.2034 30.821 52.2034 29.3544 53.0636L21.382 57.822C15.676 61.2364 12.2097 58.6823 13.7029 52.1764L15.596 43.9231C15.9426 42.3636 15.3294 40.186 14.2095 39.057L7.59688 32.3898C3.70398 28.4647 4.95718 24.4858 10.3966 23.5718L18.9023 22.1469C20.3155 21.905 22.022 20.6414 22.6619 19.3241L27.3546 9.86091C29.9144 4.72605 34.0738 4.72605 36.6069 9.86091Z"
+                                                    stroke="#242C33" stroke-linecap="round" stroke-linejoin="round">
+                                                </path>
+                                            </svg>
+                                        </button>
+                                        <button type="button" class="stars-box__btn js-rating-btn" data-value="3">
+                                            <svg width="64" height="65" viewBox="0 0 64 65" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M36.6069 9.86091L41.2997 19.3241C41.9397 20.6414 43.6461 21.905 45.0861 22.1469L53.5917 23.5718C59.0312 24.4858 60.3112 28.4647 56.3914 32.3898L49.7789 39.057C48.6589 40.186 48.0458 42.3636 48.3922 43.9231L50.2856 52.1764C51.7786 58.7092 48.3389 61.2364 42.6064 57.822L34.6338 53.0636C33.1941 52.2034 30.821 52.2034 29.3544 53.0636L21.382 57.822C15.676 61.2364 12.2097 58.6823 13.7029 52.1764L15.596 43.9231C15.9426 42.3636 15.3294 40.186 14.2095 39.057L7.59688 32.3898C3.70398 28.4647 4.95718 24.4858 10.3966 23.5718L18.9023 22.1469C20.3155 21.905 22.022 20.6414 22.6619 19.3241L27.3546 9.86091C29.9144 4.72605 34.0738 4.72605 36.6069 9.86091Z"
+                                                    stroke="#242C33" stroke-linecap="round" stroke-linejoin="round">
+                                                </path>
+                                            </svg>
+                                        </button>
+                                        <button type="button" class="stars-box__btn js-rating-btn" data-value="4">
+                                            <svg width="64" height="65" viewBox="0 0 64 65" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M36.6069 9.86091L41.2997 19.3241C41.9397 20.6414 43.6461 21.905 45.0861 22.1469L53.5917 23.5718C59.0312 24.4858 60.3112 28.4647 56.3914 32.3898L49.7789 39.057C48.6589 40.186 48.0458 42.3636 48.3922 43.9231L50.2856 52.1764C51.7786 58.7092 48.3389 61.2364 42.6064 57.822L34.6338 53.0636C33.1941 52.2034 30.821 52.2034 29.3544 53.0636L21.382 57.822C15.676 61.2364 12.2097 58.6823 13.7029 52.1764L15.596 43.9231C15.9426 42.3636 15.3294 40.186 14.2095 39.057L7.59688 32.3898C3.70398 28.4647 4.95718 24.4858 10.3966 23.5718L18.9023 22.1469C20.3155 21.905 22.022 20.6414 22.6619 19.3241L27.3546 9.86091C29.9144 4.72605 34.0738 4.72605 36.6069 9.86091Z"
+                                                    stroke="#242C33" stroke-linecap="round" stroke-linejoin="round">
+                                                </path>
+                                            </svg>
+                                        </button>
+                                        <button type="button" class="stars-box__btn js-rating-btn" data-value="5">
+                                            <svg width="64" height="65" viewBox="0 0 64 65" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M36.6069 9.86091L41.2997 19.3241C41.9397 20.6414 43.6461 21.905 45.0861 22.1469L53.5917 23.5718C59.0312 24.4858 60.3112 28.4647 56.3914 32.3898L49.7789 39.057C48.6589 40.186 48.0458 42.3636 48.3922 43.9231L50.2856 52.1764C51.7786 58.7092 48.3389 61.2364 42.6064 57.822L34.6338 53.0636C33.1941 52.2034 30.821 52.2034 29.3544 53.0636L21.382 57.822C15.676 61.2364 12.2097 58.6823 13.7029 52.1764L15.596 43.9231C15.9426 42.3636 15.3294 40.186 14.2095 39.057L7.59688 32.3898C3.70398 28.4647 4.95718 24.4858 10.3966 23.5718L18.9023 22.1469C20.3155 21.905 22.022 20.6414 22.6619 19.3241L27.3546 9.86091C29.9144 4.72605 34.0738 4.72605 36.6069 9.86091Z"
+                                                    stroke="#242C33" stroke-linecap="round" stroke-linejoin="round">
+                                                </path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="text-box">
+                                    <div class="text-box__item">
+                                        <textarea required="" minlength="20" class="text-box__area"
+                                            name="feedbackTextarea" id="feedbackTextarea" placeholder=""></textarea>
+                                        <label for="feedbackTextarea" class="field-box__label">
+                                            Текст відгука *
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="reviews__form-legal">
+                                Натискаючи кнопку, ви даєте згоду на обробку особистих даних.
+                                <a href="#!">Детальніше</a>
+                            </p>
+                            <button type="submit" class="reviews__form-submit cta cta--lg">
+                                Залишити відгук
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__col">
+                <div class="footer__info">
+                    <div class="footer__info-row">
+                        <div class="footer__info-about">
+                            <div class="footer__info-logo">
+                                <img loading="lazy" width="409" height="72" src="./assets/images/icons/logo-colored.svg"
+                                    alt="Logo">
+                            </div>
+                            <div class="footer__info-location">
+                                <p class="footer__info-subtitle">
+                                    Ми знаходимось
+                                </p>
+                                <p class="footer__info-text">
+                                    м. Рівне, вул. Дворецька, 180
+                                </p>
+                                <a href="#!" class="footer__info-btn link-plus link-plus--light link-plus--blight">
+                                    <div class="link-plus__text">
+                                        <span>показати на карті</span>
+                                        <span>детальніше</span>
+                                    </div>
+                                    <div class="link-plus__ico">
+                                        <span>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8 2.66699V13.3337" stroke="#242C33" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M2.66666 8H13.3333" stroke="#242C33" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </span>
+                                        <span>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8 2.66699V13.3337" stroke="#fff" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M2.66666 8H13.3333" stroke="#fff" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="footer__info-works">
+                                <p class="footer__info-subtitle">
+                                    Графік роботи
+                                </p>
+                                <p class="footer__info-text">
+                                    ПН-СБ: 08.00 - 18.00
+                                </p>
+                                <p class="footer__info-text">
+                                    НД: вихідний
+                                </p>
+                            </div>
+                        </div>
+                        <div class="footer__info-contacts">
+                            <a href="tel+380951125577" class="footer__info-call">
+                                <img loading="lazy" width="40" height="40" src="./assets/images/icons/ico-call.svg"
+                                    alt="Icon">
+                                <span>+38 (095) 112 55 77</span>
+                            </a>
+                            <a href="mailto:astraMed.ua@gmail.com" class="footer__info-mail">
+                                <img loading="lazy" width="32" height="32" src="./assets/images/icons/ico-mail.svg"
+                                    alt="Icon">
+                                <span>astraMed.ua@gmail.com</span>
+                            </a>
+                            <div class="footer__info-social">
+                                <p class="footer__info-subtitle">
+                                    Ми в соціальних мережах та мессенджерах
+                                </p>
+                                <div class="footer__info-links">
+                                    <a href="#!">
+                                        <img width="32" height="32" loading="lazy"
+                                            src="./assets/images/icons/ico-facebook.svg" alt="Icon">
+                                    </a>
+                                    <a href="#!">
+                                        <img width="32" height="32" loading="lazy"
+                                            src="./assets/images/icons/ico-inst.svg" alt="Icon">
+                                    </a>
+                                    <a href="#!">
+                                        <img width="32" height="32" loading="lazy"
+                                            src="./assets/images/icons/ico-telegram.svg" alt="Icon">
+                                    </a>
+                                    <a href="#!">
+                                        <img width="32" height="32" loading="lazy"
+                                            src="./assets/images/icons/ico-vider.svg" alt="Icon">
+                                    </a>
+                                    <a href="#!">
+                                        <img width="32" height="32" loading="lazy"
+                                            src="./assets/images/icons/ico-tt.svg" alt="Icon">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <nav class="footer__info-nav">
+                        <ul class="footer__info-list">
+                            <li class="footer__info-item">
+                                <a href="doctors.html" class="footer__info-link">
+                                    Лікарі
+                                </a>
+                            </li>
+                            <li class="footer__info-item">
+                                <a href="about.html" class="footer__info-link">
+                                    Про клініку
+                                </a>
+                            </li>
+                            <li class="footer__info-item">
+                                <a href="#!" class="footer__info-link">
+                                    Відгуки
+                                </a>
+                            </li>
+                            <li class="footer__info-item">
+                                <a href="#!" class="footer__info-link">
+                                    Блог
+                                </a>
+                            </li>
+                            <li class="footer__info-item">
+                                <a href="prices.html" class="footer__info-link">
+                                    Ціни
+                                </a>
+                            </li>
+                            <li class="footer__info-item">
+                                <a href="contacts.html" class="footer__info-link">
+                                    Контакти
+                                </a>
+                            </li>
+                            <li class="footer__info-item">
+                                <a href="offer.html" class="footer__info-link">
+                                    Спеціальні пропозиції
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="footer__col">
+                <div class="footer__menu">
+                    <p class="footer__menu-subtitle">
+                        Наші послуги
+                    </p>
+                    <nav class="footer__menu-nav">
+                        <ul class="footer__menu-list">
+                            <li class="footer__menu-item">
+                                <a href="#!" class="footer__menu-link">
+                                    Лікувально консультативне відділення
+                                </a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="#!" class="footer__menu-link">
+                                    Узд-обстеження
+                                </a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="#!" class="footer__menu-link">
+                                    Урологія
+                                </a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="#!" class="footer__menu-link">
+                                    Гінекологія
+                                </a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="#!" class="footer__menu-link">
+                                    Судинна хірургія
+                                </a>
+                            </li>
+                            <li class="footer__menu-item">
+                                <a href="#!" class="footer__menu-link">
+                                    Проктологія
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="footer__copy">
+            <div class="container">
+                <p class="footer__copy-text">
+                    © AstraMed 2025
+                </p>
+                <p class="footer__copy-text">
+                    Created by Esfirum Agency
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

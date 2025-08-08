@@ -13,6 +13,7 @@ import blogCard from './modules/blogCard.js';
 
 // pages
 import pricesPageFlow from './modules/pricesPage.js';
+import articlePageFlow from './modules/articlePage.js';
 
 // func
 import showMoreContent from './modules/showMoreContent.js';
@@ -31,6 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     blogCard();
     // pages
     pricesPageFlow();
+    articlePageFlow();
 
     // func
     showMoreContent('.js-offer-card', '.js-offer-parent', '.js-offer-more', 5);

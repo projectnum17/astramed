@@ -1,0 +1,27 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 60px;
+
+    span {
+        color: #dde0e3;
+    }
+
+    &__item {
+        font: 400 12px / 100% var(--ff-base);
+
+        &:first-child {
+            flex-shrink: 0;
+            width: 16px;
+            height: 16px;
+        }
+
+        &.current-link {
+            opacity: 0.3;
+        }
+    }
+}

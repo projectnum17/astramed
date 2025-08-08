@@ -10,11 +10,11 @@ const blogCard = () => {
         const fullText = cardText.textContent.trim();
 
         if (fullTitle.length > 50) {
-            cardTitle.textContent = fullTitle.slice(0, 50) + '...';
+            cardTitle.textContent = fullTitle.slice(0, 50).trimEnd() + '...';
         }
 
-        if (fullText.length > 110) {
-            cardText.textContent = fullText.slice(0, 110) + '...';
+        if (fullText.length > 100) {
+            cardText.textContent = fullText.slice(0, 100).trimEnd() + '...';
         }
     });
 };

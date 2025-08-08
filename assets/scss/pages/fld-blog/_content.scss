@@ -117,14 +117,14 @@
                 flex: 1;
                 gap: 20px;
             }
+
             &__info {
                 display: flex;
-
                 max-width: 100%;
                 display: flex;
                 flex-direction: row;
                 align-items: flex-end;
-                gap: 40px;
+                gap: 35px;
                 margin-top: auto;
             }
 
@@ -137,7 +137,7 @@
                 font: 400 18px / 140% var(--ff-base);
                 letter-spacing: -1px;
                 font-style: italic;
-                max-width: 386px;
+                max-width: 390px;
             }
 
             &__deco {

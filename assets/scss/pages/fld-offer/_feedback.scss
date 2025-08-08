@@ -1,0 +1,10 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.main--offer {
+    .feedback {
+        background: var(--bg-color);
+        padding-block: 80px 160px;
+        margin-bottom: 0;
+    }
+}

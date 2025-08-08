@@ -1,0 +1,12 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.main--offer {
+    .specialist {
+        padding-block: 80px;
+        background: var(--bg-color);
+        &__title {
+            margin-bottom: 60px;
+        }
+    }
+}

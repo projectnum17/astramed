@@ -1,6 +1,10 @@
 @use '../../base/media' as *;
 @use '../../base/mixins' as *;
 
+body:has(.main--article) {
+    background: #fff;
+}
+
 .main--article {
     .content {
         margin-bottom: var(--section-mb);

@@ -142,20 +142,52 @@ body:has(.main--doctor) {
             }
 
             &-title {
-                // margin-bottom: 24px;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
                 @include transitions(0.3s, ease-out);
+                @include hover {
+                    color: var(--accent-color);
 
-                &::after {
-                    content: '';
-                    display: inline-flex;
-                    flex-shrink: 0;
+                    span {
+                        svg {
+                            &:first-child {
+                                top: 50%;
+                            }
+
+                            &:last-child {
+                                top: 35px;
+                            }
+                        }
+                    }
+                }
+
+                span {
                     width: 26px;
                     height: 26px;
-                    background: url('../images/icons/ico-dropdown.svg')
-                        no-repeat center center;
+                    display: inline-flex;
+                    flex-shrink: 0;
+                    position: relative;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    color: var(--dark-grey);
+                    background: var(--accent-color);
+
+                    svg {
+                        width: 16px;
+                        height: 16px;
+                        display: inline-flex;
+                        flex-shrink: 0;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        @include transitions(0.3s, ease-out);
+
+                        &:first-child {
+                            top: -10px;
+                        }
+                    }
                 }
             }
 

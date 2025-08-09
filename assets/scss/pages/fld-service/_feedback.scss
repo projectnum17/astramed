@@ -1,0 +1,8 @@
+@use '../../base/media' as *;
+@use '../../base/mixins' as *;
+
+.main--service {
+    .feedback {
+        padding-block: 80px 0;
+    }
+}

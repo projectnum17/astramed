@@ -20,17 +20,6 @@ body {
     }
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-    // hyphens: auto;
-    // overflow-wrap: break-word;
-}
-
 main {
     flex: 1;
 }
@@ -146,5 +135,34 @@ section,
     }
     @include media('mobile') {
         font-size: 24px;
+    }
+}
+
+.js-animation {
+    opacity: 0;
+    transform: translateY(15px);
+    @include transitions(0.5s, ease-out);
+
+    &._animated {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.js-animation-bg {
+    transform: translate(50px, 50px) scale(1.1);
+    @include transitions(2s, ease-out);
+
+    &._animated {
+        transform: translate(0, 0) scale(1);
+    }
+}
+
+.js-animation-scale {
+    transform: scale(1.1);
+    @include transitions(2s, ease-out);
+
+    &._animated {
+        transform: scale(1);
     }
 }

@@ -1,0 +1,96 @@
+@use '../base/media' as *;
+@use '../base/mixins' as *;
+
+.services-panel {
+    position: fixed;
+    transform: translateY(-30px) scale(0.95);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    padding-block: 156px 60px;
+    border-bottom: 1px solid #ded8d8;
+    background: var(--white);
+    @include transitions(0.3s, ease-out);
+
+    &.is-shown {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+    }
+
+    &__item {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 16px;
+        border-radius: 16px;
+        background: #f9f7f0;
+
+        @include hover {
+            .services-panel__name {
+                color: var(--accent-color);
+            }
+
+            .services-panel__deco {
+                img {
+                    &:first-child {
+                        transform: translate(100%, -200%);
+                    }
+
+                    &:last-child {
+                        transform: translate(-50%, -50%);
+                    }
+                }
+            }
+        }
+    }
+
+    &__name {
+        font: 500 16px / 100% var(--ff-base);
+        text-transform: uppercase;
+        max-width: 210px;
+        @include transitions(0.5s, ease-out);
+    }
+
+    &__ico {
+        width: 64px;
+        height: 64px;
+    }
+
+    &__deco {
+        overflow: hidden;
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        display: inline-flex;
+        flex-shrink: 0;
+        width: 32px;
+        height: 32px;
+
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 16px;
+            height: 16px;
+            @include transitions(0.5s, ease-out);
+
+            &:last-child {
+                transform: translate(-200%, 100%);
+            }
+        }
+    }
+}

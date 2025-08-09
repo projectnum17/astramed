@@ -1,4 +1,5 @@
 @use 'ui';
+@forward 'services-panel';
 @forward 'appointment-modal';
 @forward 'feedback-modal';
 @forward 'doctor-card';

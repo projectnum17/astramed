@@ -31,6 +31,10 @@
             gap: 54px;
             justify-content: space-between;
 
+            &-item {
+                min-width: 230px;
+            }
+
             &-item:not(:last-child) {
                 padding-right: 54px;
                 border-right: 1px solid rgba(36, 44, 51, 0.1);

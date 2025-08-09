@@ -149,6 +149,10 @@
                 flex-shrink: 0;
             }
 
+            &__descr {
+                max-width: 1092px;
+            }
+
             &__head {
                 min-height: 92px;
                 display: flex;
@@ -157,15 +161,91 @@
                 gap: 20px;
                 cursor: pointer;
                 @include transitions(0.3s, ease-out);
+                @include hover {
+                    .box__title {
+                        color: var(--accent-color);
+                    }
 
-                &::after {
-                    content: '';
-                    display: inline-flex;
-                    flex-shrink: 0;
+                    span {
+                        svg {
+                            &:first-child {
+                                top: 50%;
+                            }
+
+                            &:last-child {
+                                top: 35px;
+                            }
+                        }
+                    }
+                }
+
+                span {
                     width: 26px;
                     height: 26px;
-                    background: url('../images/icons/ico-dropdown.svg')
-                        no-repeat center center;
+                    display: inline-flex;
+                    flex-shrink: 0;
+                    position: relative;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    color: var(--dark-grey);
+                    background: var(--accent-color);
+
+                    svg {
+                        width: 16px;
+                        height: 16px;
+                        display: inline-flex;
+                        flex-shrink: 0;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        @include transitions(0.3s, ease-out);
+
+                        &:first-child {
+                            top: -10px;
+                        }
+                    }
+                }
+            }
+
+            &__overflow {
+                overflow: hidden;
+            }
+
+            &__tabs {
+                display: flex;
+                align-items: center;
+                gap: 40px;
+                margin-bottom: 8px;
+                border-bottom: 1px solid rgba(36, 44, 51, 0.1);
+
+                &-item {
+                    padding-block: 18px;
+                    font: 500 16px / 100% var(--ff-base);
+                    text-transform: uppercase;
+                    text-align: center;
+                    position: relative;
+                    color: #9da7af;
+                    @include transitions(0.3s, ease-out);
+
+                    &::after {
+                        content: '';
+                        width: 0%;
+                        height: 2px;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        background: var(--accent-color);
+                        @include transitions(0.3s, ease-out);
+                    }
+
+                    &.is-active {
+                        color: var(--dark-grey);
+
+                        &::after {
+                            width: 100%;
+                        }
+                    }
                 }
             }
 
@@ -193,6 +273,12 @@
                 flex-direction: column;
                 gap: 8px;
                 overflow: hidden;
+
+                &-tabs {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+                }
             }
 
             &__service {
@@ -297,6 +383,29 @@
                         }
                     }
                 }
+            }
+        }
+
+        .is-show {
+            display: flex;
+        }
+
+        .is-hide {
+            display: none;
+        }
+
+        .is-fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: 0.1;
+            }
+
+            to {
+                opacity: 1;
             }
         }
     }

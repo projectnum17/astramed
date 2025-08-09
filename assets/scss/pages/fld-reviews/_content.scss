@@ -146,7 +146,7 @@
 
         &__form {
             position: sticky;
-            top: 120px;
+            top: 100px;
             z-index: 2;
             max-width: 569px;
             width: 100%;
@@ -159,8 +159,8 @@
             }
 
             &-text {
-                font: 400 18px / 160% var(--ff-base);
-                margin-bottom: 39px;
+                font: 400 14px / 140% var(--ff-base);
+                margin-bottom: 24px;
                 color: var(--light-grey);
             }
 
@@ -234,7 +234,7 @@
 
                 &:hover {
                     &::before {
-                        width: 102%;
+                        width: 103%;
                     }
                 }
             }
@@ -313,7 +313,7 @@
 
             &__input {
                 width: 100%;
-                padding: 17px 23px;
+                padding: 19px 23px;
                 border-radius: 12px;
                 outline: none;
                 border: 1px solid var(--dark-grey);

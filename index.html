@@ -221,62 +221,163 @@
             <div class="review-modal__body js-review-body"></div>
         </div>
     </div>
-    <header class="header">
-        <div class="header__wrapper">
-            <div class="header__info">
-                <a href="/" class="header__logo">
-                    <img width="208" height="36" src="./assets/images/icons/logo.svg" alt="Logo">
-                </a>
-                <button class="header__services">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="7" cy="7" r="3" fill="#242C33" />
-                        <circle cx="17" cy="7" r="3" fill="#242C33" />
-                        <circle cx="7" cy="17" r="3" fill="#242C33" />
-                        <circle cx="17" cy="17" r="3" fill="#242C33" />
-                    </svg>
-                    <span>послуги</span>
-                </button>
-            </div>
-            <nav class="header__nav">
-                <ul class="header__list">
-                    <li class="header__list-item">
-                        <a href="doctors.html" class="header__list-link">лікарі</a>
-                    </li>
-                    <li class="header__list-item">
-                        <a href="about.html" class="header__list-link">про клініку</a>
-                    </li>
-                    <li class="header__list-item">
-                        <a href="blog.html" class="header__list-link">Блог</a>
-                    </li>
-                    <li class="header__list-item">
-                        <a href="prices.html" class="header__list-link">Ціни</a>
-                    </li>
-                    <li class="header__list-item">
-                        <a href="contacts.html" class="header__list-link">контакти</a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="header__panel">
-                <button class="header__search">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M17 17L21 21" stroke="#242C33" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path
-                            d="M19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19C15.4183 19 19 15.4183 19 11Z"
-                            stroke="#242C33" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                </button>
-                <a href="tel:+380671125577" class="header__phone">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M3.77762 11.9424C2.8296 10.2893 2.37185 8.93948 2.09584 7.57121C1.68762 5.54758 2.62181 3.57081 4.16938 2.30947C4.82345 1.77638 5.57323 1.95852 5.96 2.6524L6.83318 4.21891C7.52529 5.46057 7.87134 6.08139 7.8027 6.73959C7.73407 7.39779 7.26737 7.93386 6.33397 9.00601L3.77762 11.9424ZM3.77762 11.9424C5.69651 15.2883 8.70784 18.3013 12.0576 20.2224M12.0576 20.2224C13.7107 21.1704 15.0605 21.6282 16.4288 21.9042C18.4524 22.3124 20.4292 21.3782 21.6905 19.8306C22.2236 19.1766 22.0415 18.4268 21.3476 18.04L19.7811 17.1668C18.5394 16.4747 17.9186 16.1287 17.2604 16.1973C16.6022 16.2659 16.0661 16.7326 14.994 17.666L12.0576 20.2224Z"
-                            stroke="#242C33" stroke-width="2" stroke-linejoin="round" />
-                    </svg>
-                    <span>
-                        +38 (067) 112 55 77
+    <div class="services-panel js-services-panel">
+        <div class="container">
+            <div class="services-panel__grid">
+                <a href="service.html" class="services-panel__item">
+                    <div class="services-panel__ico">
+                        <lottie-player src="./assets/animations/stetkhoscope.json" direction="1" mode="normal" loop=""
+                            autoplay="" background="transparent"></lottie-player>
+                    </div>
+                    <p class="services-panel__name">Лікувально- консультативне відділення:</p>
+                    <span class="services-panel__deco">
+                        <img width="18" height="18" src="./assets/images/icons/ico-arrow-up.svg" alt="Decoration">
+                        <img width="18" height="18" src="./assets/images/icons/ico-arrow-up.svg" alt="Decoration">
                     </span>
                 </a>
-                <button class="header__make cta cta--sm js-appointment-open">Записатись</button>
+                <a href="service.html" class="services-panel__item">
+                    <div class="services-panel__ico">
+                        <lottie-player src="./assets/animations/sensor.json" direction="1" mode="normal" loop=""
+                            autoplay="" background="transparent"></lottie-player>
+                    </div>
+                    <p class="services-panel__name">УЗД - обстеження</p>
+                    <span class="services-panel__deco">
+                        <img width="18" height="18" src="./assets/images/icons/ico-arrow-up.svg" alt="Decoration">
+                        <img width="18" height="18" src="./assets/images/icons/ico-arrow-up.svg" alt="Decoration">
+                    </span>
+                </a>
+                <a href="service.html" class="services-panel__item">
+                    <div class="services-panel__ico">
+                        <lottie-player src="./assets/animations/ovaries.json" direction="1" mode="normal" loop=""
+                            autoplay="" background="transparent"></lottie-player>
+                    </div>
+                    <p class="services-panel__name">Урологія</p>
+                    <span class="services-panel__deco">
+                        <img width="18" height="18" src="./assets/images/icons/ico-arrow-up.svg" alt="Decoration">
+                        <img width="18" height="18" src="./assets/images/icons/ico-arrow-up.svg" alt="Decoration">
+                    </span>
+                </a>
+                <a href="service.html" class="services-panel__item">
+                    <div class="services-panel__ico">
+                        <lottie-player src="./assets/animations/eye.json" direction="1" mode="normal" loop=""
+                            autoplay="" background="transparent"></lottie-player>
+                    </div>
+                    <p class="services-panel__name">Офтальмологія</p>
+                    <span class="services-panel__deco">
+                        <img width="18" height="18" src="./assets/images/icons/ico-arrow-up.svg" alt="Decoration">
+                        <img width="18" height="18" src="./assets/images/icons/ico-arrow-up.svg" alt="Decoration">
+                    </span>
+                </a>
+                <a href="service.html" class="services-panel__item">
+                    <div class="services-panel__ico">
+                        <lottie-player src="./assets/animations/couple.json" direction="1" mode="normal" loop=""
+                            autoplay="" background="transparent"></lottie-player>
+                    </div>
+                    <p class="services-panel__name">Гінекологія</p>
+                    <span class="services-panel__deco">
+                        <img width="18" height="18" src="./assets/images/icons/ico-arrow-up.svg" alt="Decoration">
+                        <img width="18" height="18" src="./assets/images/icons/ico-arrow-up.svg" alt="Decoration">
+                    </span>
+                </a>
+                <a href="service.html" class="services-panel__item">
+                    <div class="services-panel__ico">
+                        <lottie-player src="./assets/animations/heart.json" direction="1" mode="normal" loop=""
+                            autoplay="" background="transparent"></lottie-player>
+                    </div>
+                    <p class="services-panel__name">Судинна хірургія</p>
+                    <span class="services-panel__deco">
+                        <img width="18" height="18" src="./assets/images/icons/ico-arrow-up.svg" alt="Decoration">
+                        <img width="18" height="18" src="./assets/images/icons/ico-arrow-up.svg" alt="Decoration">
+                    </span>
+                </a>
+                <a href="service.html" class="services-panel__item">
+                    <div class="services-panel__ico">
+                        <lottie-player src="./assets/animations/stomach.json" direction="1" mode="normal" loop=""
+                            autoplay="" background="transparent"></lottie-player>
+                    </div>
+                    <p class="services-panel__name">Проктологія</p>
+                    <span class="services-panel__deco">
+                        <img width="18" height="18" src="./assets/images/icons/ico-arrow-up.svg" alt="Decoration">
+                        <img width="18" height="18" src="./assets/images/icons/ico-arrow-up.svg" alt="Decoration">
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <header class="header js-header">
+        <div class="header__wrapper">
+            <div class="header-search">
+                <button type="button" class="header-search__cancel js-main-s-cancel" aria-label="Відмінае">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M25.7071 24.2955C25.8 24.3884 25.8737 24.4987 25.924 24.6201C25.9743 24.7415 26.0001 24.8716 26.0001 25.003C26.0001 25.1344 25.9743 25.2645 25.924 25.3859C25.8737 25.5073 25.8 25.6176 25.7071 25.7105C25.6142 25.8034 25.5039 25.8771 25.3825 25.9274C25.2611 25.9777 25.131 26.0036 24.9996 26.0036C24.8682 26.0036 24.7381 25.9777 24.6167 25.9274C24.4953 25.8771 24.385 25.8034 24.2921 25.7105L15.9996 17.4167L7.70708 25.7105C7.51944 25.8981 7.26494 26.0036 6.99958 26.0036C6.73422 26.0036 6.47972 25.8981 6.29208 25.7105C6.10444 25.5229 5.99902 25.2684 5.99902 25.003C5.99902 24.7376 6.10444 24.4831 6.29208 24.2955L14.5858 16.003L6.29208 7.7105C6.10444 7.52286 5.99902 7.26836 5.99902 7.003C5.99902 6.73763 6.10444 6.48314 6.29208 6.2955C6.47972 6.10786 6.73422 6.00244 6.99958 6.00244C7.26494 6.00244 7.51944 6.10786 7.70708 6.2955L15.9996 14.5892L24.2921 6.2955C24.4797 6.10786 24.7342 6.00244 24.9996 6.00244C25.2649 6.00244 25.5194 6.10786 25.7071 6.2955C25.8947 6.48314 26.0001 6.73763 26.0001 7.003C26.0001 7.26836 25.8947 7.52286 25.7071 7.7105L17.4133 16.003L25.7071 24.2955Z"
+                            fill="black"></path>
+                    </svg>
+                </button>
+                <div class="header-search__btn">
+                    <button type="button" class="header-search__cta cta cta--sm js-main-s-search" aria-label="Знайти">
+                        Знайти
+                    </button>
+                </div>
+                <input class="header-search__field js-main-s-field" type="search" name="mainSearchField"
+                    id="mainSearchField" placeholder="Пошук">
+            </div>
+            <div class="header__inner">
+                <div class="header__info">
+                    <a href="/" class="header__logo">
+                        <img width="208" height="36" src="./assets/images/icons/logo.svg" alt="Logo">
+                    </a>
+                    <button class="header__services js-services-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="7" cy="7" r="3" fill="#242C33" />
+                            <circle cx="17" cy="7" r="3" fill="#242C33" />
+                            <circle cx="7" cy="17" r="3" fill="#242C33" />
+                            <circle cx="17" cy="17" r="3" fill="#242C33" />
+                        </svg>
+                        <span>послуги</span>
+                    </button>
+                </div>
+                <nav class="header__nav">
+                    <ul class="header__list">
+                        <li class="header__list-item">
+                            <a href="doctors.html" class="header__list-link">лікарі</a>
+                        </li>
+                        <li class="header__list-item">
+                            <a href="about.html" class="header__list-link">про клініку</a>
+                        </li>
+                        <li class="header__list-item">
+                            <a href="blog.html" class="header__list-link">Блог</a>
+                        </li>
+                        <li class="header__list-item">
+                            <a href="prices.html" class="header__list-link">Ціни</a>
+                        </li>
+                        <li class="header__list-item">
+                            <a href="contacts.html" class="header__list-link">контакти</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header__panel">
+                    <button class="header__search js-main-s">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17 17L21 21" stroke="#242C33" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path
+                                d="M19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19C15.4183 19 19 15.4183 19 11Z"
+                                stroke="#242C33" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <a href="tel:+380671125577" class="header__phone">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M3.77762 11.9424C2.8296 10.2893 2.37185 8.93948 2.09584 7.57121C1.68762 5.54758 2.62181 3.57081 4.16938 2.30947C4.82345 1.77638 5.57323 1.95852 5.96 2.6524L6.83318 4.21891C7.52529 5.46057 7.87134 6.08139 7.8027 6.73959C7.73407 7.39779 7.26737 7.93386 6.33397 9.00601L3.77762 11.9424ZM3.77762 11.9424C5.69651 15.2883 8.70784 18.3013 12.0576 20.2224M12.0576 20.2224C13.7107 21.1704 15.0605 21.6282 16.4288 21.9042C18.4524 22.3124 20.4292 21.3782 21.6905 19.8306C22.2236 19.1766 22.0415 18.4268 21.3476 18.04L19.7811 17.1668C18.5394 16.4747 17.9186 16.1287 17.2604 16.1973C16.6022 16.2659 16.0661 16.7326 14.994 17.666L12.0576 20.2224Z"
+                                stroke="#242C33" stroke-width="2" stroke-linejoin="round" />
+                        </svg>
+                        <span>
+                            +38 (067) 112 55 77
+                        </span>
+                    </a>
+                    <button class="header__make cta cta--sm js-appointment-open">Записатись</button>
+                </div>
             </div>
         </div>
     </header>
@@ -288,7 +389,7 @@
                 <p>Your browser does not support the video tag.</p>
             </video>
             <div class="container">
-                <div class="hero__time">
+                <div class="hero__time js-animation">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
@@ -299,10 +400,10 @@
                     <span>10:00 – 19:00 (Пн – Пт)</span>
                     <span>Вихідні (Сб.-Нд.)</span>
                 </div>
-                <h1 class="h1 hero__title">
+                <h1 class="h1 hero__title js-animation">
                     Сучасний <br> медичний центр який завжди поруч
                 </h1>
-                <div class="hero__info">
+                <div class="hero__info js-animation">
                     <button class="hero__button cta cta--lg js-appointment-open">
                         Записатись на консультацію
                     </button>
@@ -318,10 +419,10 @@
         <section class="treatment">
             <div class="container">
                 <div class="treatment__info">
-                    <h2 class="h2 treatment__title">
+                    <h2 class="h2 treatment__title js-animation">
                         З турботи починається лікування
                     </h2>
-                    <p class="treatment__description">
+                    <p class="treatment__description js-animation">
                         “AstraMed” – це спеціалізований центр у місті Рівному, де надаються високоякісні медичні
                         послуги. Головна місія нашої компанії – це надати кожному пацієнтові індивідуальний комплексний
                         підхід та доступ до найкращих європейським медицинських технологій. Адже здоров’я – це головний
@@ -329,22 +430,22 @@
                         і зі сторони кваліфікованих лікарів.
                     </p>
                 </div>
-                <div class="treatment__thumbnail">
+                <div class="treatment__thumbnail js-animation">
                     <img loading="lazy" width="566" height="615" src="./assets/images/treatment-pic.jpg"
                         alt="Thumbnail">
                 </div>
                 <div class="treatment__mission">
-                    <div class="treatment__logo">
+                    <div class="treatment__logo js-animation">
                         <img loading="lazy" width="113" height="113" src="./assets/images/icons/logo-sm.svg" alt="Logo">
                     </div>
-                    <h3 class="h3 treatment__subtitle">
+                    <h3 class="h3 treatment__subtitle js-animation">
                         Наша місія:
                     </h3>
-                    <p class="treatment__description">
+                    <p class="treatment__description js-animation">
                         Запроваджувати інноваційні методи діагностики та лікування, щоб забезпечити пацієнтам найкращі
                         результати, використовуючи новітні технології та підходи доказової медицини.
                     </p>
-                    <a href="#!" class="treatment__link link-plus link-plus--dark link-plus--bdark">
+                    <a href="#!" class="treatment__link link-plus link-plus--dark link-plus--bdark js-animation">
                         <div class="link-plus__text">
                             <span>детальніше про клініку</span>
                             <span>детальніше про клініку</span>
@@ -376,17 +477,17 @@
         <section class="services">
             <div class="container">
                 <div class="services__head">
-                    <h2 class="h2 services__title">
+                    <h2 class="h2 services__title js-animation">
                         Послуги клініки
                     </h2>
-                    <div class="services__logo">
+                    <div class="services__logo js-animation">
                         <img loading="lazy" width="409" height="72" src="./assets/images/icons/logo-dark.svg"
                             alt="Logo">
                     </div>
                 </div>
             </div>
             <div class="container">
-                <div class="services__col">
+                <div class="services__col js-animation">
                     <div class="services__sticky">
                         <div class="services__thumbnail">
                             <img loading="lazy" width="692" height="680" src="./assets/images/services-pic.jpg"
@@ -395,7 +496,7 @@
                     </div>
                 </div>
                 <div class="services__col">
-                    <div class="services__item">
+                    <div class="services__item js-animation">
                         <div class="services__item-ico">
                             <lottie-player src="./assets/animations/stetkhoscope.json" direction="1" mode="normal" loop
                                 autoplay></lottie-player>
@@ -452,7 +553,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="services__item">
+                    <div class="services__item js-animation">
                         <div class="services__item-ico">
                             <lottie-player src="./assets/animations/sensor.json" direction="1" mode="normal" loop
                                 autoplay></lottie-player>
@@ -489,7 +590,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="services__item">
+                    <div class="services__item js-animation">
                         <div class="services__item-ico">
                             <lottie-player src="./assets/animations/ovaries.json" direction="1" mode="normal" loop
                                 autoplay></lottie-player>
@@ -526,7 +627,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="services__item">
+                    <div class="services__item js-animation">
                         <div class="services__item-ico">
                             <lottie-player src="./assets/animations/eye.json" direction="1" mode="normal" loop
                                 autoplay></lottie-player>
@@ -563,7 +664,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="services__item">
+                    <div class="services__item js-animation">
                         <div class="services__item-ico">
                             <lottie-player src="./assets/animations/couple.json" direction="1" mode="normal" loop
                                 autoplay></lottie-player>
@@ -600,7 +701,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="services__item">
+                    <div class="services__item js-animation">
                         <div class="services__item-ico">
                             <lottie-player src="./assets/animations/heart.json" direction="1" mode="normal" loop
                                 autoplay></lottie-player>
@@ -637,7 +738,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="services__item">
+                    <div class="services__item js-animation">
                         <div class="services__item-ico">
                             <lottie-player src="./assets/animations/stomach.json" direction="1" mode="normal" loop
                                 autoplay></lottie-player>
@@ -680,7 +781,7 @@
         <section class="stress">
             <div class="container">
                 <div class="stress__box">
-                    <video muted autoplay loop playsinline class="stress__video js-video-autoplay"
+                    <video muted autoplay loop playsinline class="stress__video js-video-autoplay js-animation"
                         poster="./assets/images/poster-stress.jpg">
                         <source data-src="./assets/video/stress.mp4" type="video/mp4">
                         <p>Your browser does not support the video tag.</p>
@@ -688,31 +789,31 @@
 
                     <div class="stress__content">
                         <div class="stress__content-about">
-                            <h2 class="h2 stress__title">
+                            <h2 class="h2 stress__title js-animation">
                                 Stress Free атмосфера
                             </h2>
-                            <p class="stress__description">
+                            <p class="stress__description js-animation">
                                 Клініка, де поєднуються комфорт і сучасна медицина. Все, що потрібно для одужання — в
                                 одному місці
                             </p>
-                            <button class="stress__button cta cta--lg js-appointment-open">
+                            <button class="stress__button cta cta--lg js-appointment-open js-animation">
                                 Записатись на консультацію
                             </button>
                         </div>
                         <ul class="stress__content-list">
-                            <li class="stress__content-item">
+                            <li class="stress__content-item js-animation">
                                 Індивідуальний підхід
                             </li>
-                            <li class="stress__content-item">
+                            <li class="stress__content-item js-animation">
                                 Революційні технології
                             </li>
-                            <li class="stress__content-item">
+                            <li class="stress__content-item js-animation">
                                 Обладнання експертонго класу
                             </li>
-                            <li class="stress__content-item">
+                            <li class="stress__content-item js-animation">
                                 Доступні ціни
                             </li>
-                            <li class="stress__content-item">
+                            <li class="stress__content-item js-animation">
                                 Кваліфікована команда
                             </li>
                         </ul>
@@ -722,7 +823,7 @@
         </section>
         <section class="specialist">
             <div class="container">
-                <div class="specialist__head">
+                <div class="specialist__head js-animation">
                     <div class="specialist__col">
                         <h2 class="h2 specialist__title">
                             Команда Спеціалістів
@@ -780,7 +881,7 @@
                             </a>
                         </div>
                         <div class="doctors-slider__slide swiper-slide">
-                            <a href="#!" class="doctor-card">
+                            <a href="#!" class="doctor-card js-animation">
                                 <div class="doctor-card__pic">
                                     <img loading="lazy" width="458" height="528" src="./assets/images/doctor_2.jpg"
                                         alt="Picture">
@@ -818,7 +919,7 @@
                             </a>
                         </div>
                         <div class="doctors-slider__slide swiper-slide">
-                            <a href="#!" class="doctor-card">
+                            <a href="#!" class="doctor-card js-animation">
                                 <div class="doctor-card__pic">
                                     <img loading="lazy" width="458" height="528" src="./assets/images/doctor_3.jpg"
                                         alt="Picture">
@@ -856,7 +957,7 @@
                             </a>
                         </div>
                         <div class="doctors-slider__slide swiper-slide">
-                            <a href="#!" class="doctor-card">
+                            <a href="#!" class="doctor-card js-animation">
                                 <div class="doctor-card__pic">
                                     <img loading="lazy" width="458" height="528" src="./assets/images/doctor_2.jpg"
                                         alt="Picture">
@@ -894,7 +995,7 @@
                             </a>
                         </div>
                         <div class="doctors-slider__slide swiper-slide">
-                            <a href="#!" class="doctor-card">
+                            <a href="#!" class="doctor-card js-animation">
                                 <div class="doctor-card__pic">
                                     <img loading="lazy" width="458" height="528" src="./assets/images/doctor_3.jpg"
                                         alt="Picture">
@@ -967,12 +1068,12 @@
             </div>
         </section>
         <section class="reviews">
-            <img src="./assets/images/name.svg" alt="Company name" class="reviews__name">
+            <img src="./assets/images/name.svg" alt="Company name" class="reviews__name js-animation">
             <div class="container">
-                <h2 class="h2 reviews__title">
+                <h2 class="h2 reviews__title js-animation">
                     Більше <span>7 000 пацієнтів</span> довірили нам своє здоров’я
                 </h2>
-                <div class="reviews__head">
+                <div class="reviews__head js-animation">
                     <div class="reviews__info">
                         <div class="reviews__rating">
                             <p class="reviews__rating-title">
@@ -1031,7 +1132,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="reviews__slider js-reviews-slider swiper">
+                <div class="reviews__slider js-reviews-slider swiper js-animation">
                     <div class="reviews__slider-wrapper swiper-wrapper">
                         <div class="reviews__slider-slide swiper-slide">
                             <div class="reviews-box js-review-box">
@@ -1254,7 +1355,7 @@
         </section>
         <section class="offer">
             <div class="container">
-                <div class="offer__head">
+                <div class="offer__head js-animation">
                     <h2 class="h2 offer__title">
                         Спеціальні пропозиції
                     </h2>
@@ -1286,7 +1387,7 @@
                     </a>
                 </div>
                 <div class="offer__cards">
-                    <a href="offers.html" class="offer-card">
+                    <a href="offers.html" class="offer-card js-animation">
                         <div class="offer-card__pic">
                             <img loading="lazy" width="724" height="608" src="./assets/images/offer_1.jpg"
                                 alt="Picture">
@@ -1323,7 +1424,7 @@
                             </div>
                         </div>
                     </a>
-                    <a href="#!" class="offer-card">
+                    <a href="#!" class="offer-card js-animation">
                         <div class="offer-card__pic">
                             <img loading="lazy" width="724" height="608" src="./assets/images/offer_2.jpg"
                                 alt="Picture">
@@ -1367,25 +1468,25 @@
             <div class="container">
                 <div class="feedback__content">
                     <div class="feedback__col">
-                        <img class="feedback__pic" src="./assets/images/feedback-pic.jpg" alt="Picture">
+                        <img class="feedback__pic js-animation-scale" src="./assets/images/feedback-pic.jpg" alt="Picture">
                         <div class="feedback__border">
                             <div class="feedback__info">
                                 <div>
-                                    <h3 class="h3 feedback__title">
+                                    <h3 class="h3 feedback__title js-animation">
                                         Запис та консультація
                                     </h3>
-                                    <p class="feedback__description">
+                                    <p class="feedback__description js-animation">
                                         Виникають питання, зателефонуйте нам і ми проконсультуємо Вас та надамо найкраще
                                         розв'язання
                                         Вашого питання.
                                     </p>
                                     <div class="feedback__phones">
-                                        <a href="tel:+380671125577" class="feedback__phone">
+                                        <a href="tel:+380671125577" class="feedback__phone js-animation">
                                             <img loading="lazy" width="40" height="40"
                                                 src="./assets/images/icons/ico-call.svg" alt="Icon">
                                             <span>+38 (067) 112 55 77</span>
                                         </a>
-                                        <a href="tel:+380671125577" class="feedback__phone">
+                                        <a href="tel:+380671125577" class="feedback__phone js-animation">
                                             <img loading="lazy" width="40" height="40"
                                                 src="./assets/images/icons/ico-call.svg" alt="Icon">
                                             <span>+38 (067) 112 55 77</span>
@@ -1393,7 +1494,7 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <div class="feedback__social">
+                                    <div class="feedback__social js-animation">
                                         <p class="feedback__text">
                                             Ми в соціальних мережах та мессенджерах
                                         </p>
@@ -1425,10 +1526,10 @@
                         </div>
                     </div>
                     <div class="feedback__col">
-                        <h3 class="h3 feedback__title">
+                        <h3 class="h3 feedback__title js-animation">
                             Запис на прийом онлайн
                         </h3>
-                        <form class="feedback__form js-appointment-form">
+                        <form class="feedback__form js-appointment-form js-animation">
                             <div class="feedback__form-wrapper">
                                 <div class="feedback__form-fields">
                                     <div class="field-box">
@@ -1504,12 +1605,12 @@
         </section>
         <section class="location">
             <div class="container">
-                <h2 class="h2 location__title">
+                <h2 class="h2 location__title js-animation">
                     Багатопрофільна медична Клініка AstraMed
                 </h2>
                 <div class="location__content">
                     <div class="location__info">
-                        <p class="location__description">
+                        <p class="location__description js-animation">
                             У нашому медичному центрі ми поєднуємо хірургічну точність, сучасні технології та
                             людське
                             ставлення, створюючи простір, де кожен пацієнт почувається впевнено і спокійно. Комфорт
@@ -1518,7 +1619,7 @@
                             що
                             робить процес лікування максимально спокійним та ефективним.
                         </p>
-                        <div class="location__map">
+                        <div class="location__map js-animation">
                             <div class="location__map-box">
                                 <img src="./assets/images/map-pic.jpg" alt="Map">
                                 <div class="location__map-panel">
@@ -1557,7 +1658,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="location__pic">
+                    <div class="location__pic js-animation">
                         <img loading="lazy" width="766" height="712" src="./assets/images/location-pic.jpg"
                             alt="Picture">
                     </div>

@@ -1,6 +1,7 @@
 'use strict';
 
 // components
+import headerFlow from './modules/headerFlow.js';
 import forms from './modules/forms.js';
 import appointmentForm from './modules/appointmentForm.js';
 import feedbackForm from './modules/feedbackForm.js';
@@ -19,9 +20,12 @@ import articlePageFlow from './modules/articlePage.js';
 // func
 import showMoreContent from './modules/showMoreContent.js';
 import reviewCount from './modules/reviewCount.js';
+import animationObserver from './modules/animationObserver.js';
 
 document.addEventListener('DOMContentLoaded', () => {
+    animationObserver();
     // components
+    headerFlow();
     forms();
     appointmentForm();
     feedbackForm();

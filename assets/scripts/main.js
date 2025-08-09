@@ -10,6 +10,7 @@ import videoObserver from './modules/videoObserver.js';
 import sliders from './modules/sliders.js';
 import reviewBox from './modules/reviewBox.js';
 import blogCard from './modules/blogCard.js';
+import dropdownItems from './modules/dropdownItems.js';
 
 // pages
 import pricesPageFlow from './modules/pricesPage.js';
@@ -30,6 +31,8 @@ document.addEventListener('DOMContentLoaded', () => {
     sliders();
     reviewBox();
     blogCard();
+    dropdownItems();
+
     // pages
     pricesPageFlow();
     articlePageFlow();

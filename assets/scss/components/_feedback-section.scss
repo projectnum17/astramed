@@ -366,7 +366,7 @@
                     color: rgba(36, 44, 51, 0.4);
                 }
 
-                &:not(:placeholder-shown) + .field-box__label {
+                .field-box__label {
                     top: 0;
                     font-size: 12px;
                     opacity: 1;

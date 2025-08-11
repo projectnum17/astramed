@@ -4,22 +4,11 @@ const sliders = () => {
         const sliderEl = document.querySelector('.js-doctors-slider');
         if (!sliderEl) return;
 
-        const getAutoplay = () => {
-            if (window.innerWidth < 768) {
-                return {
-                    delay: 3000,
-                    disableOnInteraction: true,
-                };
-            }
-            return false;
-        };
-
-        let swiper = new Swiper(sliderEl, {
+        new Swiper(sliderEl, {
             slidesPerView: 3,
             spaceBetween: 41,
             grabCursor: true,
             speed: 900,
-            autoplay: getAutoplay(),
             navigation: {
                 prevEl: '.js-doctors-prev',
                 nextEl: '.js-doctors-next',
@@ -47,39 +36,17 @@ const sliders = () => {
                 },
             },
         });
-
-        window.addEventListener('resize', () => {
-            const newAutoplay = getAutoplay();
-            swiper.params.autoplay = newAutoplay;
-
-            if (newAutoplay) {
-                swiper.autoplay.start();
-            } else {
-                swiper.autoplay.stop();
-            }
-        });
     };
 
     const reviewsSlider = () => {
         const sliderEl = document.querySelector('.js-reviews-slider');
         if (!sliderEl) return;
 
-        const getAutoplay = () => {
-            if (window.innerWidth < 768) {
-                return {
-                    delay: 3000,
-                    disableOnInteraction: true,
-                };
-            }
-            return false;
-        };
-
-        let swiper = new Swiper(sliderEl, {
+        new Swiper(sliderEl, {
             slidesPerView: 3,
             spaceBetween: 40,
             grabCursor: true,
             speed: 900,
-            autoplay: getAutoplay(),
             navigation: {
                 prevEl: '.js-reviews-prev',
                 nextEl: '.js-reviews-next',
@@ -106,17 +73,6 @@ const sliders = () => {
                     spaceBetween: 40,
                 },
             },
-        });
-
-        window.addEventListener('resize', () => {
-            const newAutoplay = getAutoplay();
-            swiper.params.autoplay = newAutoplay;
-
-            if (newAutoplay) {
-                swiper.autoplay.start();
-            } else {
-                swiper.autoplay.stop();
-            }
         });
     };
 

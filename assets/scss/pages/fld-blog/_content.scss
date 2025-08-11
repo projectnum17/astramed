@@ -22,6 +22,7 @@
     .logotype {
         pointer-events: none;
         max-width: 1430px;
+        width: 100%;
         position: absolute;
         left: 50%;
         bottom: 0;
@@ -35,8 +36,20 @@
         padding-top: var(--section-pt);
         margin-bottom: 400px;
 
+        @include media('mobile') {
+            margin-bottom: 100px;
+        }
+
         &__title {
             margin-bottom: 80px;
+
+            @include media('tablet') {
+                margin-bottom: 50px;
+            }
+
+            @include media('mobile') {
+                margin-bottom: 24px;
+            }
         }
 
         &__cards {
@@ -44,6 +57,17 @@
             grid-template-columns: repeat(3, 1fr);
             gap: 40px;
             margin-bottom: 60px;
+
+            @include media('tablet') {
+                margin-bottom: 24px;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 24px;
+            }
+            @include media('mobile') {
+                margin-bottom: 24px;
+                grid-template-columns: repeat(1, 1fr);
+                gap: 12px;
+            }
         }
 
         &__more {
@@ -51,6 +75,10 @@
             align-items: center;
             justify-content: center;
             gap: 32px;
+
+            @include media('mobile') {
+                gap: 10px;
+            }
 
             &::after,
             &::before {
@@ -95,6 +123,12 @@
                 }
             }
 
+            @include media('mobile') {
+                width: 100%;
+                max-width: 100%;
+                padding: 12px;
+            }
+
             &__pic {
                 border-radius: 16px;
                 height: 314px;
@@ -102,6 +136,10 @@
                 width: 100%;
                 margin-bottom: 40px;
                 @include transitions(0.5s, ease-in-out);
+
+                @include media('mobile') {
+                    margin-bottom: 18px;
+                }
 
                 img {
                     width: 100%;
@@ -116,21 +154,35 @@
                 align-items: flex-start;
                 flex: 1;
                 gap: 20px;
+
+                @include media('mobile') {
+                    gap: 12px;
+                }
             }
 
             &__info {
                 display: flex;
                 max-width: 100%;
-                display: flex;
                 flex-direction: row;
                 align-items: flex-end;
                 gap: 35px;
                 margin-top: auto;
+
+                @include media('mobile') {
+                    width: 100%;
+                    justify-content: space-between;
+                    gap: 10px;
+                }
             }
 
             &__title {
                 font: 500 20px / 140% var(--ff-base);
                 max-width: 386px;
+
+                @include media('mobile') {
+                    font-size: 18px;
+                    max-width: 100%;
+                }
             }
 
             &__text {
@@ -138,6 +190,11 @@
                 letter-spacing: -1px;
                 font-style: italic;
                 max-width: 390px;
+
+                @include media('mobile') {
+                    font-size: 16px;
+                    max-width: 100%;
+                }
             }
 
             &__deco {
@@ -152,6 +209,11 @@
                 background: var(--accent-color);
                 @include transitions(0.5s, ease-in-out);
 
+                @include media('mobile') {
+                    width: 24px;
+                    height: 24px;
+                }
+
                 svg {
                     display: inline-flex;
                     flex-shrink: 0;
@@ -164,6 +226,11 @@
                         width: 24px;
                         height: 24px;
                         transform: translate(-50%, -50%) rotate(0);
+
+                        @include media('mobile') {
+                            width: 16px;
+                            height: 16px;
+                        }
                     }
 
                     &:last-child {
@@ -171,6 +238,11 @@
                         height: 16px;
                         opacity: 0;
                         transform: translate(-50%, -50%) rotate(90deg);
+
+                        @include media('mobile') {
+                            width: 12px;
+                            height: 12px;
+                        }
                     }
                 }
             }

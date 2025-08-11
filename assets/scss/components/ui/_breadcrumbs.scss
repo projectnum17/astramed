@@ -7,6 +7,10 @@
     gap: 8px;
     margin-bottom: 60px;
 
+    @include media('mobile') {
+        margin-bottom: 24px;
+    }
+
     span {
         color: #dde0e3;
     }

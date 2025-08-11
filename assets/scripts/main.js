@@ -52,6 +52,4 @@ document.addEventListener('DOMContentLoaded', () => {
     );
     reviewCount('.main--home .js-review-box');
     reviewCount('.main--reviews .js-review-box');
-
-    //support 
 });

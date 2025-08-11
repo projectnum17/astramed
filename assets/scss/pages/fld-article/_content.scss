@@ -12,8 +12,15 @@ body:has(.main--article) {
         h2 {
             font: 400 32px / 100% var(--ff-base);
             letter-spacing: -1px;
-            margin-bottom: 24px;
+            margin: 0 0 24px 0;
             color: #000;
+
+            @include media('tablet') {
+                font-size: 28px;
+            }
+            @include media('mobile') {
+                font-size: 24px;
+            }
         }
 
         ol {
@@ -23,6 +30,11 @@ body:has(.main--article) {
             padding: 0 0 0 30px;
             margin: 0 0 60px 0;
             color: #000;
+
+            @include media('mobile') {
+                margin: 0 0 24px 0;
+                padding: 0 0 0 20px;
+            }
 
             li::marker {
                 font-weight: bold;
@@ -37,12 +49,20 @@ body:has(.main--article) {
             font: 400 20px / 140% var(--ff-base);
             letter-spacing: -1px;
             color: #000;
+
+            @include media('mobile') {
+                font-size: 18px;
+            }
         }
 
         img {
             width: 100%;
             border-radius: 16px;
             margin-bottom: 60px;
+
+            @include media('mobile') {
+                margin-bottom: 24px;
+            }
         }
 
         blockquote {
@@ -52,12 +72,25 @@ body:has(.main--article) {
             border-bottom: 1px solid #30c9e8;
             color: #000;
 
+            @include media('mobile') {
+                padding-block: 18px;
+                margin: 0 0 24px 0;
+            }
+
             p {
                 font: 400 40px / 100% var(--ff-base);
                 letter-spacing: -1px;
                 gap: 60px;
                 align-items: flex-start;
                 display: flex;
+
+                @include media('tablet') {
+                    font-size: 38px;
+                }
+                @include media('mobile') {
+                    font-size: 28px;
+                    gap: 24px;
+                }
 
                 &::before {
                     content: '';
@@ -66,7 +99,12 @@ body:has(.main--article) {
                     width: 92px;
                     height: 60px;
                     background: url('../images/icons/ico-quote-clrd.svg')
-                        no-repeat center center;
+                        no-repeat center center / cover;
+
+                    @include media('mobile') {
+                        width: 50px;
+                        height: 30px;
+                    }
                 }
             }
         }
@@ -78,6 +116,11 @@ body:has(.main--article) {
             border-radius: 16px;
             overflow: hidden;
             position: relative;
+
+            @include media('mobile') {
+                height: 450px;
+                margin-bottom: 24px;
+            }
 
             &.is-playing {
                 &::after {
@@ -149,6 +192,17 @@ body:has(.main--article) {
                     &:first-child {
                         left: -20px;
                     }
+
+                    @include media('mobile') {
+                        width: 25px;
+                        height: 25px;
+                        margin-left: 2px;
+                    }
+                }
+
+                @include media('mobile') {
+                    width: 64px;
+                    height: 64px;
                 }
             }
 

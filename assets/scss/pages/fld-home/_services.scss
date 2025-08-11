@@ -10,6 +10,10 @@
                 align-items: stretch;
                 justify-content: space-between;
                 gap: 20px;
+
+                @include media('tablet') {
+                    flex-direction: column;
+                }
             }
         }
 
@@ -19,11 +23,22 @@
                 display: flex;
                 flex-direction: column;
                 gap: 40px;
+                @include media('tablet') {
+                    max-width: 100%;
+                }
+
+                @include media('mobile') {
+                    gap: 20px;
+                }
             }
         }
 
         &__title {
             margin-bottom: 15px;
+
+            @include media('mobile') {
+                margin-bottom: 23px;
+            }
         }
 
         &__logo {
@@ -31,6 +46,11 @@
             max-width: 409px;
             position: relative;
             z-index: 2;
+
+            @include media('mobile') {
+                margin: 0 auto;
+                max-width: 262px;
+            }
         }
 
         &__sticky {
@@ -38,6 +58,17 @@
             top: 160px;
             max-width: 692px;
             height: 680px;
+
+            @include media('tablet') {
+                position: relative;
+                top: auto;
+                width: 100%;
+                max-width: 100%;
+            }
+
+            @include media('mobile') {
+                height: 337px;
+            }
         }
 
         &__thumbnail {
@@ -47,6 +78,10 @@
             height: 100%;
             width: 100%;
             transform: translateY(-5%);
+
+            @include media('tablet') {
+                width: 100%;
+            }
 
             &::after {
                 content: '';
@@ -75,14 +110,78 @@
             padding-bottom: 40px;
             border-bottom: 1px solid rgba(36, 44, 51, 0.4);
 
+            @include media('mobile') {
+                gap: 20px;
+                padding-bottom: 32px;
+            }
+
+            .mobile--show {
+                display: none;
+                @include media('mobile') {
+                    display: flex;
+                }
+            }
+
             &:has(.services__item-list) {
+                .services__item-info {
+                    @include media('mobile') {
+                        flex-direction: column;
+                        align-items: flex-start;
+
+                        .services__item-link {
+                            display: none;
+
+                            &.mobile--show {
+                                display: flex;
+                            }
+                        }
+
+                        & > div {
+                            display: flex;
+                            align-items: center;
+                            gap: 5px;
+                            justify-content: space-between;
+                            margin-bottom: 28px;
+                            width: 100%;
+                        }
+                    }
+                }
                 .services__item-title {
                     margin-bottom: 32px;
+
+                    @include media('mobile') {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            &-link {
+                @include media('mobile') {
+                    padding: 0;
+                    border: none;
+                    .link-plus__text {
+                        display: none;
+                    }
+                }
+            }
+
+            &-info {
+                @include media('mobile') {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    justify-content: space-between;
+                    width: 100%;
                 }
             }
 
             &-title {
                 margin-bottom: 40px;
+
+                @include media('mobile') {
+                    font-size: 24px;
+                    margin-bottom: 0;
+                }
             }
 
             &-ico {
@@ -90,6 +189,11 @@
                 flex-shrink: 0;
                 width: 80px;
                 height: 80px;
+
+                @include media('mobile') {
+                    width: 60px;
+                    height: 60px;
+                }
 
                 lottie-player {
                     width: 100%;
@@ -102,6 +206,11 @@
                 display: flex;
                 flex-direction: column;
                 gap: 32px;
+
+                @include media('mobile') {
+                    gap: 28px;
+                    margin: 0;
+                }
             }
 
             &-point {
@@ -110,6 +219,10 @@
                 display: inline-flex;
                 align-items: center;
                 gap: 12px;
+
+                @include media('mobile') {
+                    font-size: 14px;
+                }
 
                 &::before {
                     content: '';

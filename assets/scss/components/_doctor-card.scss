@@ -31,6 +31,10 @@
             transform: translateY(-3px);
         }
     }
+    @include media('mobile') {
+        padding: 11px;
+        max-width: 100%;
+    }
 
     &__pic {
         border-radius: 16px;
@@ -40,6 +44,12 @@
         width: 100%;
         margin: 0 auto;
         @include transitions(0.5s, ease-in-out);
+        @include media('mobile') {
+            max-width: 100%;
+        }
+        @media (max-width: 576px) {
+            height: 370px;
+        }
 
         img {
             width: 100%;
@@ -54,6 +64,12 @@
         bottom: 32px;
         right: 32px;
         z-index: 2;
+
+        @include media('mobile') {
+            bottom: 17px;
+            left: 17px;
+            right: 17px;
+        }
     }
 
     &__job {
@@ -65,6 +81,9 @@
         margin-bottom: 8px;
         border: 1px solid var(--accent-color);
         background: var(--white);
+        @include media('mobile') {
+            font-size: 14px;
+        }
     }
 
     &__glass {
@@ -77,6 +96,9 @@
         background: #ffffff80;
         backdrop-filter: blur(12px);
         @include transitions(0.5s, ease-in-out);
+        @include media('mobile') {
+            padding: 8px;
+        }
     }
 
     &__name {
@@ -86,6 +108,10 @@
     &__surname {
         font: 400 20px / 140% var(--ff-base);
         letter-spacing: -1px;
+
+        @include media('mobile') {
+            font-size: 18px;
+        }
     }
 
     &__deco {

@@ -4,6 +4,9 @@
 .main--home {
     .offer {
         margin-bottom: var(--section-mb);
+        @include media('mobile') {
+            padding-top: 80px;
+        }
 
         &__head {
             display: flex;
@@ -12,12 +15,27 @@
             gap: 20px;
             max-width: 1379px;
             margin-bottom: 48px;
+            @include media('mobile') {
+                flex-direction: column;
+                gap: 24px;
+                align-items: flex-start;
+                margin-bottom: 32px;
+            }
         }
 
         &__cards {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 40px;
+
+            @include media('tablet') {
+                gap: 25px;
+            }
+
+            @include media('mobile') {
+                grid-template-columns: repeat(1, 1fr);
+                gap: 16px;
+            }
         }
     }
 }

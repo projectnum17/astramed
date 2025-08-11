@@ -48,6 +48,15 @@
         overflow: hidden;
         @include transitions(0.5s, ease-in-out);
 
+        @include media('tablet') {
+            height: 368px;
+        }
+
+        @include media('mobile') {
+            max-width: 100%;
+            width: 100%;
+        }
+
         &::after {
             content: '';
             inset: 0;
@@ -76,6 +85,18 @@
         bottom: 56px;
         right: 56px;
         @include transitions(0.5s, ease-in-out);
+
+        @include media('tablet') {
+            bottom: 40px;
+            right: 40px;
+            left: 40px;
+        }
+
+        @include media('mobile') {
+            bottom: 32px;
+            right: 32px;
+            left: 32px;
+        }
     }
 
     &__title {
@@ -84,6 +105,10 @@
         color: var(--white);
         span {
             color: var(--accent-color);
+        }
+
+        @include media('mobile') {
+            margin-bottom: 16px;
         }
     }
 
@@ -99,6 +124,11 @@
         gap: 12px;
         border-color: var(--white);
         color: var(--white);
+
+        @include media('mobile') {
+            font-size: 14px;
+            padding: 11px 11px 11px 19px;
+        }
 
         &--text {
             position: relative;
@@ -130,6 +160,11 @@
             justify-content: center;
             background: var(--accent-color);
 
+            @include media('tablet') {
+                width: 20px;
+                height: 20px;
+            }
+
             span {
                 display: inline-flex;
                 width: 16px;
@@ -141,6 +176,11 @@
                 transform: translate(-50%, -50%);
                 transition: ease-out 0.3s;
                 color: var(--dark-grey);
+
+                @include media('tablet') {
+                    width: 12px;
+                    height: 12px;
+                }
 
                 svg {
                     width: 100%;

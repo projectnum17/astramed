@@ -2,7 +2,14 @@
 @use '../base/mixins' as *;
 
 .doctors-slider {
+    @include media('mobile') {
+        overflow: visible;
+    }
     &__panel {
         padding-top: 60px;
+
+        @include media('mobile') {
+            padding-top: 40px;
+        }
     }
 }

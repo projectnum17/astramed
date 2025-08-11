@@ -12,6 +12,11 @@
     gap: 12px;
     min-width: max-content;
 
+    @include media('mobile') {
+        font-size: 14px;
+        padding: 11px 11px 11px 19px;
+    }
+
     @include hover {
         .link-plus__ico {
             span {
@@ -96,6 +101,11 @@
         justify-content: center;
         background: var(--accent-color);
 
+        @include media('mobile') {
+            width: 20px;
+            height: 20px;
+        }
+
         span {
             display: inline-flex;
             width: 16px;
@@ -107,6 +117,11 @@
             transform: translate(-50%, -50%);
             transition: ease-out 0.3s;
             color: var(--dark-grey);
+
+            @include media('mobile') {
+                width: 12px;
+                height: 12px;
+            }
 
             svg {
                 width: 100%;

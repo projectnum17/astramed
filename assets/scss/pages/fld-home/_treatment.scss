@@ -4,19 +4,43 @@
 .main--home {
     .treatment {
         margin-bottom: var(--section-mb);
+
         .container {
             display: flex;
             align-items: stretch;
             gap: 20px;
             justify-content: space-between;
+
+            @include media('desktop') {
+                flex-direction: column;
+            }
+
+            @include media('mobile') {
+                gap: 32px;
+            }
         }
 
         &__info {
             max-width: 430px;
+            @include media('desktop') {
+                max-width: 100%;
+            }
+        }
+
+        &__description {
+            font: 400 20px / 140% var(--ff-base);
+            letter-spacing: -1px;
+            @include media('mobile') {
+                font-size: 18px;
+            }
         }
 
         &__title {
             margin-bottom: 60px;
+
+            @include media('mobile') {
+                margin-bottom: 32px;
+            }
         }
 
         &__thumbnail {
@@ -25,6 +49,14 @@
             height: 615px;
             border-radius: 24px;
             overflow: hidden;
+
+            @include media('desktop') {
+                max-width: 100%;
+            }
+
+            @include media('mobile') {
+                height: 373px;
+            }
 
             img {
                 width: 100%;
@@ -38,6 +70,17 @@
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
+
+            @include media('desktop') {
+                max-width: 100%;
+                align-items: center;
+                text-align: center;
+            }
+
+            @include media('mobile') {
+                text-align: left;
+                align-items: flex-start;
+            }
         }
 
         &__logo {
@@ -45,6 +88,11 @@
             display: inline-flex;
             flex-shrink: 0;
             margin-bottom: 40px;
+
+            @include media('mobile') {
+                max-width: 66px;
+                margin-bottom: 24px;
+            }
 
             img {
                 width: 100%;
@@ -59,6 +107,10 @@
         &__link {
             margin-top: 40px;
             width: max-content;
+
+            @include media('mobile') {
+                margin-top: 24px;
+            }
         }
     }
 }

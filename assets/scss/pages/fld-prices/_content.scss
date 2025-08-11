@@ -23,6 +23,11 @@
 
         &__title {
             max-width: 50%;
+
+            @include media('mobile') {
+                max-width: 100%;
+                text-align: center;
+            }
         }
 
         &__search {

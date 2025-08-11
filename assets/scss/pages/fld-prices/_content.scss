@@ -13,6 +13,12 @@
             align-items: center;
             justify-content: space-between;
             margin-bottom: 80px;
+            gap: 12px;
+
+            @include media('mobile') {
+                margin-bottom: 24px;
+                flex-direction: column;
+            }
         }
 
         &__title {
@@ -23,6 +29,10 @@
             width: 100%;
             max-width: 569px;
             position: relative;
+
+            @include media('mobile') {
+                max-width: 100%;
+            }
 
             &-btn {
                 flex-shrink: 0;
@@ -35,6 +45,10 @@
                 svg {
                     width: 100%;
                     height: 100%;
+                }
+
+                @include media('mobile') {
+                    left: 10px;
                 }
             }
 
@@ -50,6 +64,11 @@
                 opacity: 0;
                 visibility: hidden;
                 @include transitions(0.3s, ease-out);
+
+                @include media('mobile') {
+                    width: 24px;
+                    height: 24px;
+                }
 
                 &.is-shown {
                     top: 50%;
@@ -72,6 +91,11 @@
                 padding: 16px 60px 16px 60px;
                 background: var(--white);
                 @include transitions(0.3s, ease-out);
+
+                @include media('mobile') {
+                    font-size: 16px;
+                    padding: 14px 60px 14px 40px;
+                }
 
                 &[type='search']::-webkit-search-decoration,
                 &[type='search']::-webkit-search-cancel-button,
@@ -115,6 +139,14 @@
             padding-top: 32px;
             border-bottom: 1px solid rgba(36, 44, 51, 0.2);
             @include transitions(0.3s, ease-out);
+            @include media('tablet') {
+                gap: 12px;
+            }
+
+            @include media('mobile') {
+                padding-top: 12px;
+                padding-bottom: 12px;
+            }
 
             &:first-child {
                 border-top: 1px solid rgba(36, 44, 51, 0.2);
@@ -129,6 +161,10 @@
 
                 .box__head {
                     margin-bottom: 32px;
+
+                    @include media('mobile') {
+                        margin-bottom: 24px;
+                    }
                 }
 
                 .box__inner {
@@ -147,6 +183,10 @@
                 height: 92px;
                 display: inline-flex;
                 flex-shrink: 0;
+
+                @include media('tablet') {
+                    display: none;
+                }
             }
 
             &__descr {
@@ -218,6 +258,16 @@
                 gap: 40px;
                 margin-bottom: 8px;
                 border-bottom: 1px solid rgba(36, 44, 51, 0.1);
+                overflow: scroll;
+                scrollbar-width: none;
+                -ms-overflow-style: none;
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+
+                @include media('mobile') {
+                    gap: 20px;
+                }
 
                 &-item {
                     padding-block: 18px;
@@ -225,8 +275,14 @@
                     text-transform: uppercase;
                     text-align: center;
                     position: relative;
+                    min-width: max-content;
                     color: #9da7af;
                     @include transitions(0.3s, ease-out);
+
+                    @include media('mobile') {
+                        font-size: 14px;
+                        padding-block: 14px;
+                    }
 
                     &::after {
                         content: '';
@@ -266,6 +322,9 @@
 
             &__text {
                 font: 400 14px / 140% var(--ff-base);
+                @include media('mobile') {
+                    font-size: 12px;
+                }
             }
 
             &__services {
@@ -287,8 +346,18 @@
                 gap: 40px;
                 padding: 15px 15px 15px 25px;
                 border-radius: 16px;
+                align-items: center;
                 border: 1px solid #dde0e3;
                 background: var(--white);
+
+                @include media('mobile') {
+                    padding: 8px 8px 8px 15px;
+                    border-radius: 8px;
+                    gap: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
 
                 &--full {
                     display: block;
@@ -308,6 +377,10 @@
                             padding-bottom: 16px;
                             margin-bottom: 16px;
                             border-bottom: 1px solid rgba(36, 44, 51, 0.2);
+
+                            @include media('mobile') {
+                                padding: 8px 0 8px 15px;
+                            }
                         }
                     }
                 }
@@ -317,6 +390,12 @@
                     margin-bottom: 24px;
                     opacity: 0.5;
                     padding: 16px 16px 0;
+
+                    @include media('mobile') {
+                        font-size: 16px;
+                        padding: 15px 15px 0;
+                        margin-bottom: 5px;
+                    }
                 }
 
                 &-title {
@@ -324,6 +403,12 @@
                     display: flex;
                     align-items: center;
                     gap: 25px;
+
+                    @include media('mobile') {
+                        gap: 12px;
+                        font-size: 16px;
+                        text-align: center;
+                    }
 
                     &::before {
                         content: '';
@@ -333,6 +418,10 @@
                         height: 6px;
                         border-radius: 50%;
                         background: var(--accent-color);
+
+                        @include media('mobile') {
+                            display: none;
+                        }
                     }
                 }
 
@@ -341,8 +430,16 @@
                     align-items: center;
                     gap: 4px;
 
+                    @include media('mobile') {
+                        justify-content: flex-end;
+                    }
+
                     span {
                         font: 500 20px / 140% var(--ff-base);
+
+                        @include media('mobile') {
+                            font-size: 16px;
+                        }
                     }
 
                     img {

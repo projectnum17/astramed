@@ -150,11 +150,11 @@ section,
 }
 
 .js-animation-bg {
-    transform: translate(50px, 50px) scale(1.1);
+    transform: scale(1.1);
     @include transitions(2s, ease-out);
 
     &._animated {
-        transform: translate(0, 0) scale(1);
+        transform: scale(1);
     }
 }
 

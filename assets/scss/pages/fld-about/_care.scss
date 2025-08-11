@@ -9,21 +9,37 @@
             align-items: flex-start;
             justify-content: space-between;
             gap: 20px;
+
+            @include media('desktop') {
+                flex-direction: column;
+            }
         }
 
         &__about {
             max-width: 885px;
             width: 100%;
+
+            @include media('desktop') {
+                max-width: 100%;
+            }
         }
 
         &__title {
             margin-bottom: 40px;
+            @include media('mobile') {
+                margin-bottom: 24px;
+            }
         }
 
         &__description {
             font: 400 20px / 140% var(--ff-base);
             letter-spacing: -1px;
             margin-bottom: 80px;
+
+            @include media('mobile') {
+                font-size: 18px;
+                margin-bottom: 24px;
+            }
         }
 
         &__stats {
@@ -31,13 +47,28 @@
             gap: 54px;
             justify-content: space-between;
 
+            @include media('tablet') {
+                flex-direction: column;
+                gap: 20px;
+            }
+
             &-item {
                 min-width: 230px;
+                @include media('desktop') {
+                    flex: 1;
+                    text-align: center;
+                }
             }
 
             &-item:not(:last-child) {
                 padding-right: 54px;
                 border-right: 1px solid rgba(36, 44, 51, 0.1);
+                @include media('desktop') {
+                    padding: 0;
+                }
+                @include media('tablet') {
+                    border: none;
+                }
             }
 
             &-value {
@@ -45,11 +76,21 @@
                 letter-spacing: -1px;
                 margin-bottom: 8px;
                 color: var(--accent-color);
+                @include media('tablet') {
+                    font-size: 50px;
+                }
+                @include media('mobile') {
+                    font-size: 34px;
+                }
             }
 
             &-title {
                 font: 400 20px / 140% var(--ff-base);
                 letter-spacing: -1px;
+
+                @include media('mobile') {
+                    font-size: 18px;
+                }
             }
         }
 
@@ -59,6 +100,14 @@
             height: 615px;
             border-radius: 24px;
             overflow: hidden;
+
+            @include media('desktop') {
+                max-width: 100%;
+            }
+
+            @include media('mobile') {
+                height: 373px;
+            }
 
             img {
                 width: 100%;

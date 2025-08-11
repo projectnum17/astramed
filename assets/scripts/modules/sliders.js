@@ -93,6 +93,20 @@ const sliders = () => {
                 el: '.js-gallery-prog',
                 type: 'progressbar',
             },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1.2,
+                    spaceBetween: 10,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                1199: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                },
+            },
         });
     };
 
@@ -112,6 +126,20 @@ const sliders = () => {
             pagination: {
                 el: '.js-licenses-prog',
                 type: 'progressbar',
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                },
+                768: {
+                    slidesPerView: 'auto',
+                    spaceBetween: 20,
+                },
+                1199: {
+                    slidesPerView: 'auto',
+                    spaceBetween: 20,
+                },
             },
         });
     };

@@ -9,6 +9,15 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 24px 20px;
+
+            @include media('tablet') {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+            @include media('mobile') {
+                grid-template-columns: repeat(1, 1fr);
+                gap: 15px;
+            }
         }
 
         &__box {
@@ -22,6 +31,11 @@
                 gap: 10px;
                 justify-content: space-between;
                 background: var(--white);
+
+                @include media('mobile') {
+                    padding: 12px;
+                    border-radius: 12px;
+                }
             }
 
             &-ico {
@@ -30,17 +44,29 @@
                 height: 96px;
                 display: inline-flex;
                 flex-shrink: 0;
+
+                @include media('mobile') {
+                    width: 60px;
+                    height: 60px;
+                }
             }
 
             &-title {
                 font: 500 20px / 140% var(--ff-base);
                 margin-bottom: 24px;
                 max-width: 312px;
+                @include media('mobile') {
+                    font-size: 18px;
+                    margin-bottom: 12px;
+                }
             }
 
             &-text {
                 font: 400 14px / 140% var(--ff-base);
                 max-width: 312px;
+                @include media('mobile') {
+                    font-size: 13px;
+                }
             }
         }
     }

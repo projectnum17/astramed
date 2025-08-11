@@ -15,6 +15,12 @@ body:has(.main--offer) {
 
             &:has(+ h2) {
                 margin-bottom: 60px;
+                @include media('mobile') {
+                    margin-bottom: 24px;
+                }
+            }
+            @include media('mobile') {
+                font-size: 18px;
             }
         }
 
@@ -26,6 +32,11 @@ body:has(.main--offer) {
             margin: 0 0 60px 0;
             list-style: none;
 
+            @include media('mobile') {
+                padding: 0 0 0 24px;
+                margin: 0 0 24px 0;
+            }
+
             li {
                 font: 400 20px / 140% var(--ff-base);
                 letter-spacing: -1px;
@@ -33,6 +44,11 @@ body:has(.main--offer) {
                 align-items: center;
                 gap: 17px;
                 color: #000;
+
+                @include media('mobile') {
+                    font-size: 18px;
+                    gap: 15px;
+                }
 
                 &::before {
                     content: '';
@@ -49,8 +65,14 @@ body:has(.main--offer) {
         h2 {
             font: 400 32px / 100% var(--ff-base);
             letter-spacing: -1px;
-            margin-bottom: 24px;
+            margin: 0 0 24px 0;
             color: #000;
+            @include media('tablet') {
+                font-size: 28px;
+            }
+            @include media('mobile') {
+                font-size: 24px;
+            }
         }
 
         &__prices {
@@ -68,6 +90,15 @@ body:has(.main--offer) {
             border: 1px solid #dde0e3;
             background: var(--white);
 
+            @include media('mobile') {
+                padding: 8px 8px 8px 15px;
+                border-radius: 8px;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                gap: 12px;
+            }
+
             &-subtitle {
                 font: 400 18px / 160% var(--ff-base);
                 margin-bottom: 24px;
@@ -81,6 +112,12 @@ body:has(.main--offer) {
                 align-items: center;
                 gap: 25px;
 
+                @include media('mobile') {
+                    font-size: 16px;
+                    gap: 12px;
+                    text-align: center;
+                }
+
                 &::before {
                     content: '';
                     display: inline-flex;
@@ -89,6 +126,10 @@ body:has(.main--offer) {
                     height: 6px;
                     border-radius: 50%;
                     background: var(--accent-color);
+
+                    @include media('mobile') {
+                        display: none;
+                    }
                 }
             }
 
@@ -96,6 +137,13 @@ body:has(.main--offer) {
                 display: flex;
                 align-items: center;
                 gap: 4px;
+
+                &.mobile--show {
+                    display: none;
+                    @include media('mobile') {
+                        display: flex;
+                    }
+                }
 
                 span {
                     font: 500 20px / 140% var(--ff-base);
@@ -118,6 +166,10 @@ body:has(.main--offer) {
                 height: 47px;
                 justify-content: center;
                 border: 1px solid var(--accent-color);
+
+                @include media('mobile') {
+                    // display: none;
+                }
 
                 span {
                     background: transparent;

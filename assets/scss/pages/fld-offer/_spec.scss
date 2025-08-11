@@ -4,9 +4,19 @@
 .main--offer {
     .specialist {
         padding-block: 80px;
+        overflow: hidden;
         background: var(--bg-color);
+
+        @include media('mobile') {
+            padding-block: 80px 0;
+        }
+
         &__title {
             margin-bottom: 60px;
+
+            @include media('mobile') {
+                margin-bottom: 24px;
+            }
         }
     }
 }

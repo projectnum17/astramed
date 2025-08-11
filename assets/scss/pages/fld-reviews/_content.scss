@@ -35,6 +35,10 @@
         padding-top: 97px;
         margin-bottom: 400px;
 
+        @include media('mobile') {
+            margin-bottom: 100px;
+        }
+
         &__head {
             display: flex;
             align-items: flex-end;
@@ -331,7 +335,7 @@
                     color: rgba(36, 44, 51, 0.4);
                 }
 
-                 .field-box__label {
+                .field-box__label {
                     top: 0;
                     font-size: 12px;
                     opacity: 1;

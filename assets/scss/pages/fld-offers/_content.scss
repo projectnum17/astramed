@@ -35,6 +35,10 @@
         padding-top: var(--section-pt);
         margin-bottom: 400px;
 
+        @include media('mobile') {
+            margin-bottom: 100px;
+        }
+
         &__title {
             margin-bottom: 80px;
         }

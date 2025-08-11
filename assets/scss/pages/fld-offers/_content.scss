@@ -22,6 +22,7 @@
     .logotype {
         pointer-events: none;
         max-width: 1430px;
+        width: 100%;
         position: absolute;
         left: 50%;
         bottom: 0;
@@ -41,6 +42,10 @@
 
         &__title {
             margin-bottom: 80px;
+
+            @include media('mobile') {
+                margin-bottom: 24px;
+            }
         }
 
         &__cards {
@@ -48,6 +53,12 @@
             grid-template-columns: repeat(2, 1fr);
             gap: 40px;
             margin-bottom: 60px;
+
+            @include media('mobile') {
+                grid-template-columns: repeat(1, 1fr);
+                gap: 12px;
+                margin-bottom: 24px;
+            }
         }
 
         &__more {
